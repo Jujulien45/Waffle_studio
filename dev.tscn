@@ -24,7 +24,6 @@ albedo_texture = ExtResource("2_fkxo1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(31.93, 0, 0, 0, 1, 0, 0, 0, 29.68, 0, 0, 0)
-physics_material_override = SubResource("PhysicsMaterial_daqws")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_fkxo1")
