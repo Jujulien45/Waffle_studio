@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkxx64rjjt2ns"]
+[gd_scene load_steps=8 format=3 uid="uid://bkxx64rjjt2ns"]
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://character_body_3d.gd" id="1_coge5"]
+[ext_resource type="Texture2D" uid="uid://cgulswnk8dixw" path="res://icon.svg" id="2_fkxo1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fkxo1"]
 
@@ -9,6 +10,9 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_0g12c"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_coge5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkxo1"]
+albedo_texture = ExtResource("2_fkxo1")
 
 [node name="Node3D" type="Node3D"]
 
@@ -33,6 +37,7 @@ shape = SubResource("SphereShape3D_0g12c")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 mesh = SubResource("SphereMesh_coge5")
+surface_material_override/0 = SubResource("StandardMaterial3D_fkxo1")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44526482, 1.1388335)

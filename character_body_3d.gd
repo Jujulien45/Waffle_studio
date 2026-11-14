@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+const ACELERATION = 5
 const JUMP_VELOCITY = 4.5
 
 var rotx = 0.0
@@ -13,7 +13,10 @@ var paused = false
 
 var camera
 
+var MESH: MeshInstance3D
+
 func _ready() -> void:
+	MESH = $MeshInstance3D
 	camera = $Camera3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -37,12 +40,17 @@ func _physics_process(delta: float) -> void:
 		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		var direction : Vector3 = (camera.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() #Vector3(input_dir.x * cam_transform_x , 0,  input_dir.y * cam_transform_z).normalized()
 		if direction:
-			velocity.x = direction.x * SPEED
-			velocity.z = direction.z * SPEED
+			velocity.x += direction.x * ACELERATION * delta
+			velocity.z += direction.z * ACELERATION * delta
 		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-			velocity.z = move_toward(velocity.z, 0, SPEED)
+			velocity.x = move_toward(velocity.x, 0, ACELERATION * delta)
+			velocity.z = move_toward(velocity.z, 0, ACELERATION * delta)
    
+
+		var horizontal_vel := Vector3(velocity.x, 0.0, velocity.z)
+		if horizontal_vel.length_squared() > 0.01:
+			var target_yaw := atan2(-horizontal_vel.x, -horizontal_vel.z)
+			MESH.rotation.y = lerp_angle(MESH.rotation.y, target_yaw, delta * 10.0)
 		move_and_slide()
 
 func _input(event: InputEvent) -> void:
