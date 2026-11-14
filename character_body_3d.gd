@@ -2,10 +2,13 @@ extends CharacterBody3D
 
 
 const ACELERATION = 5
+const FRICTION = 1
 const JUMP_VELOCITY = 4.5
 
 var rotx = 0.0
 var roty = 0.0
+var ROT = 15
+var rot_factor
 
 var paused = false
 
@@ -19,6 +22,7 @@ func _ready() -> void:
 	MESH = $MeshInstance3D
 	camera = $Camera3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	rot_factor = ROT / (2 * PI * $MeshInstance3D.mesh.radius)
 
 func _physics_process(delta: float) -> void:
 	
@@ -42,15 +46,18 @@ func _physics_process(delta: float) -> void:
 		if direction:
 			velocity.x += direction.x * ACELERATION * delta
 			velocity.z += direction.z * ACELERATION * delta
-		else:
-			velocity.x = move_toward(velocity.x, 0, ACELERATION * delta)
-			velocity.z = move_toward(velocity.z, 0, ACELERATION * delta)
+		if is_on_floor():
+			velocity.x -= FRICTION * velocity.x * delta
+			velocity.z -= FRICTION * velocity.z * delta
    
-
+		$MeshInstance3D.rotation -= Vector3(velocity.x, 0, velocity.z) * rot_factor * delta
+		"""
 		var horizontal_vel := Vector3(velocity.x, 0.0, velocity.z)
 		if horizontal_vel.length_squared() > 0.01:
 			var target_yaw := atan2(-horizontal_vel.x, -horizontal_vel.z)
 			MESH.rotation.y = lerp_angle(MESH.rotation.y, target_yaw, delta * 10.0)
+		"""
+			
 		move_and_slide()
 
 func _input(event: InputEvent) -> void:
