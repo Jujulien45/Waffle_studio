@@ -1,13 +1,13 @@
 extends CharacterBody3D
 
 const ACELERATION = 5
-const FRICTION = 1     
-const JUMP_VELOCITY = 20
+const FRICTION = 0.4  
+const JUMP_VELOCITY = 7
 
 var rotx = 0.0
 var roty = 0.0
-var ROT = 15
-var rot_factor
+
+var radius
 
 var paused = false
 
@@ -21,7 +21,7 @@ func _ready() -> void:
 	MESH = $MeshInstance3D
 	camera = $Camera3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	rot_factor = ROT / (2 * PI * $MeshInstance3D.mesh.radius)
+	radius = $MeshInstance3D.mesh.radius
 
 func _physics_process(delta: float) -> void:
 	
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		$Camera3D.rotation = Vector3(roty,rotx,0.0)
 		$Camera3D.position = Vector3(0,0,4).rotated(Vector3(1,0,0),roty).rotated(Vector3(0,1,0),rotx)
 		
-		# Add the gravity.
+		# Add the gravity .
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 		if is_on_floor():
@@ -46,6 +46,8 @@ func _physics_process(delta: float) -> void:
 		var cam_basis = camera.transform.basis
 		cam_basis.x.y = 0
 		cam_basis.z.y = 0
+		cam_basis.y.x = 0
+		cam_basis.y.z = 0
 		var direction : Vector3 = (cam_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 			velocity.x += direction.x * ACELERATION * delta
@@ -54,13 +56,13 @@ func _physics_process(delta: float) -> void:
 			velocity.x -= FRICTION * velocity.x * delta
 			velocity.z -= FRICTION * velocity.z * delta
    
-		$MeshInstance3D.rotation -= Vector3(velocity.x, 0, velocity.z) * rot_factor * delta
-		"""
-		var horizontal_vel := Vector3(velocity.x, 0.0, velocity.z)
-		if horizontal_vel.length_squared() > 0.01:
-			var target_yaw := atan2(-horizontal_vel.x, -horizontal_vel.z)
-			MESH.rotation.y = lerp_angle(MESH.rotation.y, target_yaw, delta * 10.0)
-		"""
+		var v := velocity
+		v.y = 0.0
+		var axis := Vector3.UP.cross(v).normalized()
+		var angle : float = v.length() / radius * delta
+
+		var local_axis := global_transform.basis.inverse() * axis
+		$MeshInstance3D.basis = $MeshInstance3D.basis.rotated(local_axis.normalized(), angle)
 			
 		move_and_slide()
 

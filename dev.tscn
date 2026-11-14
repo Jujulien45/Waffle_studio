@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bkxx64rjjt2ns"]
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://character_body_3d.gd" id="1_coge5"]
-[ext_resource type="Texture2D" uid="uid://cgulswnk8dixw" path="res://icon.svg" id="2_fkxo1"]
+[ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="2_fkxo1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_daqws"]
 
@@ -53,11 +53,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44526482, 1.1388335)
 fov = 93.84055
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
-transform = Transform3D(73.42726, 0.17364816, 0, -12.947207, 0.98480767, 0, 0, 0, 29.68, 42.25557, -3.250413, 0)
+transform = Transform3D(-12.718792, -0.17364818, -2.5947081e-06, -2.2426662, 0.9848077, 0, 1.1119121e-06, 1.5180806e-08, -29.68, 89.0958, -16.424698, 0)
 physics_material_override = SubResource("PhysicsMaterial_fkxo1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 shape = SubResource("BoxShape3D_fkxo1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("BoxMesh_daqws")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.2008683e-07, 0, -5.43, 0, 1, 0, 5.035, 0, -2.3735284e-07, 80.97615, -17.455748, -11.330917)
+physics_material_override = SubResource("PhysicsMaterial_fkxo1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+shape = SubResource("BoxShape3D_fkxo1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
+mesh = SubResource("BoxMesh_daqws")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="."]
+transform = Transform3D(-2.6510958e-07, 0.258819, -65.1034, 0, 0.96592575, 17.444405, 6.065, 1.1313339e-08, -2.84576e-06, 46.495174, -8.968786, -10.888765)
+physics_material_override = SubResource("PhysicsMaterial_fkxo1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
+shape = SubResource("BoxShape3D_fkxo1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4"]
+mesh = SubResource("BoxMesh_daqws")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="."]
+transform = Transform3D(-12.915, 0, 2.5947081e-06, 0, 0.99999994, 0, -1.1290651e-06, 0, -29.68, 116.2455, -16.424698, 0)
+physics_material_override = SubResource("PhysicsMaterial_fkxo1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5"]
+shape = SubResource("BoxShape3D_fkxo1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5"]
 mesh = SubResource("BoxMesh_daqws")
