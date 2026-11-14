@@ -1,11 +1,13 @@
 extends CharacterBody3D
 
-
 const ACELERATION = 5
-const JUMP_VELOCITY = 4.5
+const FRICTION = 1     
+const JUMP_VELOCITY = 20
 
 var rotx = 0.0
 var roty = 0.0
+var ROT = 15
+var rot_factor
 
 var paused = false
 
@@ -19,6 +21,7 @@ func _ready() -> void:
 	MESH = $MeshInstance3D
 	camera = $Camera3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	rot_factor = ROT / (2 * PI * $MeshInstance3D.mesh.radius)
 
 func _physics_process(delta: float) -> void:
 	
@@ -30,6 +33,8 @@ func _physics_process(delta: float) -> void:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
+		if is_on_floor():
+			velocity += get_gravity().slide(get_floor_normal()) * delta
 
 		# Handle jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -38,19 +43,25 @@ func _physics_process(delta: float) -> void:
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-		var direction : Vector3 = (camera.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() #Vector3(input_dir.x * cam_transform_x , 0,  input_dir.y * cam_transform_z).normalized()
+		var cam_basis = camera.transform.basis
+		cam_basis.x.y = 0
+		cam_basis.z.y = 0
+		var direction : Vector3 = (cam_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 			velocity.x += direction.x * ACELERATION * delta
 			velocity.z += direction.z * ACELERATION * delta
-		else:
-			velocity.x = move_toward(velocity.x, 0, ACELERATION * delta)
-			velocity.z = move_toward(velocity.z, 0, ACELERATION * delta)
+		if is_on_floor():
+			velocity.x -= FRICTION * velocity.x * delta
+			velocity.z -= FRICTION * velocity.z * delta
    
-
+		$MeshInstance3D.rotation -= Vector3(velocity.x, 0, velocity.z) * rot_factor * delta
+		"""
 		var horizontal_vel := Vector3(velocity.x, 0.0, velocity.z)
 		if horizontal_vel.length_squared() > 0.01:
 			var target_yaw := atan2(-horizontal_vel.x, -horizontal_vel.z)
 			MESH.rotation.y = lerp_angle(MESH.rotation.y, target_yaw, delta * 10.0)
+		"""
+			
 		move_and_slide()
 
 func _input(event: InputEvent) -> void:
@@ -60,7 +71,7 @@ func _input(event: InputEvent) -> void:
 		rotx -= move.x * sensitivity
 		roty -= move.y * sensitivity
 		
-		roty = max(min(0, roty), -PI/2)
+		roty = max(min(0, roty), -deg_to_rad(89))
 
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_ESCAPE:
