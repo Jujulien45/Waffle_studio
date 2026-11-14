@@ -42,3 +42,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_fkxo1")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44526482, 1.1388335)
 fov = 93.84055
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(52.721878, 0.70710677, 0, -52.721878, 0.70710677, 0, 0, 0, 29.68, 42.25557, -26.283245, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_fkxo1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("BoxMesh_daqws")

@@ -42,7 +42,11 @@ func _physics_process(delta: float) -> void:
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-		var direction : Vector3 = (camera.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() #Vector3(input_dir.x * cam_transform_x , 0,  input_dir.y * cam_transform_z).normalized()
+		var cam_basis = camera.transform.basis
+		cam_basis.x.y = 0
+		cam_basis.z.y = 0
+		var direction : Vector3 = (cam_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() #Vector3(input_dir.x * cam_transform_x , 0,  input_dir.y * cam_transform_z).normalized()
+		print(direction)
 		if direction:
 			velocity.x += direction.x * ACELERATION * delta
 			velocity.z += direction.z * ACELERATION * delta
@@ -67,7 +71,7 @@ func _input(event: InputEvent) -> void:
 		rotx -= move.x * sensitivity
 		roty -= move.y * sensitivity
 		
-		roty = max(min(0, roty), -PI/2)
+		roty = max(min(0, roty), -deg_to_rad(89))
 
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_ESCAPE:
