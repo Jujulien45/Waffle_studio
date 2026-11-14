@@ -9,6 +9,6 @@ func is_on_floor() -> bool:
 func _process(delta: float) -> void:
 	if is_on_floor():
 		var exploding_egg = egg_eplosion_scene.instantiate()
-		get_tree().add_child(exploding_egg)
+		get_parent().add_child(exploding_egg)
 		exploding_egg.global_position = global_position
 		queue_free()

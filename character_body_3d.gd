@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+var egg = preload("res://egg.tscn")
+
 const ACELERATION = 5
 const FRICTION = 0.4  
 const JUMP_VELOCITY = 7
@@ -8,6 +10,8 @@ var rotx = 0.0
 var roty = 0.0
 
 var radius
+
+var double_jumped = false
 
 var paused = false
 
@@ -35,10 +39,17 @@ func _physics_process(delta: float) -> void:
 			velocity += get_gravity() * delta
 		if is_on_floor():
 			velocity += get_gravity().slide(get_floor_normal()) * delta
+			double_jumped = false
 
 		# Handle jump.
-		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		if Input.is_action_just_pressed("ui_accept") and double_jumped == false:
 			velocity.y = JUMP_VELOCITY
+			if(not is_on_floor()):
+				double_jumped = true
+				var egg_inst = egg.instantiate()
+				get_parent().add_child(egg_inst)
+				egg_inst.global_position = global_position
+				egg_inst.global_position.y -= 0.6
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
