@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhjjpbfqhei5o"
+path="res://.godot/imported/Prop_Ladder_01.obj-c0dfd873f3adff57b663da5b8d750fb2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Ladder_01.obj-c0dfd873f3adff57b663da5b8d750fb2.mesh"]
+
+source_file="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/OBJ Format/Prop_Ladder_01.obj"
+dest_files=["res://.godot/imported/Prop_Ladder_01.obj-c0dfd873f3adff57b663da5b8d750fb2.mesh", "res://.godot/imported/Prop_Ladder_01.obj-c0dfd873f3adff57b663da5b8d750fb2.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

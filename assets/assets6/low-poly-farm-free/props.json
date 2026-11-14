@@ -1,0 +1,1039 @@
+{
+ "atlas": 2048,
+ "atlas_used": 352,
+ "fps": 30,
+ "props": [
+  {
+   "name": "ground_grass",
+   "title": "Grass",
+   "group": "ground",
+   "place": "floor",
+   "note": "a 2 m tile of dry autumn grass",
+   "tris": 10,
+   "size": [
+    2.0,
+    2.0,
+    0.2
+   ],
+   "min": [
+    -1.0,
+    -1.0,
+    -0.2
+   ],
+   "max": [
+    1.0,
+    1.0,
+    0.0
+   ],
+   "parts": [
+    {
+     "name": "ground_grass",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 10,
+     "min": [
+      -1.0,
+      -1.0,
+      -0.2
+     ],
+     "max": [
+      1.0,
+      1.0,
+      0.0
+     ]
+    }
+   ],
+   "anims": []
+  },
+  {
+   "name": "plot_tilled",
+   "title": "Plot, Tilled",
+   "group": "ground",
+   "place": "floor",
+   "note": "a plot hoed into four ridges along Y, ready to plant",
+   "tris": 106,
+   "size": [
+    2.0,
+    2.0,
+    0.26
+   ],
+   "min": [
+    -1.0,
+    -1.0,
+    -0.2
+   ],
+   "max": [
+    1.0,
+    1.0,
+    0.06
+   ],
+   "parts": [
+    {
+     "name": "plot_tilled",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 106,
+     "min": [
+      -1.0,
+      -1.0,
+      -0.2
+     ],
+     "max": [
+      1.0,
+      1.0,
+      0.06
+     ]
+    }
+   ],
+   "anims": []
+  },
+  {
+   "name": "plot_watered",
+   "title": "Plot, Watered",
+   "group": "ground",
+   "place": "floor",
+   "note": "the tilled plot dark from the can or the rain",
+   "tris": 106,
+   "size": [
+    2.0,
+    2.0,
+    0.26
+   ],
+   "min": [
+    -1.0,
+    -1.0,
+    -0.2
+   ],
+   "max": [
+    1.0,
+    1.0,
+    0.06
+   ],
+   "parts": [
+    {
+     "name": "plot_watered",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 106,
+     "min": [
+      -1.0,
+      -1.0,
+      -0.2
+     ],
+     "max": [
+      1.0,
+      1.0,
+      0.06
+     ]
+    }
+   ],
+   "anims": []
+  },
+  {
+   "name": "crop_sown",
+   "title": "Crop, Sown",
+   "group": "crops",
+   "place": "floor",
+   "note": "seed sown in rows, a marker at each row's end",
+   "tris": 496,
+   "size": [
+    1.45,
+    1.596,
+    0.2
+   ],
+   "min": [
+    -0.725,
+    -0.75,
+    0.06
+   ],
+   "max": [
+    0.725,
+    0.846,
+    0.26
+   ],
+   "parts": [
+    {
+     "name": "crop_sown",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 496,
+     "min": [
+      -0.725,
+      -0.7503,
+      0.06
+     ],
+     "max": [
+      0.725,
+      0.846,
+      0.26
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "",
+    "stage": 0
+   },
+   "solid": false
+  },
+  {
+   "name": "crop_carrot_sprout",
+   "title": "Carrots, Sprout",
+   "group": "crops",
+   "place": "floor",
+   "note": "a plot of carrots just up",
+   "tris": 320,
+   "size": [
+    1.478,
+    1.442,
+    0.063
+   ],
+   "min": [
+    -0.747,
+    -0.716,
+    0.06
+   ],
+   "max": [
+    0.732,
+    0.726,
+    0.123
+   ],
+   "parts": [
+    {
+     "name": "crop_carrot_sprout",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 320,
+     "min": [
+      -0.7467,
+      -0.7163,
+      0.0598
+     ],
+     "max": [
+      0.7315,
+      0.7256,
+      0.1233
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "carrot",
+    "stage": 1
+   },
+   "solid": false
+  },
+  {
+   "name": "crop_carrot_young",
+   "title": "Carrots, Young",
+   "group": "crops",
+   "place": "floor",
+   "note": "a plot of carrots half grown",
+   "tris": 640,
+   "size": [
+    1.667,
+    1.574,
+    0.137
+   ],
+   "min": [
+    -0.818,
+    -0.773,
+    0.06
+   ],
+   "max": [
+    0.849,
+    0.801,
+    0.197
+   ],
+   "parts": [
+    {
+     "name": "crop_carrot_young",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 640,
+     "min": [
+      -0.8179,
+      -0.7727,
+      0.0598
+     ],
+     "max": [
+      0.8493,
+      0.8012,
+      0.1967
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "carrot",
+    "stage": 2
+   },
+   "solid": false
+  },
+  {
+   "name": "crop_carrot_grown",
+   "title": "Carrots, Grown",
+   "group": "crops",
+   "place": "floor",
+   "note": "a plot of carrots grown, not yet ripe",
+   "tris": 1520,
+   "size": [
+    1.852,
+    1.735,
+    0.274
+   ],
+   "min": [
+    -0.922,
+    -0.854,
+    0.04
+   ],
+   "max": [
+    0.93,
+    0.881,
+    0.314
+   ],
+   "parts": [
+    {
+     "name": "crop_carrot_grown",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 1520,
+     "min": [
+      -0.9222,
+      -0.8537,
+      0.04
+     ],
+     "max": [
+      0.9302,
+      0.881,
+      0.3144
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "carrot",
+    "stage": 3
+   },
+   "solid": false
+  },
+  {
+   "name": "crop_carrot_ripe",
+   "title": "Carrots, Ripe",
+   "group": "crops",
+   "place": "floor",
+   "note": "a plot of carrots ripe for harvest",
+   "tris": 1680,
+   "size": [
+    1.889,
+    1.804,
+    0.315
+   ],
+   "min": [
+    -0.913,
+    -0.925,
+    0.04
+   ],
+   "max": [
+    0.977,
+    0.88,
+    0.355
+   ],
+   "parts": [
+    {
+     "name": "crop_carrot_ripe",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 1680,
+     "min": [
+      -0.9125,
+      -0.9248,
+      0.04
+     ],
+     "max": [
+      0.9767,
+      0.8795,
+      0.3547
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "carrot",
+    "stage": 4
+   },
+   "solid": false
+  },
+  {
+   "name": "crop_pumpkin_sprout",
+   "title": "Pumpkins, Sprout",
+   "group": "crops",
+   "place": "floor",
+   "note": "a plot of pumpkins just up",
+   "tris": 32,
+   "size": [
+    1.073,
+    1.06,
+    0.044
+   ],
+   "min": [
+    -0.556,
+    -0.512,
+    0.09
+   ],
+   "max": [
+    0.516,
+    0.548,
+    0.134
+   ],
+   "parts": [
+    {
+     "name": "crop_pumpkin_sprout",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 32,
+     "min": [
+      -0.5563,
+      -0.5116,
+      0.0897
+     ],
+     "max": [
+      0.5164,
+      0.5483,
+      0.1341
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "pumpkin",
+    "stage": 1
+   },
+   "solid": false
+  },
+  {
+   "name": "crop_pumpkin_young",
+   "title": "Pumpkins, Young",
+   "group": "crops",
+   "place": "floor",
+   "note": "a plot of pumpkins half grown",
+   "tris": 152,
+   "size": [
+    1.088,
+    1.18,
+    0.119
+   ],
+   "min": [
+    -0.583,
+    -0.533,
+    0.068
+   ],
+   "max": [
+    0.505,
+    0.646,
+    0.187
+   ],
+   "parts": [
+    {
+     "name": "crop_pumpkin_young",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 152,
+     "min": [
+      -0.5826,
+      -0.5333,
+      0.068
+     ],
+     "max": [
+      0.5054,
+      0.6465,
+      0.1873
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "pumpkin",
+    "stage": 2
+   },
+   "solid": false
+  },
+  {
+   "name": "crop_pumpkin_grown",
+   "title": "Pumpkins, Grown",
+   "group": "crops",
+   "place": "floor",
+   "note": "a plot of pumpkins grown, not yet ripe",
+   "tris": 562,
+   "size": [
+    1.343,
+    1.315,
+    0.16
+   ],
+   "min": [
+    -0.628,
+    -0.699,
+    0.06
+   ],
+   "max": [
+    0.714,
+    0.616,
+    0.22
+   ],
+   "parts": [
+    {
+     "name": "crop_pumpkin_grown",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 562,
+     "min": [
+      -0.6283,
+      -0.6991,
+      0.06
+     ],
+     "max": [
+      0.7142,
+      0.6161,
+      0.2198
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "pumpkin",
+    "stage": 3
+   },
+   "solid": false
+  },
+  {
+   "name": "crop_pumpkin_ripe",
+   "title": "Pumpkins, Ripe",
+   "group": "crops",
+   "place": "floor",
+   "note": "a plot of pumpkins ripe for harvest",
+   "tris": 908,
+   "size": [
+    1.387,
+    1.421,
+    0.279
+   ],
+   "min": [
+    -0.715,
+    -0.787,
+    0.06
+   ],
+   "max": [
+    0.672,
+    0.633,
+    0.339
+   ],
+   "parts": [
+    {
+     "name": "crop_pumpkin_ripe",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 908,
+     "min": [
+      -0.7155,
+      -0.7875,
+      0.06
+     ],
+     "max": [
+      0.672,
+      0.6335,
+      0.3388
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "pumpkin",
+    "stage": 4
+   },
+   "solid": false
+  },
+  {
+   "name": "produce_carrot",
+   "title": "Carrots",
+   "group": "produce",
+   "place": "item",
+   "note": "carrots harvested, ready for the shipping bin",
+   "tris": 180,
+   "size": [
+    0.233,
+    0.234,
+    0.198
+   ],
+   "min": [
+    -0.173,
+    -0.113,
+    -0.048
+   ],
+   "max": [
+    0.06,
+    0.121,
+    0.15
+   ],
+   "parts": [
+    {
+     "name": "produce_carrot",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 180,
+     "min": [
+      -0.1728,
+      -0.1126,
+      -0.0481
+     ],
+     "max": [
+      0.06,
+      0.1209,
+      0.1497
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "carrot",
+    "title": "Carrots",
+    "days": 3,
+    "seed": 10,
+    "sells": 35,
+    "stages": [
+     "crop_carrot_sprout",
+     "crop_carrot_young",
+     "crop_carrot_grown",
+     "crop_carrot_ripe"
+    ]
+   }
+  },
+  {
+   "name": "produce_pumpkin",
+   "title": "Pumpkins",
+   "group": "produce",
+   "place": "item",
+   "note": "pumpkins harvested, ready for the shipping bin",
+   "tris": 173,
+   "size": [
+    0.336,
+    0.336,
+    0.295
+   ],
+   "min": [
+    -0.168,
+    -0.168,
+    0.0
+   ],
+   "max": [
+    0.168,
+    0.168,
+    0.295
+   ],
+   "parts": [
+    {
+     "name": "produce_pumpkin",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 173,
+     "min": [
+      -0.168,
+      -0.168,
+      0.0
+     ],
+     "max": [
+      0.168,
+      0.168,
+      0.2952
+     ]
+    }
+   ],
+   "anims": [],
+   "game": {
+    "crop": "pumpkin",
+    "title": "Pumpkins",
+    "days": 8,
+    "seed": 40,
+    "sells": 220,
+    "stages": [
+     "crop_pumpkin_sprout",
+     "crop_pumpkin_young",
+     "crop_pumpkin_grown",
+     "crop_pumpkin_ripe"
+    ]
+   }
+  },
+  {
+   "name": "fence_rail",
+   "title": "Rail Fence",
+   "group": "fences",
+   "place": "floor",
+   "note": "a 2 m run of weathered split rails",
+   "tris": 186,
+   "size": [
+    2.06,
+    0.12,
+    1.188
+   ],
+   "min": [
+    -1.02,
+    -0.06,
+    0.0
+   ],
+   "max": [
+    1.04,
+    0.06,
+    1.188
+   ],
+   "parts": [
+    {
+     "name": "fence_rail",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 186,
+     "min": [
+      -1.02,
+      -0.06,
+      0.0
+     ],
+     "max": [
+      1.04,
+      0.06,
+      1.1885
+     ]
+    }
+   ],
+   "anims": []
+  },
+  {
+   "name": "hay_bale_round",
+   "title": "Round Hay Bale",
+   "group": "yard",
+   "place": "floor",
+   "note": "a round bale of hay lying on its side",
+   "tris": 116,
+   "size": [
+    1.2,
+    1.32,
+    1.32
+   ],
+   "min": [
+    -0.6,
+    -0.66,
+    -0.01
+   ],
+   "max": [
+    0.6,
+    0.66,
+    1.31
+   ],
+   "parts": [
+    {
+     "name": "hay_bale_round",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 116,
+     "min": [
+      -0.6,
+      -0.66,
+      -0.01
+     ],
+     "max": [
+      0.6,
+      0.66,
+      1.31
+     ]
+    }
+   ],
+   "anims": []
+  },
+  {
+   "name": "shipping_bin",
+   "title": "Shipping Bin",
+   "group": "yard",
+   "place": "floor",
+   "note": "the bin the harvest goes in, collected and sold overnight",
+   "tris": 358,
+   "size": [
+    1.5,
+    1.054,
+    0.916
+   ],
+   "min": [
+    -0.75,
+    -0.532,
+    0.0
+   ],
+   "max": [
+    0.75,
+    0.522,
+    0.916
+   ],
+   "parts": [
+    {
+     "name": "shipping_bin",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 202,
+     "min": [
+      -0.72,
+      -0.481,
+      0.0
+     ],
+     "max": [
+      0.72,
+      0.47,
+      0.84
+     ]
+    },
+    {
+     "name": "shipping_bin_lid",
+     "parent": "shipping_bin",
+     "pivot": [
+      0.0,
+      0.5,
+      0.82
+     ],
+     "tris": 156,
+     "min": [
+      -0.75,
+      -0.532,
+      0.71
+     ],
+     "max": [
+      0.75,
+      0.5223,
+      0.916
+     ]
+    }
+   ],
+   "anims": [
+    {
+     "name": "open",
+     "seconds": 0.8,
+     "loop": false
+    }
+   ]
+  },
+  {
+   "name": "hoe",
+   "title": "Hoe",
+   "group": "tools",
+   "place": "hand",
+   "note": "a draw hoe for breaking and ridging the soil",
+   "tris": 64,
+   "size": [
+    0.17,
+    0.174,
+    1.576
+   ],
+   "min": [
+    -0.085,
+    -0.155,
+    -1.276
+   ],
+   "max": [
+    0.085,
+    0.019,
+    0.3
+   ],
+   "parts": [
+    {
+     "name": "hoe",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 64,
+     "min": [
+      -0.085,
+      -0.1547,
+      -1.2759
+     ],
+     "max": [
+      0.085,
+      0.0191,
+      0.3
+     ]
+    }
+   ],
+   "anims": [
+    {
+     "name": "use",
+     "seconds": 1.2,
+     "loop": false
+    }
+   ]
+  },
+  {
+   "name": "watering_can",
+   "title": "Watering Can",
+   "group": "tools",
+   "place": "hand",
+   "note": "a galvanised can with a rose on its spout",
+   "tris": 142,
+   "size": [
+    0.24,
+    0.58,
+    0.373
+   ],
+   "min": [
+    -0.12,
+    -0.406,
+    -0.36
+   ],
+   "max": [
+    0.12,
+    0.173,
+    0.013
+   ],
+   "parts": [
+    {
+     "name": "watering_can",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 142,
+     "min": [
+      -0.12,
+      -0.4064,
+      -0.36
+     ],
+     "max": [
+      0.12,
+      0.1733,
+      0.0131
+     ]
+    }
+   ],
+   "anims": [
+    {
+     "name": "use",
+     "seconds": 1.6,
+     "loop": false
+    }
+   ]
+  },
+  {
+   "name": "tree_oak",
+   "title": "Oak, Autumn",
+   "group": "nature",
+   "place": "floor",
+   "note": "a broad oak gone orange",
+   "tris": 479,
+   "size": [
+    5.499,
+    5.052,
+    6.331
+   ],
+   "min": [
+    -2.591,
+    -2.528,
+    0.0
+   ],
+   "max": [
+    2.908,
+    2.525,
+    6.331
+   ],
+   "parts": [
+    {
+     "name": "tree_oak",
+     "parent": null,
+     "pivot": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tris": 479,
+     "min": [
+      -2.5911,
+      -2.5277,
+      0.0
+     ],
+     "max": [
+      2.9082,
+      2.5247,
+      6.3307
+     ]
+    }
+   ],
+   "anims": [],
+   "mesh_parts": [
+    "tree_oak"
+   ]
+  }
+ ]
+}

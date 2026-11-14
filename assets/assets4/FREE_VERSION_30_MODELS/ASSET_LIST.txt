@@ -1,0 +1,35 @@
+FREE ASSET LIST
+===============
+
+Total assets: 30
+
+01. Apple Harvest Basket
+02. Burlap Sack
+03. Cabbage
+04. Carrot Plant
+05. Corn
+06. Corn Stalk
+07. Empty Produce Crate
+08. Farm Direction Sign
+09. Filled Vegetable Crate
+10. Hay Bale
+11. Irrigated Soil Patch
+12. Potato
+13. Potato Plant
+14. Produce Wicker Basket
+15. Pumpkin
+16. Pumpkin Plant
+17. Scarecrow
+18. Shovel in Soil
+19. Soil Patch
+20. Sunflower
+21. Tomato Plant
+22. Tool Shed
+23. Watering Can
+24. Wheat Crop
+25. Wheelbarrow
+26. Wooden Barrel
+27. Wooden Bucket
+28. Wooden Farm Gate
+29. Wooden Fence Corner
+30. Wooden Fence Straight

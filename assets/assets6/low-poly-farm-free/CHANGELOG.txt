@@ -1,0 +1,5 @@
+Low Poly Farm Free: changes, newest first
+
+1.0.5 (12 Nov 2026)
+- The plots are hoed into ridges, the fence's posts are capped, and the shipping bin has its
+  corner irons, hasp, lid battens and strap hinges.

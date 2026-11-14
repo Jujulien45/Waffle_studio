@@ -1,0 +1,212 @@
+[gd_scene load_steps=19 format=3]
+
+[ext_resource type="PackedScene" path="res://addons/low_poly_animals/models/rabbit_model.glb" id="1"]
+
+[sub_resource type="BoxShape3D" id="box0"]
+size = Vector3(0.1236, 0.2040, 0.1744)
+
+[sub_resource type="BoxShape3D" id="box1"]
+size = Vector3(0.1112, 0.1039, 0.1623)
+
+[sub_resource type="BoxShape3D" id="box2"]
+size = Vector3(0.1146, 0.1014, 0.1989)
+
+[sub_resource type="BoxShape3D" id="box3"]
+size = Vector3(0.0534, 0.0534, 0.0473)
+
+[sub_resource type="BoxShape3D" id="box4"]
+size = Vector3(0.0304, 0.0474, 0.0770)
+
+[sub_resource type="BoxShape3D" id="box5"]
+size = Vector3(0.0236, 0.0329, 0.0617)
+
+[sub_resource type="BoxShape3D" id="box6"]
+size = Vector3(0.0228, 0.0232, 0.0227)
+
+[sub_resource type="BoxShape3D" id="box7"]
+size = Vector3(0.0436, 0.0965, 0.1051)
+
+[sub_resource type="BoxShape3D" id="box8"]
+size = Vector3(0.0236, 0.1137, 0.1107)
+
+[sub_resource type="BoxShape3D" id="box9"]
+size = Vector3(0.0282, 0.1070, 0.0276)
+
+[sub_resource type="BoxShape3D" id="box10"]
+size = Vector3(0.0304, 0.0474, 0.0770)
+
+[sub_resource type="BoxShape3D" id="box11"]
+size = Vector3(0.0236, 0.0329, 0.0617)
+
+[sub_resource type="BoxShape3D" id="box12"]
+size = Vector3(0.0228, 0.0232, 0.0227)
+
+[sub_resource type="BoxShape3D" id="box13"]
+size = Vector3(0.0436, 0.0965, 0.1051)
+
+[sub_resource type="BoxShape3D" id="box14"]
+size = Vector3(0.0236, 0.1137, 0.1107)
+
+[sub_resource type="BoxShape3D" id="box15"]
+size = Vector3(0.0282, 0.1070, 0.0276)
+
+[sub_resource type="BoxShape3D" id="box16"]
+size = Vector3(0.0434, 0.0645, 0.0608)
+
+[node name="rabbit" instance=ExtResource("1")]
+
+[node name="Hips" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "Hips"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/Hips"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/Hips/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.96020, -0.27997, 0.00000, 0.27997, -0.96020, 0.00000, 0.06970, 0.02720)
+shape = SubResource("box0")
+
+[node name="neck" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "neck"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/neck"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/neck/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.25897, 0.96604, 0.00000, -0.96604, -0.25897, 0.00000, 0.00490, 0.00340)
+shape = SubResource("box1")
+
+[node name="Head" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "Head"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/Head"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/Head/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.28865, -0.95746, 0.00000, 0.95746, -0.28865, 0.00000, -0.02590, -0.03720)
+shape = SubResource("box2")
+
+[node name="jaw" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "jaw"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/jaw"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/jaw/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.78832, -0.61521, 0.00000, 0.61521, -0.78832, 0.00000, 0.01930, -0.00120)
+shape = SubResource("box3")
+
+[node name="leg_fl" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "leg_fl"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/leg_fl"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/leg_fl/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, 0.11049, -0.99381, 0.00000, 0.99381, 0.11049, 0.00000, 0.02100, -0.00090)
+shape = SubResource("box4")
+
+[node name="shin_fl" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "shin_fl"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/shin_fl"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/shin_fl/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.16068, -0.98699, 0.00000, 0.98699, -0.16068, 0.00000, 0.02530, 0.00250)
+shape = SubResource("box5")
+
+[node name="foot_fl" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "foot_fl"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/foot_fl"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/foot_fl/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.69206, -0.72204, 0.00000, 0.72204, -0.69206, 0.00000, 0.00780, -0.00100)
+shape = SubResource("box6")
+
+[node name="leg_bl" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "leg_bl"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/leg_bl"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/leg_bl/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.64421, -0.76489, 0.00000, 0.76489, -0.64421, 0.00000, 0.03170, 0.00060)
+shape = SubResource("box7")
+
+[node name="shin_bl" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "shin_bl"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/shin_bl"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/shin_bl/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, 0.72085, -0.69310, 0.00000, 0.69310, 0.72085, 0.00000, 0.05750, 0.00010)
+shape = SubResource("box8")
+
+[node name="foot_bl" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "foot_bl"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/foot_bl"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/foot_bl/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.98045, -0.19703, 0.00000, 0.19703, -0.98045, 0.00000, 0.04900, -0.00310)
+shape = SubResource("box9")
+
+[node name="leg_fr" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "leg_fr"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/leg_fr"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/leg_fr/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, 0.11049, -0.99381, 0.00000, 0.99381, 0.11049, 0.00000, 0.02100, -0.00090)
+shape = SubResource("box10")
+
+[node name="shin_fr" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "shin_fr"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/shin_fr"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/shin_fr/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.16068, -0.98699, 0.00000, 0.98699, -0.16068, 0.00000, 0.02530, 0.00250)
+shape = SubResource("box11")
+
+[node name="foot_fr" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "foot_fr"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/foot_fr"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/foot_fr/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.69206, -0.72204, 0.00000, 0.72204, -0.69206, 0.00000, 0.00780, -0.00100)
+shape = SubResource("box12")
+
+[node name="leg_br" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "leg_br"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/leg_br"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/leg_br/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.64421, -0.76489, 0.00000, 0.76489, -0.64421, -0.00000, 0.03170, 0.00060)
+shape = SubResource("box13")
+
+[node name="shin_br" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "shin_br"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/shin_br"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/shin_br/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, 0.72085, -0.69310, 0.00000, 0.69310, 0.72085, -0.00000, 0.05750, 0.00010)
+shape = SubResource("box14")
+
+[node name="foot_br" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "foot_br"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/foot_br"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/foot_br/Collision"]
+transform = Transform3D(1.00000, 0.00000, 0.00000, 0.00000, -0.98045, -0.19703, 0.00000, 0.19703, -0.98045, -0.00000, 0.04900, -0.00310)
+shape = SubResource("box15")
+
+[node name="tail" type="BoneAttachment3D" parent="rabbit/Skeleton3D"]
+bone_name = "tail"
+
+[node name="Collision" type="StaticBody3D" parent="rabbit/Skeleton3D/tail"]
+
+[node name="Box" type="CollisionShape3D" parent="rabbit/Skeleton3D/tail/Collision"]
+transform = Transform3D(1.00000, -0.00000, 0.00000, 0.00000, 0.86605, 0.49995, -0.00000, -0.49995, 0.86605, 0.00000, 0.01150, -0.00230)
+shape = SubResource("box16")
+
+[node name="AnimationPlayer" parent="."]
+autoplay = "idle"

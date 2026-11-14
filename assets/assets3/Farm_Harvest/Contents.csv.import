@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://micoqigxqrbj"
+
+[deps]
+
+files=["res://assets/assets3/Farm_Harvest/Contents.group.translation", "res://assets/assets3/Farm_Harvest/Contents.edition.translation", "res://assets/assets3/Farm_Harvest/Contents.width.translation", "res://assets/assets3/Farm_Harvest/Contents.depth.translation", "res://assets/assets3/Farm_Harvest/Contents.height.translation", "res://assets/assets3/Farm_Harvest/Contents.triangles.translation"]
+
+source_file="res://assets/assets3/Farm_Harvest/Contents.csv"
+dest_files=["res://assets/assets3/Farm_Harvest/Contents.group.translation", "res://assets/assets3/Farm_Harvest/Contents.edition.translation", "res://assets/assets3/Farm_Harvest/Contents.width.translation", "res://assets/assets3/Farm_Harvest/Contents.depth.translation", "res://assets/assets3/Farm_Harvest/Contents.height.translation", "res://assets/assets3/Farm_Harvest/Contents.triangles.translation"]
+
+[params]
+
+compress=true
+delimiter=0

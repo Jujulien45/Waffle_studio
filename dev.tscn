@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkxx64rjjt2ns"]
+[gd_scene load_steps=13 format=3 uid="uid://bkxx64rjjt2ns"]
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://character_body_3d.gd" id="1_coge5"]
 [ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="2_fkxo1"]
 [ext_resource type="PackedScene" uid="uid://6ntoukbhnxjy" path="res://Chick.tscn" id="3_daqws"]
+[ext_resource type="PackedScene" uid="uid://clodp8jr5a6ga" path="res://pouleanime.tscn" id="4_0g12c"]
+[ext_resource type="PackedScene" uid="uid://pu6efshxol71" path="res://rabbit_model.tscn" id="5_gamoy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fkxo1"]
 
@@ -101,3 +103,12 @@ shape = SubResource("BoxShape3D_fkxo1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5"]
 mesh = SubResource("BoxMesh_daqws")
+
+[node name="pouleanim" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20035708, 0.5000001, 2.0844655)
+
+[node name="chicken_model2" parent="pouleanim" instance=ExtResource("4_0g12c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7996429, 0.49999988, 0.9155345)
+
+[node name="rabbit_model" parent="." instance=ExtResource("5_gamoy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3684477, 0.5, 2.9949589)

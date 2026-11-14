@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dw8ewo0kt5000"
+path="res://.godot/imported/Env_Daisy_Low_Detail_01.obj-247b8ef4d867d96bbe02cb1611a8d49f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Env_Daisy_Low_Detail_01.obj-247b8ef4d867d96bbe02cb1611a8d49f.mesh"]
+
+source_file="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/OBJ Format/Env_Daisy_Low_Detail_01.obj"
+dest_files=["res://.godot/imported/Env_Daisy_Low_Detail_01.obj-247b8ef4d867d96bbe02cb1611a8d49f.mesh", "res://.godot/imported/Env_Daisy_Low_Detail_01.obj-247b8ef4d867d96bbe02cb1611a8d49f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

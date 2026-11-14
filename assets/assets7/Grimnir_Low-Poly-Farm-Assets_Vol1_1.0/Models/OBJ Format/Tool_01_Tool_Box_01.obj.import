@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djqpoljvi6aow"
+path="res://.godot/imported/Tool_01_Tool_Box_01.obj-5073c043b2fe1a5cc2a70c41f60ac01c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tool_01_Tool_Box_01.obj-5073c043b2fe1a5cc2a70c41f60ac01c.mesh"]
+
+source_file="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/OBJ Format/Tool_01_Tool_Box_01.obj"
+dest_files=["res://.godot/imported/Tool_01_Tool_Box_01.obj-5073c043b2fe1a5cc2a70c41f60ac01c.mesh", "res://.godot/imported/Tool_01_Tool_Box_01.obj-5073c043b2fe1a5cc2a70c41f60ac01c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

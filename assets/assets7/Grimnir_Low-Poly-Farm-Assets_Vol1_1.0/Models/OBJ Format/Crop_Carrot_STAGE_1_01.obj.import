@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bnes7byx4215i"
+path="res://.godot/imported/Crop_Carrot_STAGE_1_01.obj-0e641c916e5e2ce8ad95a728b6ff52fd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Crop_Carrot_STAGE_1_01.obj-0e641c916e5e2ce8ad95a728b6ff52fd.mesh"]
+
+source_file="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/OBJ Format/Crop_Carrot_STAGE_1_01.obj"
+dest_files=["res://.godot/imported/Crop_Carrot_STAGE_1_01.obj-0e641c916e5e2ce8ad95a728b6ff52fd.mesh", "res://.godot/imported/Crop_Carrot_STAGE_1_01.obj-0e641c916e5e2ce8ad95a728b6ff52fd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
