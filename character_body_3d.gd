@@ -1,9 +1,8 @@
 extends CharacterBody3D
 
-
 const ACELERATION = 5
-const FRICTION = 1
-const JUMP_VELOCITY = 4.5
+const FRICTION = 1     
+const JUMP_VELOCITY = 20
 
 var rotx = 0.0
 var roty = 0.0
@@ -34,6 +33,8 @@ func _physics_process(delta: float) -> void:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
+		if is_on_floor():
+			velocity += get_gravity().slide(get_floor_normal()) * delta
 
 		# Handle jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -45,8 +46,7 @@ func _physics_process(delta: float) -> void:
 		var cam_basis = camera.transform.basis
 		cam_basis.x.y = 0
 		cam_basis.z.y = 0
-		var direction : Vector3 = (cam_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() #Vector3(input_dir.x * cam_transform_x , 0,  input_dir.y * cam_transform_z).normalized()
-		print(direction)
+		var direction : Vector3 = (cam_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 			velocity.x += direction.x * ACELERATION * delta
 			velocity.z += direction.z * ACELERATION * delta
