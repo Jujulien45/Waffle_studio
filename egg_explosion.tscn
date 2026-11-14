@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://c43v0kdkoic1s"]
+
+[ext_resource type="Script" uid="uid://bl8lx1dn5c25g" path="res://egg_explosion.gd" id="1_dwm25"]
+
+[sub_resource type="Curve" id="Curve_o376u"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7983651, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_dwm25"]
+curve = SubResource("Curve_o376u")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fc5i1"]
+particle_flag_align_y = true
+spread = 180.0
+initial_velocity_min = 12.0
+initial_velocity_max = 14.0
+scale_min = 0.25
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_dwm25")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fc5i1"]
+albedo_color = Color(0.6666667, 0.6666667, 0, 1)
+emission_enabled = true
+emission = Color(0.78431374, 0.6313726, 0, 1)
+emission_energy_multiplier = 2.0
+grow_amount = -3.68
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hdh6x"]
+material = SubResource("StandardMaterial3D_fc5i1")
+top_radius = 0.1
+bottom_radius = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ani73"]
+size = Vector3(0.2, 0.05, 0.2)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_dwm25")
+
+[node name="egg_yolk" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 17
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_fc5i1")
+draw_pass_1 = SubResource("CylinderMesh_hdh6x")
+
+[node name="egg_shell" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 7
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_fc5i1")
+draw_pass_1 = SubResource("BoxMesh_ani73")

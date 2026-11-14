@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2fov4iutnqbg"]
+
+[ext_resource type="Script" uid="uid://dqr0ht42idj3h" path="res://Egg.gd" id="1_60cwx"]
+[ext_resource type="Texture2D" uid="uid://cgulswnk8dixw" path="res://icon.svg" id="2_s80rl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7piv4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gtrp8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4lxc0"]
+albedo_texture = ExtResource("2_s80rl")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wdad3"]
+
+[node name="Egg" type="RigidBody3D"]
+script = ExtResource("1_60cwx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_7piv4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_gtrp8")
+surface_material_override/0 = SubResource("StandardMaterial3D_4lxc0")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_wdad3")
