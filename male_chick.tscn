@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2we34x8nngnl"]
+
+[ext_resource type="Texture2D" uid="uid://cgulswnk8dixw" path="res://icon.svg" id="1_fa0ol"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_p42ce"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_t87h6"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_sb0g4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rd8t"]
+albedo_texture = ExtResource("1_fa0ol")
+
+[node name="male_chick" type="RigidBody3D"]
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_p42ce")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
+shape = SubResource("SphereShape3D_t87h6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_sb0g4")
+skeleton = NodePath("../Area3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_1rd8t")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

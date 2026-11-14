@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://character_body_3d.gd" id="1_coge5"]
 [ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="2_fkxo1"]
-[ext_resource type="PackedScene" uid="uid://6ntoukbhnxjy" path="res://Chick.tscn" id="3_daqws"]
 [ext_resource type="PackedScene" uid="uid://clodp8jr5a6ga" path="res://pouleanime.tscn" id="4_0g12c"]
 [ext_resource type="PackedScene" uid="uid://pu6efshxol71" path="res://rabbit_model.tscn" id="5_gamoy"]
+[ext_resource type="PackedScene" uid="uid://bkru8ife5aq0y" path="res://chicken.tscn" id="5_p4ujc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fkxo1"]
 
@@ -51,18 +51,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_fkxo1")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44526482, 1.1388335)
 fov = 93.84055
-
-[node name="Chick" parent="." instance=ExtResource("3_daqws")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.227989, 9.162504, 0)
-
-[node name="Chick2" parent="." instance=ExtResource("3_daqws")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6455564, 8.781688)
-
-[node name="Chick3" parent="." instance=ExtResource("3_daqws")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.277223, 8.783419, 0)
-
-[node name="Chick4" parent="." instance=ExtResource("3_daqws")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.453464, -6.9914875)
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
 transform = Transform3D(-12.718792, -0.17364818, -2.5947081e-06, -2.2426662, 0.9848077, 0, 1.1119121e-06, 1.5180806e-08, -29.68, 89.0958, -16.424698, 0)
@@ -112,3 +100,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7996429, 0.49999988, 0.915
 
 [node name="rabbit_model" parent="." instance=ExtResource("5_gamoy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3684477, 0.5, 2.9949589)
+
+[node name="Chicken" parent="." instance=ExtResource("5_p4ujc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.633192, 5.83336, 0)
+
+[node name="Chicken2" parent="." instance=ExtResource("5_p4ujc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.089616, 7.086986, 0)
+
+[node name="Chicken3" parent="." instance=ExtResource("5_p4ujc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.3268466, 6.1047993)
+
+[node name="Chicken4" parent="." instance=ExtResource("5_p4ujc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.754731, 0)
