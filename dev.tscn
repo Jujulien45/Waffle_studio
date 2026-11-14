@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkxx64rjjt2ns"]
+[gd_scene load_steps=9 format=3 uid="uid://bkxx64rjjt2ns"]
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://character_body_3d.gd" id="1_coge5"]
 [ext_resource type="Texture2D" uid="uid://cgulswnk8dixw" path="res://icon.svg" id="2_fkxo1"]
+[ext_resource type="PackedScene" uid="uid://6ntoukbhnxjy" path="res://Chick.tscn" id="3_daqws"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fkxo1"]
 
@@ -42,3 +43,15 @@ surface_material_override/0 = SubResource("StandardMaterial3D_fkxo1")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44526482, 1.1388335)
 fov = 93.84055
+
+[node name="Chick" parent="." instance=ExtResource("3_daqws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.227989, 9.162504, 0)
+
+[node name="Chick2" parent="." instance=ExtResource("3_daqws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6455564, 8.781688)
+
+[node name="Chick3" parent="." instance=ExtResource("3_daqws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.277223, 8.783419, 0)
+
+[node name="Chick4" parent="." instance=ExtResource("3_daqws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.453464, -6.9914875)

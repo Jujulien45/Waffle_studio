@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://6ntoukbhnxjy"]
+
+[ext_resource type="Script" uid="uid://bbp1il4kn4ohq" path="res://chick.gd" id="1_2hhta"]
+[ext_resource type="Texture2D" uid="uid://cgulswnk8dixw" path="res://icon.svg" id="2_6usit"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6usit"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vgagl"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_vgagl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l2guy"]
+albedo_texture = ExtResource("2_6usit")
+
+[node name="Chick" type="RigidBody3D"]
+mass = 10.0
+script = ExtResource("1_2hhta")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_6usit")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
+shape = SubResource("SphereShape3D_vgagl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_vgagl")
+skeleton = NodePath("../Area3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_l2guy")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

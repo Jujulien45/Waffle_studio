@@ -67,3 +67,7 @@ func _input(event: InputEvent) -> void:
 			get_tree().quit()
 		if event.pressed and event.keycode == KEY_P:
 			paused = not paused
+
+
+func add_chick():
+	pass
