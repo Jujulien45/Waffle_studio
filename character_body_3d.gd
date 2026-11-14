@@ -4,8 +4,15 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+var rotx = 0.0
+var roty = 0.0
+
+@export var sensitivity = 0.003
 
 func _physics_process(delta: float) -> void:
+	
+	$Camera3D.rotation = Vector3(roty,rotx,0.0)
+	$Camera3D.position = Vector3(0,0,4).rotated(Vector3(1,0,0),roty).rotated(Vector3(0,1,0),rotx)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -26,3 +33,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		var move = event.relative
+		rotx -= move.x * sensitivity
+		roty -= move.y * sensitivity
+		
+		roty = max(min(0, roty), -PI/2)
