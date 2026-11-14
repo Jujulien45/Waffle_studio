@@ -13,7 +13,7 @@ var camera
 
 func _ready() -> void:
 	camera = $Camera3D
-	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta: float) -> void:
 	
@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# As good practice, you should replace UI actions with custom gameplay actions.zzzzzzzzzzzzzzzzzz    
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction : Vector3 = (camera.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() #Vector3(input_dir.x * cam_transform_x , 0,  input_dir.y * cam_transform_z).normalized()
 	if direction:
@@ -42,9 +42,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _input(event: InputEvent) -> void:
+	
 	if event is InputEventMouseMotion:
 		var move = event.relative
 		rotx -= move.x * sensitivity
 		roty -= move.y * sensitivity
 		
 		roty = max(min(0, roty), -PI/2)
+
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_ESCAPE:
+			get_tree().quit()
