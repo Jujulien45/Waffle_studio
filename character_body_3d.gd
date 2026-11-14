@@ -3,6 +3,7 @@ extends CharacterBody3D
 var egg = preload("res://egg.tscn")
 
 const ACELERATION = 5
+const DASH_ACCEL = 20
 const FRICTION = 0.4  
 const JUMP_VELOCITY = 7
 
@@ -12,6 +13,10 @@ var roty = 0.0
 var radius
 
 var double_jumped = false
+var dir = null
+
+var dash_time = -5000
+var dash_available = true
 
 var paused = false
 
@@ -60,6 +65,7 @@ func _physics_process(delta: float) -> void:
 		cam_basis.y.x = 0
 		cam_basis.y.z = 0
 		var direction : Vector3 = (cam_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		dir = direction
 		if direction:
 			velocity.x += direction.x * ACELERATION * delta
 			velocity.z += direction.z * ACELERATION * delta
@@ -76,6 +82,10 @@ func _physics_process(delta: float) -> void:
 		$MeshInstance3D.basis = $MeshInstance3D.basis.rotated(local_axis.normalized(), angle)
 			
 		move_and_slide()
+		
+		if(not dash_available):
+			if(Time.get_ticks_msec() > 4000 + dash_time):
+				dash_available = true
 
 func _input(event: InputEvent) -> void:
 	
@@ -91,7 +101,12 @@ func _input(event: InputEvent) -> void:
 			get_tree().quit()
 		if event.pressed and event.keycode == KEY_P:
 			paused = not paused
-
+		if event.pressed and event.keycode == KEY_E and not paused:
+			if(dir and dash_available):
+				velocity.x += dir.x * DASH_ACCEL
+				velocity.z += dir.z * DASH_ACCEL
+				dash_time = Time.get_ticks_msec()
+				dash_available = false
 
 func add_chick():
 	pass
