@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://h80a4rvqlm01"]
 
 [ext_resource type="Script" uid="uid://dm84owpqvvv77" path="res://ending.gd" id="1_fsb5k"]
-[ext_resource type="AudioStream" uid="uid://dfsqw6lrriuy0" path="res://assets/sfx/voicelines/coq/coqVL.01.coq1.wav" id="2_4jooh"]
+[ext_resource type="AudioStream" uid="uid://fnmu2m3vk143" path="res://assets/end.wav" id="2_4jooh"]
 [ext_resource type="Texture2D" uid="uid://ckyseuxucg1gt" path="res://assets/pictures/poulegie.png" id="3_4jooh"]
 [ext_resource type="Texture2D" uid="uid://cm832mx38sre5" path="res://assets/pictures/black_screen.png" id="3_iggq8"]
 
@@ -21,7 +21,6 @@ offset_bottom = 1050.0
 texture = ExtResource("3_4jooh")
 
 [node name="black" type="TextureRect" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("3_iggq8")
