@@ -1,0 +1,78 @@
+[gd_scene load_steps=22 format=3 uid="uid://b5bwbeu1y1ydi"]
+
+[ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://player.gd" id="1_606se"]
+[ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="2_u1c27"]
+[ext_resource type="AudioStream" uid="uid://bwo6q6iju7jbs" path="res://RandomizerStream/pickup.tres" id="3_op7ga"]
+[ext_resource type="AudioStream" uid="uid://dnxlxaj124qei" path="res://assets/sfx/dragon-studio-pop-402324.mp3" id="4_q13i1"]
+[ext_resource type="AudioStream" uid="uid://6ni6nfdi8o8t" path="res://assets/sfx/oeuf.mp3" id="5_pylmc"]
+[ext_resource type="AudioStream" uid="uid://dfsqw6lrriuy0" path="res://assets/sfx/voicelines/coq/coqVL.01.coq1.wav" id="6_pbfsw"]
+[ext_resource type="AudioStream" uid="uid://cxsn53uuabdwu" path="res://assets/sfx/voicelines/coq/coqVL.03.coq3.wav" id="7_5tmop"]
+[ext_resource type="AudioStream" uid="uid://y3fuy2hqw2cv" path="res://assets/sfx/voicelines/coq/coqVL.04.coq4.wav" id="8_7ahtn"]
+[ext_resource type="AudioStream" uid="uid://cvvkcay3dt7vb" path="res://assets/sfx/voicelines/coq/coqVL.05.coq5.wav" id="9_7lmhl"]
+[ext_resource type="AudioStream" uid="uid://dexgmku5hs7kw" path="res://assets/sfx/voicelines/coq/coqVL.06.coq6.wav" id="10_dx0e4"]
+[ext_resource type="AudioStream" uid="uid://bjr31mxtkkbnn" path="res://assets/sfx/voicelines/coq/coqVL.07.coq7.wav" id="11_jm5j8"]
+[ext_resource type="AudioStream" uid="uid://rmigrghnbyxl" path="res://assets/sfx/voicelines/coq/coqVL.08.coq8.wav" id="12_7hik5"]
+[ext_resource type="AudioStream" uid="uid://biqsr6tuuyb17" path="res://assets/sfx/voicelines/coq/coqVL.09.coq9.wav" id="13_qtqh7"]
+[ext_resource type="AudioStream" uid="uid://dhbd3pdrcddh6" path="res://assets/sfx/voicelines/coq/coqVL.11.coq11.wav" id="14_2wuci"]
+[ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="15_iruf7"]
+[ext_resource type="PackedScene" uid="uid://biasbeaubjat4" path="res://player_hud.tscn" id="16_u1c27"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0g12c"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_coge5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkxo1"]
+albedo_texture = ExtResource("2_u1c27")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vm5kt"]
+streams_count = 10
+stream_0/stream = ExtResource("6_pbfsw")
+stream_1/stream = ExtResource("7_5tmop")
+stream_2/stream = ExtResource("8_7ahtn")
+stream_3/stream = ExtResource("9_7lmhl")
+stream_4/stream = ExtResource("10_dx0e4")
+stream_5/stream = ExtResource("11_jm5j8")
+stream_6/stream = ExtResource("12_7hik5")
+stream_7/stream = ExtResource("13_qtqh7")
+stream_8/stream = ExtResource("14_2wuci")
+stream_9/stream = ExtResource("15_iruf7")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7wi0t"]
+radius = 0.2
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_606se")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_0g12c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_coge5")
+surface_material_override/0 = SubResource("StandardMaterial3D_fkxo1")
+
+[node name="pickup" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_op7ga")
+
+[node name="lay_egg" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_q13i1")
+
+[node name="jump" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_pylmc")
+
+[node name="voicelines" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_vm5kt")
+
+[node name="PivotCamera" type="Node3D" parent="."]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="PivotCamera"]
+shape = SubResource("SphereShape3D_7wi0t")
+spring_length = 5.0
+margin = 0.005
+
+[node name="Camera3D" type="Camera3D" parent="PivotCamera/SpringArm3D"]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("16_u1c27")]
+
+[connection signal="finished" from="pickup" to="." method="_on_pickup_finished"]
+[connection signal="finished" from="jump" to="." method="_on_jump_finished"]
+[connection signal="finished" from="voicelines" to="." method="_on_voicelines_finished"]
