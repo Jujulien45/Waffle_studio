@@ -1,8 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://cjo7cpv4c2c53"]
+[gd_scene load_steps=41 format=3 uid="uid://cjo7cpv4c2c53"]
 
 [ext_resource type="Script" uid="uid://b8mex6n83r8b0" path="res://barnlv_1.gd" id="1_fh1oy"]
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://player.gd" id="2_7rax8"]
-[ext_resource type="Texture2D" uid="uid://dr0vqkdbpewtf" path="res://assets/pictures/sky.jpg" id="2_g8myq"]
 [ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="3_0jm4f"]
 [ext_resource type="AudioStream" uid="uid://bwo6q6iju7jbs" path="res://RandomizerStream/pickup.tres" id="3_6bweg"]
 [ext_resource type="PackedScene" uid="uid://cp0k7litdqsvj" path="res://grange.tscn" id="3_x2eys"]
@@ -32,16 +31,6 @@
 [ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="15_fh1oy"]
 [ext_resource type="PackedScene" uid="uid://byaif553kd3ok" path="res://prop_hay_bale_square_02.tscn" id="16_aisrd"]
 [ext_resource type="PackedScene" uid="uid://df8y6jn3mkkjx" path="res://bld_01_fence_wood_gate_double_handle_01.tscn" id="17_uc47n"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_r64e7"]
-panorama = ExtResource("2_g8myq")
-
-[sub_resource type="Sky" id="Sky_mmphc"]
-sky_material = SubResource("PanoramaSkyMaterial_r64e7")
-
-[sub_resource type="Environment" id="Environment_iolw2"]
-background_mode = 2
-sky = SubResource("Sky_mmphc")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cri2b"]
 
@@ -102,11 +91,8 @@ size = Vector3(10.094238, 12.233887, 1)
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_fh1oy")
 
-[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_iolw2")
-
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1.6490294, 0, 0, 0, 1.6490294, 0, 0, 0, 1.6490294, 22.028154, 37.22005, 51.7538)
+transform = Transform3D(1.6490294, 0, 0, 0, 1.6490294, 0, 0, 0, 1.6490294, 22.028154, -1.1064528, 51.7538)
 script = ExtResource("2_7rax8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
