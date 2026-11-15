@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b5bwbeu1y1ydi"]
+[gd_scene load_steps=21 format=3 uid="uid://b5bwbeu1y1ydi"]
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://player.gd" id="1_606se"]
 [ext_resource type="AudioStream" uid="uid://bwo6q6iju7jbs" path="res://RandomizerStream/pickup.tres" id="3_op7ga"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="15_iruf7"]
 [ext_resource type="PackedScene" uid="uid://07pfosgp7o3g" path="res://assets/assets1/ChickenBrown.fbx" id="16_op7ga"]
 [ext_resource type="PackedScene" uid="uid://biasbeaubjat4" path="res://player_hud.tscn" id="16_u1c27"]
+[ext_resource type="AudioStream" uid="uid://dw374ykwxanq8" path="res://assets/sfx/voicelines/coq/coqVL.10.coq10.wav" id="17_op7ga"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0g12c"]
 
@@ -78,9 +79,12 @@ one_shot = true
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 
+[node name="cocorico" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("17_op7ga")
+
 [connection signal="finished" from="pickup" to="." method="_on_pickup_finished"]
 [connection signal="finished" from="jump" to="." method="_on_jump_finished"]
 [connection signal="finished" from="voicelines" to="." method="_on_voicelines_finished"]
-[connection signal="timeout" from="warning_timer" to="." method="_on_warning_timer_timeout"]
 [connection signal="timeout" from="warning_timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="warning_timer" to="." method="_on_warning_timer_timeout"]
 [connection signal="timeout" from="jump_sound_delay" to="." method="_on_jump_sound_delay_timeout"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://2358hdckow0m"]
 
-[ext_resource type="Script" path="res://ptnlvl_3enfinilest_7h.gd" id="1_flo2v"]
+[ext_resource type="Script" uid="uid://c0880pn6nq44m" path="res://ptnlvl_3enfinilest_7h.gd" id="1_flo2v"]
 [ext_resource type="PackedScene" uid="uid://b5bwbeu1y1ydi" path="res://player.tscn" id="3_qtuxb"]
 [ext_resource type="PackedScene" uid="uid://c46177kxv8076" path="res://breakable_floor.tscn" id="4_556px"]
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="5_c7pun"]
@@ -68,7 +68,7 @@ environment = SubResource("Environment_aon40")
 transform = Transform3D(-49.990498, 0, -0.97469634, 0, 50, 0, 0.97469634, 0, -49.990498, 33.925114, -6.2423663, 297.68478)
 
 [node name="Player" parent="." instance=ExtResource("3_qtuxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.653973, -3.1398633, 287.25867)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 11.653973, -3.1398633, 287.25867)
 
 [node name="Chicken" parent="." instance=ExtResource("17_o8qhx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.588455, 8.47875, 284.66986)

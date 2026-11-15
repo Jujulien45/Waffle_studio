@@ -34,6 +34,7 @@ var camera
 @onready var cast  = $RayCast3D
 
 
+@onready var cocorico: AudioStreamPlayer3D = $cocorico
 @onready var progress_bar : ProgressBar = $CanvasLayer/Control/ProgressBar
 @onready var progress_label : Label = $CanvasLayer/Control/Progress_label
 @onready var warning_label : Label = $CanvasLayer/Control/Warning
@@ -58,6 +59,7 @@ var warning = false
 @export var WARNING_DURATION = 5
 
 var num_sounds_playing = 0
+var played_cocorico = false
 
 
 func _ready() -> void:
@@ -161,7 +163,7 @@ func _input(event: InputEvent) -> void:
 				dash_available = false
 		if event.pressed and event.keycode == KEY_CTRL and not ground_pound and not paused:
 			ground_pound = true
-			velocity.y -= 5*JUMP_VELOCITY
+			velocity.y -= 5 * JUMP_VELOCITY
 
 
 func _process(_delta: float) -> void:
@@ -173,11 +175,14 @@ func _process(_delta: float) -> void:
 
 		if picked_up_chicks >= total_chicks:
 			has_all_chicks = true
+			if not played_cocorico:
+				cocorico.play()
+				played_cocorico = false
 		else:
 			has_all_chicks = false
 
 func play_sound(sound: AudioStreamPlayer3D, ignore_cap = false) -> void:
-	if num_sounds_playing < 4 or ignore_cap:
+	if num_sounds_playing < 3 or ignore_cap:
 		num_sounds_playing += 1
 		sound.play()
 		sound.finished.connect(_on_audio_finished.bind(sound), CONNECT_ONE_SHOT)
