@@ -1,7 +1,9 @@
+
 [gd_scene load_steps=28 format=3 uid="uid://bkxx64rjjt2ns"]
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://player.gd" id="1_coge5"]
 [ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="2_fkxo1"]
+
 [ext_resource type="AudioStream" uid="uid://bwo6q6iju7jbs" path="res://RandomizerStream/pickup.tres" id="3_p4ujc"]
 [ext_resource type="AudioStream" uid="uid://dnxlxaj124qei" path="res://assets/sfx/dragon-studio-pop-402324.mp3" id="4_ofiah"]
 [ext_resource type="AudioStream" uid="uid://6ni6nfdi8o8t" path="res://assets/sfx/oeuf.mp3" id="5_6r40v"]
@@ -18,6 +20,10 @@
 [ext_resource type="AudioStream" uid="uid://dhbd3pdrcddh6" path="res://assets/sfx/voicelines/coq/coqVL.11.coq11.wav" id="14_mn5um"]
 [ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="15_ue33a"]
 [ext_resource type="PackedScene" uid="uid://dinponx3j8uqb" path="res://crate.tscn" id="19_3m4xw"]
+[ext_resource type="PackedScene" path="res://pouleanime.tscn" id="4_0g12c"]
+[ext_resource type="PackedScene" path="res://rabbit_model.tscn" id="5_gamoy"]
+[ext_resource type="PackedScene" path="res://chicken.tscn" id="5_p4ujc"]
+[ext_resource type="PackedScene" uid="uid://c46177kxv8076" path="res://breakable_floor.tscn" id="6_p4ujc"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0g12c"]
 
