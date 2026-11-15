@@ -26,5 +26,5 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 func _on_timer_timeout() -> void:
 	if not player.is_playing_audio:
-		voicelines.play()
+		player.play_sound(voicelines)
 	schedule_next_sound()

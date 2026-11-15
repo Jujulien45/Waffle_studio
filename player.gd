@@ -57,6 +57,8 @@ var warning = false
 @export var WARNING_BLINK_DELAY = 0.5
 @export var WARNING_DURATION = 5
 
+var num_sounds_playing = 0
+
 
 func _ready() -> void:
 	jump_stream_player = $jump
@@ -173,11 +175,19 @@ func _process(_delta: float) -> void:
 			has_all_chicks = true
 		else:
 			has_all_chicks = false
+		print(num_sounds_playing)
+func play_sound(sound: AudioStreamPlayer3D, ignore_cap = false) -> void:
+	if num_sounds_playing < 2 or ignore_cap:
+		num_sounds_playing += 1
+		sound.play()
+		sound.finished.connect(_on_audio_finished.bind(sound), CONNECT_ONE_SHOT)
 
+func _on_audio_finished(sound: AudioStreamPlayer3D) -> void:
+	num_sounds_playing -= 1
 
 func pick_up_chick():
 	is_playing_audio = true
-	Pickup_steam_player.play()
+	play_sound(Pickup_steam_player, true)
 
 func add_chick():
 	total_chicks += 1
@@ -190,7 +200,7 @@ func start_warning() -> void:
 	warning_label.visible = true
 
 func _on_pickup_finished() -> void:
-	voicelines_audio.play()
+	play_sound(voicelines_audio, true)
 
 
 func _on_voicelines_finished() -> void:
@@ -203,5 +213,5 @@ func _on_warning_timer_timeout() -> void:
 
 
 func _on_jump_sound_delay_timeout() -> void:
-	jump_stream_player.play()
+	play_sound(jump_stream_player, true)
 	
