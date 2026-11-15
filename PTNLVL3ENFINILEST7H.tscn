@@ -5,7 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://c46177kxv8076" path="res://breakable_floor.tscn" id="4_556px"]
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="5_c7pun"]
 [ext_resource type="PackedScene" uid="uid://c35yrjjsyjipx" path="res://tobogan.tscn" id="6_rwmjy"]
-[ext_resource type="Texture2D" uid="uid://by7mo7x6lpgmu" path="res://Poolrooms-4.jpg" id="8_j3xmy"]
+[ext_resource type="PackedScene" uid="uid://birci87xxngjb" path="res://bld_well_02.tscn" id="9_48jeo"]
+[ext_resource type="PackedScene" uid="uid://cg3uln7s033oc" path="res://plank.tscn" id="10_1wjfi"]
+[ext_resource type="PackedScene" uid="uid://dtbmg0i3r6kbt" path="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/FBX Format (Unity)/Prop_Plank_Stack_01.fbx" id="11_13fn1"]
+[ext_resource type="PackedScene" uid="uid://df8y6jn3mkkjx" path="res://bld_01_fence_wood_gate_double_handle_01.tscn" id="11_vhh78"]
 [ext_resource type="PackedScene" uid="uid://cilnm87mkwntc" path="res://bld_chicken_coop_02.tscn" id="16_78rg5"]
 [ext_resource type="PackedScene" uid="uid://bkru8ife5aq0y" path="res://chicken.tscn" id="17_o8qhx"]
 
@@ -39,16 +42,8 @@ volumetric_fog_anisotropy = 0.5
 volumetric_fog_length = 256.0
 volumetric_fog_ambient_inject = 0.1
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_j3xmy"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48jeo"]
-albedo_texture = ExtResource("8_j3xmy")
-
-[sub_resource type="BoxMesh" id="BoxMesh_48jeo"]
-lightmap_size_hint = Vector2i(13, 19)
-uv2_padding = 1.51
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_1wjfi"]
+size = Vector3(10.529449, 9.62262, 0.001)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_flo2v")
@@ -485,21 +480,41 @@ transform = Transform3D(9.449889, 0, 3.2710245, 0, 10, 0, -3.2710245, 0, 9.44988
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+[node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(0.95, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
-shape = SubResource("BoxShape3D_j3xmy")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
-transform = Transform3D(2.6416047, 0, 0, 0, 2.6416047, 0, 0, 0, 2.6416047, 60.880817, -258.00348, 365.28546)
-material_override = SubResource("StandardMaterial3D_48jeo")
-mesh = SubResource("BoxMesh_48jeo")
-
-[node name="Area3D" type="Area3D" parent="StaticBody3D2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2/Area3D"]
-transform = Transform3D(2.025, 0, 0, 0, 2.025, 0, 0, 0, 2.025, 0, 0, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2.025, 0, 0, 0, 2.025, 0, 0, 0, 2.025, 55.539055, -235.993, 348.24432)
 shape = SubResource("BoxShape3D_1wjfi")
 
-[connection signal="body_entered" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
+[node name="Bld_Well_02" parent="." instance=ExtResource("9_48jeo")]
+transform = Transform3D(10.125, 0, 0, 0, 10.125, 0, 0, 0, 10.125, 51.302513, -8.353113, 327.64075)
+
+[node name="Prop_Plank_01" parent="." instance=ExtResource("10_1wjfi")]
+transform = Transform3D(71.686, 0, 0, 0, -4.4410772e-08, -40.558, 0, 1.016, -1.7728464e-06, 50.76667, -75.78362, 320.25345)
+
+[node name="Prop_Plank_02" parent="." instance=ExtResource("10_1wjfi")]
+transform = Transform3D(74.815, 0, 0, 0, -4.633407e-08, -34.619, 0, 1.06, -1.5132446e-06, 50.76667, -65.90985, 335.66312)
+
+[node name="Prop_Plank_03" parent="." instance=ExtResource("10_1wjfi")]
+transform = Transform3D(-3.4451132e-06, 1, -1.7447401e-06, 0, -4.371139e-08, -39.915, -78.815, -4.371139e-08, 7.626501e-14, 58.417336, -74.264885, 327.7076)
+
+[node name="Prop_Plank_04" parent="." instance=ExtResource("10_1wjfi")]
+transform = Transform3D(-3.4451132e-06, 1, -1.7447401e-06, 0, -4.371139e-08, -39.915, -78.815, -4.371139e-08, 7.626501e-14, 43.737087, -74.264885, 327.7076)
+
+[node name="Prop_Plank_Stack_01" parent="." instance=ExtResource("11_13fn1")]
+transform = Transform3D(-1.6577653, -4.7949724, 4.7025394, 0, 6.872599, 3.5578644, -5.7060647, 1.3930686, -1.3662142, 47.92148, -125.85734, 336.56967)
+
+[node name="Prop_Plank_Stack_02" parent="." instance=ExtResource("11_13fn1")]
+transform = Transform3D(-2.0030203, 6.3450747, 3.4691617, 0, 5.171428, -4.802168, -5.5942173, -2.2718663, -1.24214, 45.61571, -143.60489, 336.56967)
+
+[node name="Bld_01_Fence_Wood_Gate_Double_Handle_02" parent="." instance=ExtResource("11_vhh78")]
+transform = Transform3D(-1.5145997e-06, 0, 14.495, 0, 14.495, 0, -34.65, 0, -6.335966e-07, 80.367065, -5.1459637, 314.05563)
+
+[node name="Bld_01_Fence_Wood_Gate_Double_Handle_03" parent="." instance=ExtResource("11_vhh78")]
+transform = Transform3D(-1.5145997e-06, 0, 14.495, 0, 14.495, 0, -34.65, 0, -6.335966e-07, 15.940863, -3.342987, 318.34445)
+
+[node name="Bld_01_Fence_Wood_Gate_Double_Handle_04" parent="." instance=ExtResource("11_vhh78")]
+transform = Transform3D(38.62, 0, 0, 0, 14.495, 0, 0, 0, 14.495, 85.33143, -4.3472824, 380.80215)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
