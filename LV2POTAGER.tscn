@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="1_7qbri"]
 [ext_resource type="Script" uid="uid://bbddv4hurbbcn" path="res://lv_2potager.gd" id="1_sd4mx"]
-
 [ext_resource type="PackedScene" uid="uid://df8y6jn3mkkjx" path="res://bld_01_fence_wood_gate_double_handle_01.tscn" id="17_vxc5f"]
 [ext_resource type="PackedScene" uid="uid://dda3e6fddlfg" path="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/FBX Format/Bld_Barn_01.fbx" id="18_uu322"]
 [ext_resource type="PackedScene" uid="uid://eu1d0w2mj1di" path="res://env_dirt_rows_long_bottom_end_watered_01.tscn" id="19_uu322"]
@@ -655,7 +654,6 @@ transform = Transform3D(6.4164586, 0, -8.9347105, 0, 11, 0, 8.9347105, 0, 6.4164
 transform = Transform3D(9.977546, 1.5745571, -6.4783807, 2.1748095, 10.25401, 5.841702, 6.3022885, -6.031259, 8.240455, 19.636326, -3.443737, 237.76297)
 
 [node name="Player" parent="." instance=ExtResource("23_8n7aj")]
-
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.930666, 13.36752, 32.28454)
 
 [node name="Area3D" type="Area3D" parent="."]
