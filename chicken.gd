@@ -13,3 +13,4 @@ func _ready() -> void:
 	
 	add_child(instance)
 	instance.global_position = global_position
+	rotation_degrees.y = randi_range(0, 360)

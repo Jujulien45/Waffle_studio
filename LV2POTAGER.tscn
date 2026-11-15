@@ -719,6 +719,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.823915, 8.211586, 275.5635
 shape = SubResource("BoxShape3D_8kcsw")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-=======
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.939659, 0, 20.92966)
->>>>>>> f100324 (finally)
