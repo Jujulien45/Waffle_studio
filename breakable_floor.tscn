@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://c46177kxv8076"]
+
+[ext_resource type="Script" uid="uid://dr16mgevgc4bm" path="res://breakable_floor.gd" id="1_os7hb"]
+[ext_resource type="PackedScene" uid="uid://c6wmk8s2e4q8c" path="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/GLB Format/Prop_Plank_01.glb" id="2_tm576"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tm576"]
+size = Vector3(1, 0.10644531, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_degm0"]
+size = Vector3(1, 1.0976563, 1)
+
+[node name="floor" type="StaticBody3D"]
+script = ExtResource("1_os7hb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44677734, 0)
+shape = SubResource("BoxShape3D_tm576")
+
+[node name="Prop_Plank_012" parent="." instance=ExtResource("2_tm576")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.285, 0.3900408, 0.405901, 0.0027206242)
+
+[node name="Prop_Plank_013" parent="." instance=ExtResource("2_tm576")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.285, 0.1334368, 0.405901, 0.0027206242)
+
+[node name="Prop_Plank_015" parent="." instance=ExtResource("2_tm576")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.285, -0.13122052, 0.405901, 0.0027206242)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9532362, 0)
+shape = SubResource("BoxShape3D_degm0")
+
+[node name="Prop_Plank_014" parent="." instance=ExtResource("2_tm576")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.285, -0.4011833, 0.405901, 0.0027206242)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
