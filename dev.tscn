@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://player.gd" id="1_coge5"]
 [ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="2_fkxo1"]
 [ext_resource type="AudioStream" uid="uid://bwo6q6iju7jbs" path="res://RandomizerStream/pickup.tres" id="3_p4ujc"]
-[ext_resource type="PackedScene" uid="uid://clodp8jr5a6ga" path="res://pouleanime.tscn" id="4_0g12c"]
 [ext_resource type="AudioStream" uid="uid://dnxlxaj124qei" path="res://assets/sfx/dragon-studio-pop-402324.mp3" id="4_ofiah"]
 [ext_resource type="AudioStream" uid="uid://6ni6nfdi8o8t" path="res://assets/sfx/oeuf.mp3" id="5_6r40v"]
 [ext_resource type="PackedScene" uid="uid://pu6efshxol71" path="res://rabbit_model.tscn" id="5_gamoy"]
@@ -40,6 +39,9 @@ stream_7/stream = ExtResource("13_cnd6s")
 stream_8/stream = ExtResource("14_mn5um")
 stream_9/stream = ExtResource("15_ue33a")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_7wi0t"]
+radius = 0.2
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_fkxo1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_daqws"]
@@ -65,10 +67,6 @@ shape = SubResource("SphereShape3D_0g12c")
 mesh = SubResource("SphereMesh_coge5")
 surface_material_override/0 = SubResource("StandardMaterial3D_fkxo1")
 
-[node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44526482, 1.1388335)
-fov = 93.84055
-
 [node name="pickup" type="AudioStreamPlayer3D" parent="Player"]
 stream = ExtResource("3_p4ujc")
 
@@ -80,6 +78,15 @@ stream = ExtResource("5_6r40v")
 
 [node name="voicelines" type="AudioStreamPlayer3D" parent="Player"]
 stream = SubResource("AudioStreamRandomizer_vm5kt")
+
+[node name="PivotCamera" type="Node3D" parent="Player"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Player/PivotCamera"]
+shape = SubResource("SphereShape3D_7wi0t")
+spring_length = 5.0
+margin = 0.005
+
+[node name="Camera3D" type="Camera3D" parent="Player/PivotCamera/SpringArm3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(31.93, 0, 0, 0, 1, 0, 0, 0, 29.68, 0, 0, 0)
@@ -134,8 +141,18 @@ mesh = SubResource("BoxMesh_daqws")
 [node name="pouleanim" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20035708, 0.5000001, 2.0844655)
 
-[node name="chicken_model2" parent="pouleanim" instance=ExtResource("4_0g12c")]
+[node name="chicken_model2" parent="pouleanim"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7996429, 0.49999988, 0.9155345)
+script = null
 
 [node name="rabbit_model" parent="." instance=ExtResource("5_gamoy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3684477, 0.5, 2.9949589)
