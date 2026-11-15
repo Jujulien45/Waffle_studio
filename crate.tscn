@@ -1,10 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dinponx3j8uqb"]
+[gd_scene load_steps=5 format=3 uid="uid://bb2wr3t8rmw4g"]
 
-[ext_resource type="Script" uid="uid://1d2jpjsavhjf" path="res://crate.gd" id="1_uep05"]
+[ext_resource type="Script" path="res://crate.gd" id="1_uep05"]
+[ext_resource type="PackedScene" uid="uid://dw5qt4v804ovy" path="res://assets/assets4/FREE_VERSION_30_MODELS/FBX/Filled Vegetable Crate.fbx" id="2_mo0jf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mo0jf"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_ggnq6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_44j4e"]
 
@@ -15,9 +14,8 @@ script = ExtResource("1_uep05")
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 shape = SubResource("BoxShape3D_mo0jf")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_ggnq6")
-skeleton = NodePath("")
+[node name="Filled Vegetable Crate" parent="." instance=ExtResource("2_mo0jf")]
+transform = Transform3D(1.3428751, 0, 0, 0, 1.9442294, 0, 0, 0, 1.8492895, -0.020433486, -0.43966115, -0.028026462)
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
