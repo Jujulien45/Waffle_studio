@@ -1,13 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://h80a4rvqlm01"]
 
 [ext_resource type="Script" uid="uid://dm84owpqvvv77" path="res://ending.gd" id="1_fsb5k"]
-[ext_resource type="AudioStream" uid="uid://dfsqw6lrriuy0" path="res://assets/sfx/voicelines/coq/coqVL.01.coq1.wav" id="2_4jooh"]
-[ext_resource type="Texture2D" uid="uid://dstxis15t28f4" path="res://assets/pictures/placeholder_end.png" id="2_dmh3q"]
+[ext_resource type="AudioStream" uid="uid://fnmu2m3vk143" path="res://assets/end.wav" id="2_4jooh"]
+[ext_resource type="Texture2D" uid="uid://ckyseuxucg1gt" path="res://assets/pictures/poulegie.png" id="3_4jooh"]
 [ext_resource type="Texture2D" uid="uid://cm832mx38sre5" path="res://assets/pictures/black_screen.png" id="3_iggq8"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_iggq8"]
+[sub_resource type="LabelSettings" id="LabelSettings_4jooh"]
 font_size = 100
-font_color = Color(0.15564886, 0.36027864, 0, 1)
 
 [node name="ending" type="Node2D"]
 script = ExtResource("1_fsb5k")
@@ -19,17 +18,17 @@ stream = ExtResource("2_4jooh")
 [node name="ending_picture" type="TextureRect" parent="."]
 offset_right = 1679.0
 offset_bottom = 1050.0
-texture = ExtResource("2_dmh3q")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 592.0
-offset_top = 243.0
-offset_right = 766.0
-offset_bottom = 380.0
-text = "Jaaj"
-label_settings = SubResource("LabelSettings_iggq8")
+texture = ExtResource("3_4jooh")
 
 [node name="black" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("3_iggq8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 715.0
+offset_top = 169.0
+offset_right = 1016.0
+offset_bottom = 306.0
+text = "GGWP"
+label_settings = SubResource("LabelSettings_4jooh")

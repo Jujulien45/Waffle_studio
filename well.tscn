@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtevj6753kit6"]
+
+[ext_resource type="PackedScene" uid="uid://w4gy1xaikv1y" path="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/FBX Format (Unity)/Bld_Well_02.fbx" id="1_rymds"]
+
+[node name="Bld_Well_02" instance=ExtResource("1_rymds")]
