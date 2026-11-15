@@ -164,17 +164,15 @@ func _process(_delta: float) -> void:
 		picked_up_chicks = total_chicks - get_tree().get_node_count_in_group("Chicken")
 		progress_label.text = str(picked_up_chicks) + "/" + str(total_chicks)
 		progress_bar.value = picked_up_chicks
+		progress_bar.max_value = total_chicks
 
 
 func pick_up_chick():
 	is_playing_audio = true
 	Pickup_steam_player.play()
-	start_warning()
 
 func add_chick():
 	total_chicks += 1
-	progress_label.text = str(picked_up_chicks) + "/" + str(total_chicks)
-	progress_bar.max_value = total_chicks
 
 
 func start_warning() -> void:
