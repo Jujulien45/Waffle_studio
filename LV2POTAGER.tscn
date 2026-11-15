@@ -655,7 +655,8 @@ transform = Transform3D(6.4164586, 0, -8.9347105, 0, 11, 0, 8.9347105, 0, 6.4164
 transform = Transform3D(9.977546, 1.5745571, -6.4783807, 2.1748095, 10.25401, 5.841702, 6.3022885, -6.031259, 8.240455, 19.636326, -3.443737, 237.76297)
 
 [node name="Player" parent="." instance=ExtResource("23_8n7aj")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.930666, 13.36752, 32.28454)
+
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.930666, 13.36752, 32.28454)
 
 [node name="Area3D" type="Area3D" parent="."]
 

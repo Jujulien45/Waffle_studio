@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://biasbeaubjat4"]
+[gd_scene load_steps=5 format=3 uid="uid://biasbeaubjat4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5sskr"]
 font_size = 32
@@ -8,6 +8,9 @@ font_size = 32
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_cs3pk"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_6vp4k"]
 font_size = 50
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -76,12 +79,22 @@ horizontal_alignment = 1
 
 [node name="Pause" type="Label" parent="."]
 visible = false
-offset_left = 759.0
-offset_top = 366.0
-offset_right = 1067.0
-offset_bottom = 579.0
+offset_left = 688.0
+offset_top = 369.0
+offset_right = 996.0
+offset_bottom = 582.0
 text = "Paused
 Esc to Quit
 P to upsause"
 label_settings = SubResource("LabelSettings_cs3pk")
+horizontal_alignment = 1
+
+[node name="tuto" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.024
+offset_left = 657.0
+offset_top = 32.0
+offset_right = 987.68
+offset_bottom = 200.0
+label_settings = SubResource("LabelSettings_6vp4k")
 horizontal_alignment = 1

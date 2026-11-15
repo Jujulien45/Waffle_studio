@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://vv46eiicqbul"]
+
+[ext_resource type="AudioStream" uid="uid://ciksdxgkw3vtt" path="res://assets/Aces High - Funkorama.mp3" id="1_4m5bw"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_4m5bw")
+volume_db = -10.0
+autoplay = true

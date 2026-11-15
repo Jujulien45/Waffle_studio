@@ -1,6 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://cjo7cpv4c2c53"]
+[gd_scene load_steps=23 format=3 uid="uid://cjo7cpv4c2c53"]
 
 [ext_resource type="Script" uid="uid://b8mex6n83r8b0" path="res://barnlv_1.gd" id="1_fh1oy"]
+[ext_resource type="PackedScene" uid="uid://b5bwbeu1y1ydi" path="res://player.tscn" id="2_aisrd"]
+
 [ext_resource type="PackedScene" uid="uid://cp0k7litdqsvj" path="res://grange.tscn" id="3_x2eys"]
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="4_cri2b"]
 [ext_resource type="PackedScene" uid="uid://deuduqxjxjsei" path="res://wheelbarrow.tscn" id="5_cri2b"]
@@ -354,6 +356,8 @@ shape = SubResource("BoxShape3D_g8myq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.908987, 41.48072, 66.88393)
 shape = SubResource("BoxShape3D_aisrd")
 
+[node name="Player" parent="." instance=ExtResource("16_bvgwf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.45089, 0, 51.211227)
 [node name="Chicken" parent="." instance=ExtResource("18_uc47n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.201097, 1.0909185, 47.759678)
 
