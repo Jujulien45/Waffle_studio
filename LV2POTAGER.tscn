@@ -1,27 +1,13 @@
-[gd_scene load_steps=46 format=3 uid="uid://dwq4tr2ryf3mq"]
+[gd_scene load_steps=27 format=3 uid="uid://dwq4tr2ryf3mq"]
 
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="1_7qbri"]
-[ext_resource type="Script" path="res://player.gd" id="2_j87em"]
-[ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="3_vxc5f"]
-[ext_resource type="AudioStream" uid="uid://bwo6q6iju7jbs" path="res://RandomizerStream/pickup.tres" id="4_uu322"]
-[ext_resource type="AudioStream" uid="uid://dnxlxaj124qei" path="res://assets/sfx/dragon-studio-pop-402324.mp3" id="5_pjl3l"]
-[ext_resource type="AudioStream" uid="uid://6ni6nfdi8o8t" path="res://assets/sfx/oeuf.mp3" id="6_84how"]
-[ext_resource type="AudioStream" uid="uid://dfsqw6lrriuy0" path="res://assets/sfx/voicelines/coq/coqVL.01.coq1.wav" id="7_bafpn"]
-[ext_resource type="AudioStream" uid="uid://cxsn53uuabdwu" path="res://assets/sfx/voicelines/coq/coqVL.03.coq3.wav" id="8_8n7aj"]
-[ext_resource type="AudioStream" uid="uid://y3fuy2hqw2cv" path="res://assets/sfx/voicelines/coq/coqVL.04.coq4.wav" id="9_sd4mx"]
-[ext_resource type="AudioStream" uid="uid://cvvkcay3dt7vb" path="res://assets/sfx/voicelines/coq/coqVL.05.coq5.wav" id="10_o4evj"]
-[ext_resource type="AudioStream" uid="uid://dexgmku5hs7kw" path="res://assets/sfx/voicelines/coq/coqVL.06.coq6.wav" id="11_fypvx"]
-[ext_resource type="AudioStream" uid="uid://bjr31mxtkkbnn" path="res://assets/sfx/voicelines/coq/coqVL.07.coq7.wav" id="12_8kcsw"]
-[ext_resource type="AudioStream" uid="uid://rmigrghnbyxl" path="res://assets/sfx/voicelines/coq/coqVL.08.coq8.wav" id="13_mbrwg"]
-[ext_resource type="AudioStream" uid="uid://biqsr6tuuyb17" path="res://assets/sfx/voicelines/coq/coqVL.09.coq9.wav" id="14_68tqn"]
-[ext_resource type="AudioStream" uid="uid://dhbd3pdrcddh6" path="res://assets/sfx/voicelines/coq/coqVL.11.coq11.wav" id="15_isjpf"]
-[ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="16_xiyai"]
 [ext_resource type="PackedScene" uid="uid://df8y6jn3mkkjx" path="res://bld_01_fence_wood_gate_double_handle_01.tscn" id="17_vxc5f"]
 [ext_resource type="PackedScene" uid="uid://dda3e6fddlfg" path="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/FBX Format/Bld_Barn_01.fbx" id="18_uu322"]
 [ext_resource type="PackedScene" uid="uid://eu1d0w2mj1di" path="res://env_dirt_rows_long_bottom_end_watered_01.tscn" id="19_uu322"]
 [ext_resource type="PackedScene" uid="uid://hsl5hvrameon" path="res://crop_bean_stage_4_01.tscn" id="20_8n7aj"]
 [ext_resource type="PackedScene" uid="uid://citccwh6uvhu4" path="res://crop_beetroot_stage_3_01.tscn" id="21_sd4mx"]
 [ext_resource type="PackedScene" uid="uid://p406dg76hs2i" path="res://crop_cabbage_stage_1_03.tscn" id="22_o4evj"]
+[ext_resource type="PackedScene" uid="uid://b5bwbeu1y1ydi" path="res://player.tscn" id="23_8n7aj"]
 [ext_resource type="PackedScene" uid="uid://bb2wr3t8rmw4g" path="res://crate.tscn" id="23_fypvx"]
 [ext_resource type="PackedScene" uid="uid://wn25x26wkkud" path="res://tool_shed.tscn" id="23_o4evj"]
 [ext_resource type="PackedScene" uid="uid://cmdswgm3cox2n" path="res://prop_plank_stack_01.tscn" id="24_fypvx"]
@@ -37,29 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://cel6n33rl7n6w" path="res://filled_vegetable_crate.tscn" id="36_qnq0a"]
 [ext_resource type="PackedScene" uid="uid://b720d1hjdq03g" path="res://prop_hay_pile_012.tscn" id="37_slo6c"]
 [ext_resource type="PackedScene" uid="uid://mwmtvoflckp1" path="res://prop_wood_pile_02.tscn" id="38_as24j"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_xi47v"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_moseg"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cehe7"]
-albedo_texture = ExtResource("3_vxc5f")
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_odtmv"]
-radius = 0.2
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qnq0a"]
-streams_count = 10
-stream_0/stream = ExtResource("7_bafpn")
-stream_1/stream = ExtResource("8_8n7aj")
-stream_2/stream = ExtResource("9_sd4mx")
-stream_3/stream = ExtResource("10_o4evj")
-stream_4/stream = ExtResource("11_fypvx")
-stream_5/stream = ExtResource("12_8kcsw")
-stream_6/stream = ExtResource("13_mbrwg")
-stream_7/stream = ExtResource("14_68tqn")
-stream_8/stream = ExtResource("15_isjpf")
-stream_9/stream = ExtResource("16_xiyai")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_slo6c"]
 
@@ -173,38 +136,6 @@ transform = Transform3D(-29.48787, 0, -0.37881377, 0, 29.490307, 0, 0.37881377, 
 
 [node name="ground_grass_model34" parent="." instance=ExtResource("1_7qbri")]
 transform = Transform3D(-29.48787, 0, -0.37881377, 0, 29.490307, 0, 0.37881377, 0, -29.48787, -36.79241, -2.664711, 381.58652)
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1.6490294, 0, 0, 0, 1.6490294, 0, 0, 0, 1.6490294, 13.469599, 12.038427, 27.540504)
-script = ExtResource("2_j87em")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-shape = SubResource("SphereShape3D_xi47v")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
-mesh = SubResource("SphereMesh_moseg")
-surface_material_override/0 = SubResource("StandardMaterial3D_cehe7")
-
-[node name="PivotCamera" type="Node3D" parent="CharacterBody3D"]
-
-[node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D/PivotCamera"]
-shape = SubResource("SphereShape3D_odtmv")
-spring_length = 5.0
-margin = 0.005
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/PivotCamera/SpringArm3D"]
-
-[node name="pickup" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
-stream = ExtResource("4_uu322")
-
-[node name="lay_egg" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
-stream = ExtResource("5_pjl3l")
-
-[node name="jump" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
-stream = ExtResource("6_84how")
-
-[node name="voicelines" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
-stream = SubResource("AudioStreamRandomizer_qnq0a")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.9831402, 0.18285325, 0, -0.18285325, -0.9831402, 0, 76.303505, 0)
@@ -705,3 +636,6 @@ transform = Transform3D(6.4164586, 0, -8.9347105, 0, 11, 0, 8.9347105, 0, 6.4164
 
 [node name="Tool_Rake_03" parent="." instance=ExtResource("26_isjpf")]
 transform = Transform3D(9.977546, 1.5745571, -6.4783807, 2.1748095, 10.25401, 5.841702, 6.3022885, -6.031259, 8.240455, 19.636326, -3.443737, 237.76297)
+
+[node name="Player" parent="." instance=ExtResource("23_8n7aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.930666, 13.36752, 32.28454)

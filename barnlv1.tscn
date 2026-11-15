@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8mex6n83r8b0" path="res://barnlv_1.gd" id="1_fh1oy"]
 [ext_resource type="PackedScene" uid="uid://b5bwbeu1y1ydi" path="res://player.tscn" id="2_aisrd"]
+
 [ext_resource type="PackedScene" uid="uid://cp0k7litdqsvj" path="res://grange.tscn" id="3_x2eys"]
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="4_cri2b"]
 [ext_resource type="PackedScene" uid="uid://deuduqxjxjsei" path="res://wheelbarrow.tscn" id="5_cri2b"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://r6nq4odae8h5" path="res://prop_crate_box_pile_022.tscn" id="14_uc47n"]
 [ext_resource type="PackedScene" uid="uid://p3pia14j08hc" path="res://prop_hay_bale_round_01.tscn" id="15_bvgwf"]
 [ext_resource type="PackedScene" uid="uid://byaif553kd3ok" path="res://prop_hay_bale_square_02.tscn" id="16_aisrd"]
+[ext_resource type="PackedScene" uid="uid://b5bwbeu1y1ydi" path="res://player.tscn" id="16_bvgwf"]
 [ext_resource type="PackedScene" uid="uid://df8y6jn3mkkjx" path="res://bld_01_fence_wood_gate_double_handle_01.tscn" id="17_uc47n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x2eys"]
