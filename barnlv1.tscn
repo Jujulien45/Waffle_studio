@@ -58,9 +58,6 @@ size = Vector3(11, 16, 1)
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_fh1oy")
 
-[node name="Player" parent="." instance=ExtResource("16_bvgwf")]
-transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 22.49303, 0.55059004, 59.13955)
-
 [node name="Bld_Barn_01" parent="." instance=ExtResource("3_x2eys")]
 transform = Transform3D(7.5, 0, 0, 0, 7.5, 0, 0, 0, 7.5, 15.63562, -0.9178524, 21.379395)
 
@@ -356,5 +353,8 @@ shape = SubResource("BoxShape3D_aisrd")
 
 [node name="Chicken" parent="." instance=ExtResource("18_uc47n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.201097, 1.0909185, 47.759678)
+
+[node name="Player" parent="." instance=ExtResource("16_bvgwf")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.367393, 0, 52.66963)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

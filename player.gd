@@ -60,6 +60,7 @@ var warning = false
 
 var num_sounds_playing = 0
 var played_cocorico = false
+var wants_cocorico = false
 
 
 func _ready() -> void:
@@ -169,20 +170,21 @@ func _input(event: InputEvent) -> void:
 func _process(_delta: float) -> void:
 	if not paused:
 		picked_up_chicks = total_chicks - get_tree().get_node_count_in_group("Chicken")
-		progress_label.text = str(picked_up_chicks) + "/" + str(total_chicks)
+		progress_label.text = str(picked_up_chicks) + "/" + str(total_chicks) + " Chicks"
 		progress_bar.value = picked_up_chicks
 		progress_bar.max_value = total_chicks
 
 		if picked_up_chicks >= total_chicks:
 			has_all_chicks = true
 			if not played_cocorico:
-				cocorico.play()
-				played_cocorico = false
+				wants_cocorico = true
+				
+				print("cocorico")
 		else:
 			has_all_chicks = false
 
 func play_sound(sound: AudioStreamPlayer3D, ignore_cap = false) -> void:
-	if num_sounds_playing < 3 or ignore_cap:
+	if num_sounds_playing < 2 or ignore_cap:
 		num_sounds_playing += 1
 		sound.play()
 		sound.finished.connect(_on_audio_finished.bind(sound), CONNECT_ONE_SHOT)
@@ -211,6 +213,10 @@ func _on_pickup_finished() -> void:
 
 func _on_voicelines_finished() -> void:
 	is_playing_audio = false
+	if wants_cocorico:
+		play_sound(cocorico, true)
+		played_cocorico = true
+		wants_cocorico = false
 
 
 func _on_warning_timer_timeout() -> void:

@@ -21,8 +21,12 @@ offset_bottom = 1050.0
 texture = ExtResource("3_4jooh")
 
 [node name="black" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -311.0
+offset_top = -162.0
+offset_right = 5396.0
+offset_bottom = 3384.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource("3_iggq8")
 
 [node name="Label" type="Label" parent="."]
