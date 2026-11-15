@@ -32,7 +32,14 @@ var camera
 # On remplace la caméra par le Pivot
 @onready var pivot = $PivotCamera 
 
-var MESH: MeshInstance3D
+
+@onready var progress_bar : ProgressBar = $CanvasLayer/Control/ProgressBar
+@onready var progress_label : Label = $CanvasLayer/Control/Progress_label
+@onready var warning_label : Label = $CanvasLayer/Control/Warning
+var total_chicks : int = 0
+var picked_up_chicks : int = 0
+
+var MESH: Node3D
 var Pickup_steam_player: AudioStreamPlayer3D
 var lay_egg_steam_player: AudioStreamPlayer3D
 var jump_stream_player: AudioStreamPlayer3D
@@ -40,15 +47,26 @@ var voicelines_audio: AudioStreamPlayer3D
 
 var is_playing_audio := false
 
+var warning = false
+@onready var warning_blink: Timer = $warning_blink
+@onready var warning_timer: Timer = $warning_timer
+@export var WARNING_BLINK_DELAY = 0.5
+@export var WARNING_DURATION = 5
+
+
 func _ready() -> void:
 	jump_stream_player = $jump
 	Pickup_steam_player = $pickup
 	lay_egg_steam_player = $lay_egg
-	MESH = $MeshInstance3D
+	MESH = $ChickenBrown
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	radius = $MeshInstance3D.mesh.radius
+	radius = $CollisionShape3D.shape.radius
 	voicelines_audio = $voicelines
-
+	
+	progress_label.text = "0/" + str(total_chicks)
+	progress_bar.max_value = total_chicks
+	progress_bar.value = 0
+	
 func _physics_process(delta: float) -> void:
 	
 	if(not paused):
@@ -112,6 +130,7 @@ func _physics_process(delta: float) -> void:
 			if(Time.get_ticks_msec() > 4000 + dash_time):
 				dash_available = true
 
+
 func _input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseMotion:
@@ -137,10 +156,30 @@ func _input(event: InputEvent) -> void:
 			ground_pound = true
 			velocity.y -= 5*JUMP_VELOCITY
 
-func add_chick():
+
+func _process(_delta: float) -> void:
+	if not paused:
+		picked_up_chicks = total_chicks - get_tree().get_node_count_in_group("Chicken")
+		progress_label.text = str(picked_up_chicks) + "/" + str(total_chicks)
+		progress_bar.value = picked_up_chicks
+
+
+func pick_up_chick():
 	is_playing_audio = true
 	Pickup_steam_player.play()
+	start_warning()
 
+func add_chick():
+	total_chicks += 1
+	progress_label.text = str(picked_up_chicks) + "/" + str(total_chicks)
+	progress_bar.max_value = total_chicks
+
+
+func start_warning() -> void:
+	warning_timer.wait_time = WARNING_DURATION
+	warning_timer.start()
+	warning = true
+	warning_label.visible = true
 
 func _on_pickup_finished() -> void:
 	voicelines_audio.play()
@@ -148,3 +187,8 @@ func _on_pickup_finished() -> void:
 
 func _on_voicelines_finished() -> void:
 	is_playing_audio = false
+
+
+func _on_warning_timer_timeout() -> void:
+	warning = false
+	warning_label.visible = false

@@ -100,7 +100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.089616, 7.086986, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.3268466, 6.1047993)
 
 [node name="Chicken4" parent="." instance=ExtResource("5_p4ujc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.754731, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.754731, -7.2147884)
 
 [node name="Crate" parent="." instance=ExtResource("19_3m4xw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9539175, 0.99999905, -10.876823)

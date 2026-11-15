@@ -10,6 +10,7 @@ var player: CharacterBody3D
 func _ready() -> void:
 	schedule_next_sound()
 	player = get_tree().get_nodes_in_group("Player")[0]
+	player.add_chick()
 
 
 func schedule_next_sound() -> void:
@@ -19,7 +20,7 @@ func schedule_next_sound() -> void:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is CharacterBody3D:
-		body.add_chick()
+		body.pick_up_chick()
 		queue_free()
 
 

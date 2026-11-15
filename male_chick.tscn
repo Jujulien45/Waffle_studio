@@ -33,7 +33,7 @@ stream_8/stream = ExtResource("11_aq0qg")
 stream_9/stream = ExtResource("12_ke7sg")
 stream_10/stream = ExtResource("4_csmu4")
 
-[node name="male_chick" type="RigidBody3D"]
+[node name="male_chick" type="RigidBody3D" groups=["Chicken"]]
 script = ExtResource("1_p42ce")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]

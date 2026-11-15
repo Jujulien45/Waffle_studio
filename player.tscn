@@ -1,7 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://b5bwbeu1y1ydi"]
+[gd_scene load_steps=20 format=3 uid="uid://b5bwbeu1y1ydi"]
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://player.gd" id="1_606se"]
-[ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="2_u1c27"]
 [ext_resource type="AudioStream" uid="uid://bwo6q6iju7jbs" path="res://RandomizerStream/pickup.tres" id="3_op7ga"]
 [ext_resource type="AudioStream" uid="uid://dnxlxaj124qei" path="res://assets/sfx/dragon-studio-pop-402324.mp3" id="4_q13i1"]
 [ext_resource type="AudioStream" uid="uid://6ni6nfdi8o8t" path="res://assets/sfx/oeuf.mp3" id="5_pylmc"]
@@ -15,14 +14,10 @@
 [ext_resource type="AudioStream" uid="uid://biqsr6tuuyb17" path="res://assets/sfx/voicelines/coq/coqVL.09.coq9.wav" id="13_qtqh7"]
 [ext_resource type="AudioStream" uid="uid://dhbd3pdrcddh6" path="res://assets/sfx/voicelines/coq/coqVL.11.coq11.wav" id="14_2wuci"]
 [ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="15_iruf7"]
+[ext_resource type="PackedScene" uid="uid://07pfosgp7o3g" path="res://assets/assets1/ChickenBrown.fbx" id="16_op7ga"]
 [ext_resource type="PackedScene" uid="uid://biasbeaubjat4" path="res://player_hud.tscn" id="16_u1c27"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0g12c"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_coge5"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkxo1"]
-albedo_texture = ExtResource("2_u1c27")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vm5kt"]
 streams_count = 10
@@ -45,10 +40,6 @@ script = ExtResource("1_606se")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_0g12c")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_coge5")
-surface_material_override/0 = SubResource("StandardMaterial3D_fkxo1")
 
 [node name="pickup" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_op7ga")
@@ -73,6 +64,16 @@ margin = 0.005
 
 [node name="CanvasLayer" parent="." instance=ExtResource("16_u1c27")]
 
+[node name="warning_timer" type="Timer" parent="."]
+
+[node name="ChickenBrown" type="Node3D" parent="."]
+transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 0, -0.3, 0)
+
+[node name="ChickenBrown" parent="ChickenBrown" instance=ExtResource("16_op7ga")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+
 [connection signal="finished" from="pickup" to="." method="_on_pickup_finished"]
 [connection signal="finished" from="jump" to="." method="_on_jump_finished"]
 [connection signal="finished" from="voicelines" to="." method="_on_voicelines_finished"]
+[connection signal="timeout" from="warning_timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="warning_timer" to="." method="_on_warning_timer_timeout"]
