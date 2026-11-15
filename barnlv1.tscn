@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cjo7cpv4c2c53"]
+[gd_scene load_steps=14 format=3 uid="uid://cjo7cpv4c2c53"]
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://character_body_3d.gd" id="2_7rax8"]
 [ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="3_0jm4f"]
 [ext_resource type="PackedScene" uid="uid://cp0k7litdqsvj" path="res://grange.tscn" id="3_x2eys"]
+[ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="4_cri2b"]
+[ext_resource type="PackedScene" uid="uid://bsvje4ywbbaf0" path="res://assets/assets4/FREE_VERSION_30_MODELS/FBX/Wheelbarrow.fbx" id="5_valy8"]
+[ext_resource type="PackedScene" uid="uid://dbsuro4lqbk7k" path="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/GLB Format/Prop_Hay_Pile_01.glb" id="6_wiarr"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cri2b"]
 
@@ -11,10 +14,43 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wiarr"]
 albedo_texture = ExtResource("3_0jm4f")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_x2eys"]
+radius = 0.2
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x2eys"]
+
+[sub_resource type="Sky" id="Sky_7rax8"]
+sky_material = SubResource("ProceduralSkyMaterial_x2eys")
+process_mode = 1
+radiance_size = 4
+
+[sub_resource type="Environment" id="Environment_0jm4f"]
+background_mode = 2
+background_energy_multiplier = 1.77
+sky = SubResource("Sky_7rax8")
+ambient_light_source = 3
+ambient_light_color = Color(0.039215688, 0.0627451, 0.1254902, 1)
+ambient_light_sky_contribution = 0.65
+ambient_light_energy = 0.1
+tonemap_mode = 4
+tonemap_exposure = 0.64
+ssao_enabled = true
+ssao_intensity = 9.87
+glow_enabled = true
+glow_intensity = 1.52
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(1.3659997, 1.2227292, 0.9797501, 1)
+volumetric_fog_emission = Color(0.2159017, 0.21590173, 0.2159017, 1)
+volumetric_fog_emission_energy = 3.0
+volumetric_fog_anisotropy = 0.5
+volumetric_fog_length = 256.0
+volumetric_fog_ambient_inject = 0.1
+
 [node name="Node3D" type="Node3D"]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1.6490294, 0, 0, 0, 1.6490294, 0, 0, 0, 1.6490294, 12.857969, 13.616934, 21.585117)
+transform = Transform3D(1.6490294, 0, 0, 0, 1.6490294, 0, 0, 0, 1.6490294, 22.028154, 1.5173435, 59.056232)
 script = ExtResource("2_7rax8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
@@ -24,9 +60,67 @@ shape = SubResource("SphereShape3D_cri2b")
 mesh = SubResource("SphereMesh_valy8")
 surface_material_override/0 = SubResource("StandardMaterial3D_wiarr")
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44526482, 1.1388335)
-fov = 93.84055
+[node name="PivotCamera" type="Node3D" parent="CharacterBody3D"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D/PivotCamera"]
+shape = SubResource("SphereShape3D_x2eys")
+spring_length = 5.0
+margin = 0.005
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/PivotCamera/SpringArm3D"]
 
 [node name="Bld_Barn_01" parent="." instance=ExtResource("3_x2eys")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15.63562, -0.9178524, 21.379395)
+transform = Transform3D(7.5, 0, 0, 0, 7.5, 0, 0, 0, 7.5, 15.63562, -0.9178524, 21.379395)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.9831402, 0.18285325, 0, -0.18285325, -0.9831402, 0, 76.303505, 0)
+light_color = Color(0.9999935, 0.50694025, 0.11757334, 1)
+light_energy = 3.315
+shadow_enabled = true
+shadow_blur = 0.0
+directional_shadow_mode = 0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0jm4f")
+
+[node name="ground_grass_model2" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, -38.466938, -2.664711, 34.083244)
+
+[node name="ground_grass_model3" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 19.667484, -2.664711, 34.083244)
+
+[node name="ground_grass_model4" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 76.2373, -2.664711, 34.083244)
+
+[node name="ground_grass_model7" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, -38.466938, -2.664711, 91.4715)
+
+[node name="ground_grass_model8" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 19.667484, -2.664711, 91.4715)
+
+[node name="ground_grass_model9" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 76.2373, -2.664711, 91.4715)
+
+[node name="ground_grass_model12" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, -38.466938, -2.664711, 149.57483)
+
+[node name="ground_grass_model13" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 19.667484, -2.664711, 149.57483)
+
+[node name="ground_grass_model14" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 76.2373, -2.664711, 149.57483)
+
+[node name="ground_grass_model17" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, -38.466938, -2.664711, 207.28246)
+
+[node name="ground_grass_model18" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 19.667484, -2.664711, 207.28246)
+
+[node name="ground_grass_model19" parent="." instance=ExtResource("4_cri2b")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 76.2373, -2.664711, 207.28246)
+
+[node name="Wheelbarrow" parent="." instance=ExtResource("5_valy8")]
+transform = Transform3D(8.555, 0, 0, 0, 8.537197, -0.5516269, 0, 0.5516269, 8.537197, 14.958988, -2.0660455, 56.0941)
+
+[node name="Prop_Hay_Pile_012" parent="." instance=ExtResource("6_wiarr")]
+transform = Transform3D(1.0926722, 0, -0.051972426, 0, 1.1507255, 0, 0.03895881, 0, 1.4576634, 14.938642, 0.9748099, 56.266087)
