@@ -150,6 +150,7 @@ func _input(event: InputEvent) -> void:
 			get_tree().quit()
 		if event.pressed and event.keycode == KEY_P:
 			paused = not paused
+			$CanvasLayer/Pause.visible = not $CanvasLayer/Pause.visible
 		if event.pressed and event.keycode == KEY_E and not paused:
 			if(dir and dash_available):
 				velocity.x += dir.x * DASH_ACCEL
