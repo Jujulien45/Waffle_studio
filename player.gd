@@ -31,6 +31,7 @@ var camera
 
 # On remplace la caméra par le Pivot
 @onready var pivot = $PivotCamera 
+@onready var cast  = $RayCast3D
 
 
 @onready var progress_bar : ProgressBar = $CanvasLayer/Control/ProgressBar
