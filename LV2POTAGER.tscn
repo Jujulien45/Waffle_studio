@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dwq4tr2ryf3mq"]
+[gd_scene load_steps=33 format=3 uid="uid://dwq4tr2ryf3mq"]
 
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="1_7qbri"]
 [ext_resource type="Script" uid="uid://bbddv4hurbbcn" path="res://lv_2potager.gd" id="1_sd4mx"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://wn25x26wkkud" path="res://tool_shed.tscn" id="23_o4evj"]
 [ext_resource type="PackedScene" uid="uid://cmdswgm3cox2n" path="res://prop_plank_stack_01.tscn" id="24_fypvx"]
 [ext_resource type="PackedScene" uid="uid://dbc2dtuw3b71y" path="res://prop_plank_01.tscn" id="25_8kcsw"]
+[ext_resource type="PackedScene" uid="uid://bkru8ife5aq0y" path="res://chicken.tscn" id="25_o4evj"]
+[ext_resource type="PackedScene" uid="uid://dp30rkhmc2se4" path="res://assets/assets4/FREE_VERSION_30_MODELS/GLB/Filled Vegetable Crate.glb" id="26_fypvx"]
 [ext_resource type="PackedScene" uid="uid://dcc0kb85esjii" path="res://tool_rake_01.tscn" id="26_isjpf"]
 [ext_resource type="PackedScene" uid="uid://c18r6bm8lmmlq" path="res://tool_axe_02.tscn" id="27_xiyai"]
 [ext_resource type="PackedScene" uid="uid://dh348ew775p6t" path="res://tool_pitchfork_01.tscn" id="28_xi47v"]
@@ -58,6 +60,12 @@ volumetric_fog_ambient_inject = 0.1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sd4mx"]
 size = Vector3(15, 20, 7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fypvx"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8kcsw"]
+size = Vector3(20, 30, 1)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_sd4mx")
@@ -559,6 +567,9 @@ transform = Transform3D(8.0047, 1.3998187, -5.8279753, 0, 9.7234535, 2.3354716, 
 [node name="Prop_Plank_02" parent="." instance=ExtResource("25_8kcsw")]
 transform = Transform3D(9.497319, 0.7311532, -3.0440674, 0.2493859, 9.515862, 3.0636802, 3.1206946, -2.98559, 9.019285, 56.694664, 17.868366, 124.65527)
 
+[node name="Prop_Plank_03" parent="." instance=ExtResource("25_8kcsw")]
+transform = Transform3D(2.4376454, 0.4651243, -0.84588665, 0.41276184, 11.155925, 0.045375694, -10.197021, 0.56276643, -0.20037635, 51.400185, 23.195993, 140.18143)
+
 [node name="Tool_Rake_01" parent="." instance=ExtResource("26_isjpf")]
 transform = Transform3D(12.973331, -1.0430813e-07, -5.262385, 1.641096, 13.301819, 4.045786, 4.99995, -4.365957, 12.32635, 59.317978, -2.6647072, 128.48418)
 
@@ -599,7 +610,7 @@ transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -21.124065, 1.4358764, 179.74
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -13.543133, 1.4358764, 187.87181)
 
 [node name="Crate3" parent="." instance=ExtResource("23_fypvx")]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -15.3641205, 8.63935, 182.34428)
+transform = Transform3D(6.1827545, 0, -5.076765, 0, 8, 0, 5.076765, 0, 6.1827545, -14.673349, 8.63935, 181.29623)
 
 [node name="Filled Vegetable Crate" parent="." instance=ExtResource("36_qnq0a")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -32.866196, -2.664709, 91.6444)
@@ -652,5 +663,60 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.930666, 13.36752, 32.28454)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.229788, 7.645712, 271.34137)
 shape = SubResource("BoxShape3D_sd4mx")
+
+[node name="Chicken" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.695663, 17.143599, 223.27298)
+
+[node name="Chicken2" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.76026, 17.141827, 180.79543)
+
+[node name="Chicken3" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.523483, 25.064056, 140.28003)
+
+[node name="Chicken7" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.934418, 0.15898752, 167.52083)
+
+[node name="Chicken8" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.389297, 0.15898752, 167.52083)
+
+[node name="Chicken9" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.389297, 0.15898752, 111.5736)
+
+[node name="Chicken10" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.74025, 13.086615, 90.44862)
+
+[node name="Chicken11" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.508116, 0.9708638, 78.09441)
+
+[node name="Chicken12" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.101542, 0.9708638, 70.821686)
+
+[node name="Chicken13" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.577007, 9.165551, 46.34594)
+
+[node name="Chicken4" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.95779, 25.064056, 101.96643)
+
+[node name="Chicken5" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0848055, 15.179237, 180.24261)
+
+[node name="Chicken6" parent="." instance=ExtResource("25_o4evj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.978153, 1.5202503, 232.84729)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6436305, -2.664711, 200.37682)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.688694, 14.91874, -110.148346)
+shape = SubResource("BoxShape3D_fypvx")
+
+[node name="Physics revision" parent="." instance=ExtResource("26_fypvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6436305, -2.664711, 200.37682)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.823915, 8.211586, 275.56357)
+shape = SubResource("BoxShape3D_8kcsw")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

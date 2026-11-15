@@ -13,7 +13,8 @@
 [ext_resource type="AudioStream" uid="uid://cwnifn5qoa2cd" path="res://assets/sfx/voicelines/poules/poule.09.poule9.wav" id="10_hjwsc"]
 [ext_resource type="AudioStream" uid="uid://cqju2655be74k" path="res://assets/sfx/voicelines/poules/poule.10.poule10.wav" id="11_wigrb"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vgagl"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p4m3y"]
+height = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vgagl"]
 
@@ -36,22 +37,23 @@ mass = 10.0
 script = ExtResource("1_2hhta")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, -3, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_vgagl")
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+shape = SubResource("CylinderShape3D_p4m3y")
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
+transform = Transform3D(3.75, 0, 0, 0, 3.75, 0, 0, 0, 3.75, 0, 0, 0)
 shape = SubResource("SphereShape3D_vgagl")
 
 [node name="voicelines" type="AudioStreamPlayer3D" parent="."]
 stream = SubResource("AudioStreamRandomizer_32jxb")
 
 [node name="chicken_model" parent="." instance=ExtResource("2_6usit")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.5719062, 0)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

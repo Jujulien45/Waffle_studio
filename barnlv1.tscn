@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://byaif553kd3ok" path="res://prop_hay_bale_square_02.tscn" id="16_aisrd"]
 [ext_resource type="PackedScene" uid="uid://b5bwbeu1y1ydi" path="res://player.tscn" id="16_bvgwf"]
 [ext_resource type="PackedScene" uid="uid://df8y6jn3mkkjx" path="res://bld_01_fence_wood_gate_double_handle_01.tscn" id="17_uc47n"]
+[ext_resource type="PackedScene" uid="uid://bkru8ife5aq0y" path="res://chicken.tscn" id="18_uc47n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x2eys"]
 
@@ -58,6 +59,9 @@ size = Vector3(11, 16, 1)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_fh1oy")
+
+[node name="Player" parent="." instance=ExtResource("16_bvgwf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.49303, 0.55059004, 59.13955)
 
 [node name="Bld_Barn_01" parent="." instance=ExtResource("3_x2eys")]
 transform = Transform3D(7.5, 0, 0, 0, 7.5, 0, 0, 0, 7.5, 15.63562, -0.9178524, 21.379395)
@@ -354,5 +358,7 @@ shape = SubResource("BoxShape3D_aisrd")
 
 [node name="Player" parent="." instance=ExtResource("16_bvgwf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.45089, 0, 51.211227)
+[node name="Chicken" parent="." instance=ExtResource("18_uc47n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.201097, 1.0909185, 47.759678)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
