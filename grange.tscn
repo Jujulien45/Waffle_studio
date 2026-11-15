@@ -37,6 +37,9 @@ data = PackedVector3Array(2.2382, -0.0072, 5.9414997, 2.2382, 7.0221, 5.9414997,
 
 [node name="Bld_Barn_01" instance=ExtResource("1_2cydt")]
 
+[node name="Bld_Barn_01" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.509958e-07, 0, 1.509958e-07, 1, 1.06162, -0.15489006, -0.11482999)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Bld_Barn_01/(_ignore)_Bld_Barn_Windows_01" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bld_Barn_01/(_ignore)_Bld_Barn_Windows_01/StaticBody3D" index="0"]

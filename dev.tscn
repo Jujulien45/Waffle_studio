@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bkxx64rjjt2ns"]
+[gd_scene load_steps=28 format=3 uid="uid://bkxx64rjjt2ns"]
 
 [ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://player.gd" id="1_coge5"]
 [ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="2_fkxo1"]
@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://biqsr6tuuyb17" path="res://assets/sfx/voicelines/coq/coqVL.09.coq9.wav" id="13_cnd6s"]
 [ext_resource type="AudioStream" uid="uid://dhbd3pdrcddh6" path="res://assets/sfx/voicelines/coq/coqVL.11.coq11.wav" id="14_mn5um"]
 [ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="15_ue33a"]
+[ext_resource type="PackedScene" uid="uid://dinponx3j8uqb" path="res://crate.tscn" id="19_3m4xw"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_0g12c"]
 
@@ -162,6 +163,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.3268466, 6.1047993)
 
 [node name="Chicken4" parent="." instance=ExtResource("5_p4ujc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.754731, 0)
+
+[node name="Crate" parent="." instance=ExtResource("19_3m4xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9539175, 0.99999905, -10.876823)
+
+[node name="Crate2" parent="." instance=ExtResource("19_3m4xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.468864, 2.207725, -10.876823)
+
+[node name="Crate3" parent="." instance=ExtResource("19_3m4xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.160599, 0.99999905, -10.876823)
+
+[node name="Crate4" parent="." instance=ExtResource("19_3m4xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.228725, 0.99999905, -10.876823)
 
 [connection signal="finished" from="Player/pickup" to="Player" method="_on_pickup_finished"]
 [connection signal="finished" from="Player/jump" to="Player" method="_on_jump_finished"]
