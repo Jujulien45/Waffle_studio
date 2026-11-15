@@ -1,26 +1,26 @@
 [gd_scene load_steps=5 format=3 uid="uid://bb2wr3t8rmw4g"]
 
-[ext_resource type="Script" path="res://crate.gd" id="1_uep05"]
+[ext_resource type="Script" uid="uid://1d2jpjsavhjf" path="res://crate.gd" id="1_uep05"]
 [ext_resource type="PackedScene" uid="uid://dwspmk3atco16" path="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/GLB Format/Prop_Crate_Box_01.glb" id="2_mo0jf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mo0jf"]
-size = Vector3(1, 0.74523926, 1)
+size = Vector3(1, 1.1803589, 1.1094971)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_44j4e"]
-size = Vector3(1, 0.28979492, 1)
+size = Vector3(1, 0.479187, 1)
 
 [node name="Crate" type="RigidBody3D"]
 script = ExtResource("1_uep05")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -0.101904295, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.07214356, -0.011279298)
 shape = SubResource("BoxShape3D_mo0jf")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06530762, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.037872314, 0)
 shape = SubResource("BoxShape3D_44j4e")
 
 [node name="Prop_Crate_Box_012" parent="." instance=ExtResource("2_mo0jf")]
