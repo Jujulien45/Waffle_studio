@@ -39,6 +39,7 @@ var camera
 @onready var warning_label : Label = $CanvasLayer/Control/Warning
 var total_chicks : int = 0
 var picked_up_chicks : int = 0
+var has_all_chicks: bool = false
 
 var MESH: Node3D
 var Pickup_steam_player: AudioStreamPlayer3D
@@ -167,6 +168,10 @@ func _process(_delta: float) -> void:
 		progress_label.text = str(picked_up_chicks) + "/" + str(total_chicks)
 		progress_bar.value = picked_up_chicks
 		progress_bar.max_value = total_chicks
+		if picked_up_chicks >= total_chicks:
+			has_all_chicks = true
+		else:
+			has_all_chicks = false
 
 
 func pick_up_chick():

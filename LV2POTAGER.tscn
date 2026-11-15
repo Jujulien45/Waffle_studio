@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://dwq4tr2ryf3mq"]
+[gd_scene load_steps=29 format=3 uid="uid://dwq4tr2ryf3mq"]
 
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="1_7qbri"]
+[ext_resource type="Script" uid="uid://bbddv4hurbbcn" path="res://lv_2potager.gd" id="1_sd4mx"]
 [ext_resource type="PackedScene" uid="uid://df8y6jn3mkkjx" path="res://bld_01_fence_wood_gate_double_handle_01.tscn" id="17_vxc5f"]
 [ext_resource type="PackedScene" uid="uid://dda3e6fddlfg" path="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/FBX Format/Bld_Barn_01.fbx" id="18_uu322"]
 [ext_resource type="PackedScene" uid="uid://eu1d0w2mj1di" path="res://env_dirt_rows_long_bottom_end_watered_01.tscn" id="19_uu322"]
@@ -54,7 +55,11 @@ volumetric_fog_anisotropy = 0.5
 volumetric_fog_length = 256.0
 volumetric_fog_ambient_inject = 0.1
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sd4mx"]
+size = Vector3(15, 20, 7)
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_sd4mx")
 
 [node name="ground_grass_model2" parent="." instance=ExtResource("1_7qbri")]
 transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, -38.466938, -2.664711, 34.083244)
@@ -639,3 +644,11 @@ transform = Transform3D(9.977546, 1.5745571, -6.4783807, 2.1748095, 10.25401, 5.
 
 [node name="Player" parent="." instance=ExtResource("23_8n7aj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.930666, 13.36752, 32.28454)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.229788, 7.645712, 271.34137)
+shape = SubResource("BoxShape3D_sd4mx")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

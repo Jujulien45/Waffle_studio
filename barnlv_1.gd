@@ -1,11 +1,17 @@
 extends Node3D
 
 
-# Called when the node enters the scene tree for the first time.
+var player: CharacterBody3D
+
 func _ready() -> void:
-	pass # Replace with function body.
+	player = get_tree().get_nodes_in_group("Player")[0]
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if(body is CharacterBody3D):
-		pass
-		#get_tree().change_scene("res://lvl2.tscn")
+		print("hellow")
+		if player.has_all_chicks:
+			print("ok")
+			get_tree().change_scene_to_file("res://LV2POTAGER.tscn")
+		else:
+			player.start_warning()
+	
