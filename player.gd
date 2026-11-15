@@ -168,6 +168,7 @@ func _process(_delta: float) -> void:
 		progress_label.text = str(picked_up_chicks) + "/" + str(total_chicks)
 		progress_bar.value = picked_up_chicks
 		progress_bar.max_value = total_chicks
+
 		if picked_up_chicks >= total_chicks:
 			has_all_chicks = true
 		else:
