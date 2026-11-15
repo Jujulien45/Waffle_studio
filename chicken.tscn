@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkru8ife5aq0y"]
+
+[ext_resource type="Script" uid="uid://djevbrxcxgutq" path="res://chicken.gd" id="1_45cuv"]
+
+[node name="Chicken" type="Node3D"]
+script = ExtResource("1_45cuv")

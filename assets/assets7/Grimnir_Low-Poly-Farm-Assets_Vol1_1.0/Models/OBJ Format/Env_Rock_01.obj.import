@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ch41y7rtqre4o"
+path="res://.godot/imported/Env_Rock_01.obj-d596f5e80ccb7ec7f60f727e8ea8361c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Env_Rock_01.obj-d596f5e80ccb7ec7f60f727e8ea8361c.mesh"]
+
+source_file="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/OBJ Format/Env_Rock_01.obj"
+dest_files=["res://.godot/imported/Env_Rock_01.obj-d596f5e80ccb7ec7f60f727e8ea8361c.mesh", "res://.godot/imported/Env_Rock_01.obj-d596f5e80ccb7ec7f60f727e8ea8361c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

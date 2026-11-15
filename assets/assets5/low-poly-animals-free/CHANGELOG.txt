@@ -1,0 +1,9 @@
+Low-Poly Animals Free: changes, newest first
+
+1.2.0 (14 Nov 2026)
+- The rabbit's neck grows out of its body as one skin, and eating it lowers its head to the grass without the neck folding over.
+- The demo's guide is a panel under the view's title, the done tasks struck through and the next one marked.
+- The props' store image shows them on meadow green.
+
+1.1.0
+- The rabbit, hen and props in the full pack's stylized look, pines behind the fence.

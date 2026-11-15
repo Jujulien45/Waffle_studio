@@ -1,0 +1,700 @@
+{
+  "schema": 2,
+  "pack_title": "Low Poly Farm Production and Market Pack",
+  "builder_version": "1.1-FARM-PRODUCTION-AND-MARKET",
+  "catalog_document": "Farm_Pack_Gratis_y_Pago.docx",
+  "catalog_sha256": "2375591f7e1b50002fcef47d3b38776c1036321594b8b08e3fa8a09f8ba21211",
+  "pack_name": "FREE_VERSION_30_MODELS",
+  "edition": "free",
+  "author": "dglopez",
+  "copyright": "Copyright (c) 2026 dglopez. All rights reserved.",
+  "created_utc": "2026-10-08T15:00:36+00:00",
+  "asset_count": 30,
+  "assets": [
+    "Apple Harvest Basket",
+    "Burlap Sack",
+    "Cabbage",
+    "Carrot Plant",
+    "Corn",
+    "Corn Stalk",
+    "Empty Produce Crate",
+    "Farm Direction Sign",
+    "Filled Vegetable Crate",
+    "Hay Bale",
+    "Irrigated Soil Patch",
+    "Potato",
+    "Potato Plant",
+    "Produce Wicker Basket",
+    "Pumpkin",
+    "Pumpkin Plant",
+    "Scarecrow",
+    "Shovel in Soil",
+    "Soil Patch",
+    "Sunflower",
+    "Tomato Plant",
+    "Tool Shed",
+    "Watering Can",
+    "Wheat Crop",
+    "Wheelbarrow",
+    "Wooden Barrel",
+    "Wooden Bucket",
+    "Wooden Farm Gate",
+    "Wooden Fence Corner",
+    "Wooden Fence Straight"
+  ],
+  "formats": [
+    "FBX",
+    "OBJ",
+    "GLB"
+  ],
+  "blend_source_files_included": false,
+  "files": [
+    {
+      "path": "AI_NOTICE.txt",
+      "sha256": "a5b60d9f806d6a4032460bb859a33b1851aa5e8f1aa10a1426959e2ea65888aa",
+      "bytes": 909
+    },
+    {
+      "path": "ASSET_LIST.txt",
+      "sha256": "4659e52bfc54f5d4963ed2b7ff71a230ced6058dbd6e74fad5d792a63ec7fedd",
+      "bytes": 625
+    },
+    {
+      "path": "FBX/_LICENSE_NOTICE.txt",
+      "sha256": "302bdd7e041b3166373c87179e3e4f9baa6e37aed4ac33bb3b8edf49e45bdc0a",
+      "bytes": 484
+    },
+    {
+      "path": "FBX/Apple Harvest Basket.fbx",
+      "sha256": "1f568eeb8b0df05b34dbcd2f717c3aad961a2bef8d9574a8a53e594b8d587817",
+      "bytes": 49868
+    },
+    {
+      "path": "FBX/Burlap Sack.fbx",
+      "sha256": "243945b79a3e93e9450173b404e3fbb83ea31a90a0ecc7b0cee9543de27bfc33",
+      "bytes": 42188
+    },
+    {
+      "path": "FBX/Cabbage.fbx",
+      "sha256": "c452ca9e421d6316416d8a3e988cf7258eced6809636f071d20eea7938fa4638",
+      "bytes": 37500
+    },
+    {
+      "path": "FBX/Carrot Plant.fbx",
+      "sha256": "e26b9358fd20c3de9e74bbb69596cc1c693f5dd89bf4fb8ad42669acbc9b8924",
+      "bytes": 51484
+    },
+    {
+      "path": "FBX/Corn Stalk.fbx",
+      "sha256": "e0db9108f0e34618e7d01d0fecc147cda4600f9273eff8e52aead9797190dbf0",
+      "bytes": 85852
+    },
+    {
+      "path": "FBX/Corn.fbx",
+      "sha256": "c2f29ad03f62557919478a7bf2e9da980f81b094e707ae9666a9ee906a11ede9",
+      "bytes": 45900
+    },
+    {
+      "path": "FBX/Empty Produce Crate.fbx",
+      "sha256": "0b04a9ea1ee5945eacf0638fbee2ccb4af078af780ab432b030db6c2e691f472",
+      "bytes": 27036
+    },
+    {
+      "path": "FBX/Farm Direction Sign.fbx",
+      "sha256": "01850ef0e6942f2f333dc98b763c07f717497c953d1f41c9358eb0b8e066f7b1",
+      "bytes": 36140
+    },
+    {
+      "path": "FBX/Filled Vegetable Crate.fbx",
+      "sha256": "423bbbb72ac7c1f14a128921224c43d0d3f5969c54b91ab1a980b5bfce93e37c",
+      "bytes": 245436
+    },
+    {
+      "path": "FBX/Hay Bale.fbx",
+      "sha256": "4b3a1e70b707860370d20e3396002712cc805f16b4ef2d132e4d491fbcacd8e2",
+      "bytes": 58940
+    },
+    {
+      "path": "FBX/Irrigated Soil Patch.fbx",
+      "sha256": "d815cf30a8d544f0ede081652d1738878de1bf941ac6e8d0754f17b37aed117e",
+      "bytes": 42348
+    },
+    {
+      "path": "FBX/Potato Plant.fbx",
+      "sha256": "11024e8b53ad5db58964302afff12a54cffc6c88655a7e6f3923209c64ac307f",
+      "bytes": 70828
+    },
+    {
+      "path": "FBX/Potato.fbx",
+      "sha256": "c26286bee3d3e119c588c5d2b9b47f4c8a2f47fb8e550965c95ec53dce7edb11",
+      "bytes": 23788
+    },
+    {
+      "path": "FBX/Produce Wicker Basket.fbx",
+      "sha256": "9774e85b8bc5ae016f3043633347bc48584ac26fc241f8b119b62f11f24dd854",
+      "bytes": 37036
+    },
+    {
+      "path": "FBX/Pumpkin Plant.fbx",
+      "sha256": "ae33f870bead5e933bb4f628e404b395ea69cc04735ab96422565bf21c9151e4",
+      "bytes": 51708
+    },
+    {
+      "path": "FBX/Pumpkin.fbx",
+      "sha256": "98a821a48aa0144353b6fe7f1baea04d0c062d8086124fdc7c4a94ae59a0586b",
+      "bytes": 33868
+    },
+    {
+      "path": "FBX/Scarecrow.fbx",
+      "sha256": "6b577ae830864d904c3833558c758be1b53c6158de31c1445513b4cb48531a9d",
+      "bytes": 47180
+    },
+    {
+      "path": "FBX/Shovel in Soil.fbx",
+      "sha256": "baeb0c59ae2433a573459593c49a2026c558d93723993a89f36984be7017f0d6",
+      "bytes": 34316
+    },
+    {
+      "path": "FBX/Soil Patch.fbx",
+      "sha256": "fc2fb0290e92c2ddbc762db78019a57e8f1f5f0fda02f54bff99b222ee515474",
+      "bytes": 39212
+    },
+    {
+      "path": "FBX/Sunflower.fbx",
+      "sha256": "406c2afb1717707c6b0291ba249f577fddf9a8c21f694a9c033866fea8674435",
+      "bytes": 97756
+    },
+    {
+      "path": "FBX/Tomato Plant.fbx",
+      "sha256": "bd24ac094cc892ad2c74e5e76c9a9b9b453ec2b911b068239eabd41bdf17c9b2",
+      "bytes": 75244
+    },
+    {
+      "path": "FBX/Tool Shed.fbx",
+      "sha256": "c88462db007a0663c1ab3e8409ce90ef0d86921aabeda2818eeaf6bcce6cd916",
+      "bytes": 68828
+    },
+    {
+      "path": "FBX/Watering Can.fbx",
+      "sha256": "47c423c390be48472197d6fd9b92a6a7bc9836ee545fe61bc25ce328f86de52b",
+      "bytes": 30732
+    },
+    {
+      "path": "FBX/Wheat Crop.fbx",
+      "sha256": "a119140675cec06fb45806b620f918821e3942ceedc1feff2b1df8ec567375cc",
+      "bytes": 72492
+    },
+    {
+      "path": "FBX/Wheelbarrow.fbx",
+      "sha256": "e5c56fc6ec68a650ccf3a765e9965b2c70ee82e725ae2ea9e6c931003eb3869d",
+      "bytes": 42300
+    },
+    {
+      "path": "FBX/Wooden Barrel.fbx",
+      "sha256": "dbbc306faac2e61b17ee48885999f0657ffd54e5bf827c46d06257e6ae0c86f9",
+      "bytes": 36124
+    },
+    {
+      "path": "FBX/Wooden Bucket.fbx",
+      "sha256": "82b0c4782cd0c87db944a66c880179db572dbc348a6dc1171a9716c9c1cffa6a",
+      "bytes": 32348
+    },
+    {
+      "path": "FBX/Wooden Farm Gate.fbx",
+      "sha256": "6938c0c536b2309a8bb3412bd57baa34e57b4fdb2b4dd1f7f3cf6219d69d3f88",
+      "bytes": 33548
+    },
+    {
+      "path": "FBX/Wooden Fence Corner.fbx",
+      "sha256": "a67d62d1c5a79425e267f61657fecfc02a40ec6c37999bedc1c3207a3c04d4a4",
+      "bytes": 27388
+    },
+    {
+      "path": "FBX/Wooden Fence Straight.fbx",
+      "sha256": "f6762015bef2290e634911a5be6692faa1e2e0a5373d6b8cfd52589e9adf4d15",
+      "bytes": 20876
+    },
+    {
+      "path": "GLB/_LICENSE_NOTICE.txt",
+      "sha256": "302bdd7e041b3166373c87179e3e4f9baa6e37aed4ac33bb3b8edf49e45bdc0a",
+      "bytes": 484
+    },
+    {
+      "path": "GLB/Apple Harvest Basket.glb",
+      "sha256": "efdc0b6fbab51a630bb7f2c9e3e3e8f1f2b226e1dee3ef30655d2812ef39394c",
+      "bytes": 75012
+    },
+    {
+      "path": "GLB/Burlap Sack.glb",
+      "sha256": "c94a60fed37efbf4abb369052ddf17e6a9c54a30e03e01348d602e6e8455fe75",
+      "bytes": 62272
+    },
+    {
+      "path": "GLB/Cabbage.glb",
+      "sha256": "99376230d2e772dc91952b716cf5309133f503e3a0b63d22ca756d05f94fcbef",
+      "bytes": 51060
+    },
+    {
+      "path": "GLB/Carrot Plant.glb",
+      "sha256": "a059bfc6df60813a2c07713d1050b55bca1d81e4db3493741384b3f5f7df0145",
+      "bytes": 83872
+    },
+    {
+      "path": "GLB/Corn Stalk.glb",
+      "sha256": "9fb9e85882ef219617fc27f4e7193b4ad814d9aa2177e98cce123a2b521716f0",
+      "bytes": 170652
+    },
+    {
+      "path": "GLB/Corn.glb",
+      "sha256": "bb39062b8691f3effb27ec9c929c1b34e4c74361806ee7450027c3e77373aaec",
+      "bytes": 67936
+    },
+    {
+      "path": "GLB/Empty Produce Crate.glb",
+      "sha256": "e576cdf863967236cf713deecbd1dbfa75b073a03c137f9d105e0b3961aab0dd",
+      "bytes": 48364
+    },
+    {
+      "path": "GLB/Farm Direction Sign.glb",
+      "sha256": "a66f456b26f6fb13efb60a78c2da8f891a6678b305e43dbf86b6c53fd30087b6",
+      "bytes": 42636
+    },
+    {
+      "path": "GLB/Filled Vegetable Crate.glb",
+      "sha256": "69d2ff1fc61cb870c7ae22c112656a42c64622c38673538611827bc89793b022",
+      "bytes": 526372
+    },
+    {
+      "path": "GLB/Hay Bale.glb",
+      "sha256": "44d1f470bc8c709f5cbc59bc4a586b81eb5d8e788de285682a9a834a401b0062",
+      "bytes": 98824
+    },
+    {
+      "path": "GLB/Irrigated Soil Patch.glb",
+      "sha256": "67d604fa1553cc52f4dc0b1c0bc61ae12208963316c5277a6e2a559360ce8604",
+      "bytes": 58392
+    },
+    {
+      "path": "GLB/Potato Plant.glb",
+      "sha256": "0bed4e72baa29b9d24b6e486dc7aa8f76ad2eeac25a4aa246e732bd76c2e54af",
+      "bytes": 120456
+    },
+    {
+      "path": "GLB/Potato.glb",
+      "sha256": "cdff17f96633775161694638a5646fb4b8aca5782c10a520c896475901eee6a5",
+      "bytes": 18948
+    },
+    {
+      "path": "GLB/Produce Wicker Basket.glb",
+      "sha256": "282c084fa8c5bdaf1397e234695edc98f707156e7ff1c97b298434713c7ac9dd",
+      "bytes": 53244
+    },
+    {
+      "path": "GLB/Pumpkin Plant.glb",
+      "sha256": "5f83ff55e355812cc67ea96a89a3ea181d8040226983baee8834593121ed2562",
+      "bytes": 84644
+    },
+    {
+      "path": "GLB/Pumpkin.glb",
+      "sha256": "50573f9c41099a3621a8e86c4964ee2a644d858cb52fc8c60303cb13c131d3b6",
+      "bytes": 47872
+    },
+    {
+      "path": "GLB/Scarecrow.glb",
+      "sha256": "e992a76da06710f430dfa352ea3eb90ca1931633379a4ba94c5960527a5a0be3",
+      "bytes": 80868
+    },
+    {
+      "path": "GLB/Shovel in Soil.glb",
+      "sha256": "ed5bcb6aa0ecd979b63f689662cfc2abef3dfa605a9a24e5614ce6885db60bdf",
+      "bytes": 31820
+    },
+    {
+      "path": "GLB/Soil Patch.glb",
+      "sha256": "3f41f7ddd4c50604ec7e4c5be9a1cf2a3963a1a9c497f2a54bdc96c2a8fc248f",
+      "bytes": 54748
+    },
+    {
+      "path": "GLB/Sunflower.glb",
+      "sha256": "81b6870857f55c408046560a77b80a105800609a446b96174bbfb371acce2fdd",
+      "bytes": 181400
+    },
+    {
+      "path": "GLB/Tomato Plant.glb",
+      "sha256": "203cf9108604d9dbc4437969301f58701d0a9029da06b8090a01f6b621ea8962",
+      "bytes": 138160
+    },
+    {
+      "path": "GLB/Tool Shed.glb",
+      "sha256": "a6eb6a58ff98ff5d1da9128253be6c497218d9ac8d2166fb929f18342094695a",
+      "bytes": 161884
+    },
+    {
+      "path": "GLB/Watering Can.glb",
+      "sha256": "208d88b5ef8a98bbc8ab8054d6ddbc748b2e97130d03bb5b7938a45a9b686974",
+      "bytes": 43848
+    },
+    {
+      "path": "GLB/Wheat Crop.glb",
+      "sha256": "b88e1bf4c8739d856b531540e6205a2f86ab805f6d168269be33fca4cd5f8fe2",
+      "bytes": 136064
+    },
+    {
+      "path": "GLB/Wheelbarrow.glb",
+      "sha256": "d8fe1878de420b1a62830392b5898b26cd88c9b6a85bb034923e96b767614ffb",
+      "bytes": 66324
+    },
+    {
+      "path": "GLB/Wooden Barrel.glb",
+      "sha256": "28b4b440807e992408016280bfbc2bc0fe0c708a000726d3676fdf9395c698f1",
+      "bytes": 61952
+    },
+    {
+      "path": "GLB/Wooden Bucket.glb",
+      "sha256": "892e9f0059b3d0116cd5fab8b043ac24e33f5ccd527cf385d6dac375e6bfb87f",
+      "bytes": 56072
+    },
+    {
+      "path": "GLB/Wooden Farm Gate.glb",
+      "sha256": "ed7f3857c82d159e757b6542a77c09c280b1346252c7d5d9cde553353c3f753c",
+      "bytes": 58484
+    },
+    {
+      "path": "GLB/Wooden Fence Corner.glb",
+      "sha256": "b9f39b1a08117591e930030cabea4f74e6716ba7f2a0b6b4b9db73f318de055c",
+      "bytes": 51228
+    },
+    {
+      "path": "GLB/Wooden Fence Straight.glb",
+      "sha256": "5760f02f650daf60bcb79f56eaf61677491e4a36340f4921f3b628eee42c1208",
+      "bytes": 21528
+    },
+    {
+      "path": "LICENSE.txt",
+      "sha256": "e358344908f7b801c39d7d1d401b35202cdcd1c421d4de90e45c209c05a2bea4",
+      "bytes": 2805
+    },
+    {
+      "path": "OBJ/_LICENSE_NOTICE.txt",
+      "sha256": "302bdd7e041b3166373c87179e3e4f9baa6e37aed4ac33bb3b8edf49e45bdc0a",
+      "bytes": 484
+    },
+    {
+      "path": "OBJ/Apple Harvest Basket.mtl",
+      "sha256": "e97e0a57640276194c38d949d37340fa938de789d4f605300874cbc62e5b98d6",
+      "bytes": 2319
+    },
+    {
+      "path": "OBJ/Apple Harvest Basket.obj",
+      "sha256": "906dba2c2930a7a9b2fb3ab323a209c64e5988231d1155dbd6c4648d50e9aac9",
+      "bytes": 64827
+    },
+    {
+      "path": "OBJ/Burlap Sack.mtl",
+      "sha256": "2ed579bfb8606c83d1c2d073eb3176fdaee42b68383f266c85a6bfad49c26019",
+      "bytes": 1523
+    },
+    {
+      "path": "OBJ/Burlap Sack.obj",
+      "sha256": "356cf9752570dc2ba59bf21a8608864a9d54db7bd628d1b10c51b12a8fae80bf",
+      "bytes": 54451
+    },
+    {
+      "path": "OBJ/Cabbage.mtl",
+      "sha256": "3f342d71aaed4338805c800b773d54d3d175a8e1ccd9479509eb4063de7bcd6d",
+      "bytes": 1332
+    },
+    {
+      "path": "OBJ/Cabbage.obj",
+      "sha256": "b00d3e2e86bf8f8ac83f96ea35ab3928c958832a4b24ede6f088aa8f122d8ade",
+      "bytes": 42945
+    },
+    {
+      "path": "OBJ/Carrot Plant.mtl",
+      "sha256": "6f5fcb1d8ec246859d476f8667877374aeeec2e7c76ac7ea2856f3354e9948ba",
+      "bytes": 1520
+    },
+    {
+      "path": "OBJ/Carrot Plant.obj",
+      "sha256": "5b27eebe2a482d0410ee7f867a54dee901d0b133660277d39186632cf6753ce6",
+      "bytes": 73397
+    },
+    {
+      "path": "OBJ/Corn Stalk.mtl",
+      "sha256": "d6a0e37db148c9cdf8ab8bce9bfa1db09f3bf0d8c1e7a20bc0fc2ef48864f28a",
+      "bytes": 1919
+    },
+    {
+      "path": "OBJ/Corn Stalk.obj",
+      "sha256": "071b1f0cc5e01f1409ea3eb69432a119a7ce1bdea6e68551e27f4f5005d107d3",
+      "bytes": 155752
+    },
+    {
+      "path": "OBJ/Corn.mtl",
+      "sha256": "608db4dffe1bb8ea4b895777def7b490451d4b74a1acb706709297addce9c659",
+      "bytes": 1707
+    },
+    {
+      "path": "OBJ/Corn.obj",
+      "sha256": "0bad72287a8fae78cd55dc8d69aa8749aa8f5d8b739c87477a697978c8ef5820",
+      "bytes": 55740
+    },
+    {
+      "path": "OBJ/Empty Produce Crate.mtl",
+      "sha256": "2dce6ca756a81ecf1caa02e3248a424372ea2ca04b435051c2c7df0ac5ac407b",
+      "bytes": 1105
+    },
+    {
+      "path": "OBJ/Empty Produce Crate.obj",
+      "sha256": "982bff2b358282a6f707df83dbb59420e5a1b4d79ccb28b9819b239428777b07",
+      "bytes": 30870
+    },
+    {
+      "path": "OBJ/Farm Direction Sign.mtl",
+      "sha256": "4f4cbe87e2d59d2f60c7b45c16efa1098de1b300bf9d766a45aa32b3b39f76d3",
+      "bytes": 1716
+    },
+    {
+      "path": "OBJ/Farm Direction Sign.obj",
+      "sha256": "c2e218d3943a016dd3a342d00a7447227e39c36ecb8ff74a0bafc04981231d4c",
+      "bytes": 34530
+    },
+    {
+      "path": "OBJ/Filled Vegetable Crate.mtl",
+      "sha256": "20ea51e8b20d44598a0032389e3d6587212241d11f2909eec4cb9119eaf06ea5",
+      "bytes": 6763
+    },
+    {
+      "path": "OBJ/Filled Vegetable Crate.obj",
+      "sha256": "fd25daee1fcfb33c4f97862505fa59c5eabb67e7a4a4a07a3029316e38ca6947",
+      "bytes": 506805
+    },
+    {
+      "path": "OBJ/Hay Bale.mtl",
+      "sha256": "dc273fc6e20daf2f57d21fd963c72565c59693a8fdbe947aa491140d2f94f4a8",
+      "bytes": 2319
+    },
+    {
+      "path": "OBJ/Hay Bale.obj",
+      "sha256": "fc0bad992ab1bc9ed0c3378567f6e11e31bc146ecba1f23950cf67906c8beee4",
+      "bytes": 84591
+    },
+    {
+      "path": "OBJ/Irrigated Soil Patch.mtl",
+      "sha256": "4fedecf6532ca48cf4c21132ea4198289453fd5aae068cbeae1f52865acd10d8",
+      "bytes": 1723
+    },
+    {
+      "path": "OBJ/Irrigated Soil Patch.obj",
+      "sha256": "58dc1f0603e6262eba1762eb570215fe6474ffac910268d58051035e606481eb",
+      "bytes": 47744
+    },
+    {
+      "path": "OBJ/Potato Plant.mtl",
+      "sha256": "18bcff2f40645bd95b2b6505875190372c6404fc17e33d04aac5bed0e9de4332",
+      "bytes": 2758
+    },
+    {
+      "path": "OBJ/Potato Plant.obj",
+      "sha256": "61b2a6fb807984216729b3c1766950544c4687a0e4f80b7a2d1bcbe339c5cb6b",
+      "bytes": 105210
+    },
+    {
+      "path": "OBJ/Potato.mtl",
+      "sha256": "bc8d0ecdd903495d140f02ef69abc4e9af648aa335a0402a4c884ae34228f9f5",
+      "bytes": 920
+    },
+    {
+      "path": "OBJ/Potato.obj",
+      "sha256": "69295989b03ca922c2a0999183955bdc8f42b4ec92c4d61cf44060b32bd27610",
+      "bytes": 14447
+    },
+    {
+      "path": "OBJ/Produce Wicker Basket.mtl",
+      "sha256": "a9aa57da6495b361aca4276182b971bd4f0ebaafda1de3cf62640084731d4657",
+      "bytes": 1330
+    },
+    {
+      "path": "OBJ/Produce Wicker Basket.obj",
+      "sha256": "3729abc6c06914fb8e69c1169c96e625d2b2e750bed32238534091a959081d70",
+      "bytes": 46219
+    },
+    {
+      "path": "OBJ/Pumpkin Plant.mtl",
+      "sha256": "912135c512b3e8e59edc9ff3439f71228fce2a1ba8a41ef19a32742afc249e68",
+      "bytes": 1943
+    },
+    {
+      "path": "OBJ/Pumpkin Plant.obj",
+      "sha256": "2798deb2e5dedc7594a0f4bda1f07534ec2ca3b8f309ff5c6665118471ba2c84",
+      "bytes": 72527
+    },
+    {
+      "path": "OBJ/Pumpkin.mtl",
+      "sha256": "eafeb39739dd2f0f2061768586fef56c3ea2d01d10b8857b9c7dd9f6bede3243",
+      "bytes": 1306
+    },
+    {
+      "path": "OBJ/Pumpkin.obj",
+      "sha256": "3b74906001d63b0ebf56a56ec0d4d6d0c4394a8b0577b9f6b297213a03fb58d5",
+      "bytes": 39694
+    },
+    {
+      "path": "OBJ/Scarecrow.mtl",
+      "sha256": "8ad5b1164c2bd2acba475b30efe8f713b0a45ee5bf3e523a583059ceefa5941f",
+      "bytes": 2736
+    },
+    {
+      "path": "OBJ/Scarecrow.obj",
+      "sha256": "2916207d86da1d329aae010826107447b9541944ac28c5335368ea21d73d5b53",
+      "bytes": 61652
+    },
+    {
+      "path": "OBJ/Shovel in Soil.mtl",
+      "sha256": "9b1ab6c923225637265deb8ce97f8fa9e282047750f2df9f8f6870092ae9a50f",
+      "bytes": 1728
+    },
+    {
+      "path": "OBJ/Shovel in Soil.obj",
+      "sha256": "2b5cc87689e84c7131634d5c12093ba60f91e24fa30cb9aef29e6a2be67a37e2",
+      "bytes": 25553
+    },
+    {
+      "path": "OBJ/Soil Patch.mtl",
+      "sha256": "31db6761d20d5f6f4bc3c27cfc8163a219cf6d1d9700e8a2d1e4d1c2cc7db053",
+      "bytes": 1317
+    },
+    {
+      "path": "OBJ/Soil Patch.obj",
+      "sha256": "ec574f8524aa2a6a0bc9fbed11f988e1b98fd5170a172a269f7532be305ab51b",
+      "bytes": 45742
+    },
+    {
+      "path": "OBJ/Sunflower.mtl",
+      "sha256": "7274d8d411807750199afbdb45066bcdaa987499f470e0a61394db313bf4ab6c",
+      "bytes": 2987
+    },
+    {
+      "path": "OBJ/Sunflower.obj",
+      "sha256": "50fc1ec09eca6b5c257a9bf19e42fb1be36ca278621dd0220ec58bfe65072c3a",
+      "bytes": 169103
+    },
+    {
+      "path": "OBJ/Tomato Plant.mtl",
+      "sha256": "80b62c9f498c0004007565f4ed3a9573c97b47daa6ce3362973a53aef96314e2",
+      "bytes": 1726
+    },
+    {
+      "path": "OBJ/Tomato Plant.obj",
+      "sha256": "580e480e633cba1374e8fb55815a2a125ad8f5f5eac92506084e5bbd6a50308c",
+      "bytes": 128005
+    },
+    {
+      "path": "OBJ/Tool Shed.mtl",
+      "sha256": "ae06ef19cda67403e6b552c43731cef58edb15752af8af14042896cc2035209f",
+      "bytes": 2287
+    },
+    {
+      "path": "OBJ/Tool Shed.obj",
+      "sha256": "256853ae78178679dd39507a1ee94882c37820b050c5a956a19825b683206fc0",
+      "bytes": 131063
+    },
+    {
+      "path": "OBJ/Watering Can.mtl",
+      "sha256": "6010e34b0c4e767ba988194a266ed680217f1ea965ca29080eafd3c3b7b81cb3",
+      "bytes": 907
+    },
+    {
+      "path": "OBJ/Watering Can.obj",
+      "sha256": "f2d7febe17f1448cde122052213f2b0ea0b52fc4cc5a6af8beb06181f02d35ef",
+      "bytes": 38704
+    },
+    {
+      "path": "OBJ/Wheat Crop.mtl",
+      "sha256": "46b63300ab708c8e28cfad8dd80da9cfb88fbd4c4e6077cca262e0a5f7091d2a",
+      "bytes": 1713
+    },
+    {
+      "path": "OBJ/Wheat Crop.obj",
+      "sha256": "04eae888b28eeb312bc6f5cb93bea49fa181aedb85c3da44f0e5a65b4450dad9",
+      "bytes": 123679
+    },
+    {
+      "path": "OBJ/Wheelbarrow.mtl",
+      "sha256": "c48815cf26025256c68a4e382d3d17fe225fb829466447cf2fdbc0f700481385",
+      "bytes": 1911
+    },
+    {
+      "path": "OBJ/Wheelbarrow.obj",
+      "sha256": "fbd2d69d3ff88af03cca7528dfcbec811334fb305addcc3a14758cf36879203b",
+      "bytes": 59731
+    },
+    {
+      "path": "OBJ/Wooden Barrel.mtl",
+      "sha256": "8f160df34338a4010aa7d0ed758514c835b0c0be02a3a2041135865e4738e24a",
+      "bytes": 1501
+    },
+    {
+      "path": "OBJ/Wooden Barrel.obj",
+      "sha256": "05037d752929bbd686a808ff74dd5c8eec69e3d6752ca8f00eb7ef362fe28222",
+      "bytes": 51137
+    },
+    {
+      "path": "OBJ/Wooden Bucket.mtl",
+      "sha256": "0c60989dccb1536587831e230859143458b051386f2592a68482262f686f1392",
+      "bytes": 1301
+    },
+    {
+      "path": "OBJ/Wooden Bucket.obj",
+      "sha256": "581e8a5f3652402e6cd91abe59d02615e64751e1eee1ec84fa08fb9d34471a88",
+      "bytes": 41967
+    },
+    {
+      "path": "OBJ/Wooden Farm Gate.mtl",
+      "sha256": "c19c9630be05f4c5ace0c9167fe924bd29564361c2bfd40df1dfa296af735c2e",
+      "bytes": 1304
+    },
+    {
+      "path": "OBJ/Wooden Farm Gate.obj",
+      "sha256": "3904adbb50ee8bd1cf8ca1819ec32b61653efeeef481898c0d3e0fff831e397a",
+      "bytes": 35254
+    },
+    {
+      "path": "OBJ/Wooden Fence Corner.mtl",
+      "sha256": "d8354702ab87942c2a9917b6aa3278cee4d3e0a889bd79f9b392ae77dadc5edf",
+      "bytes": 696
+    },
+    {
+      "path": "OBJ/Wooden Fence Corner.obj",
+      "sha256": "c4bfee93cb9b99eaaf38d293d0e5ba5e7d93bf7fabfc14da1733dd145c75b8f4",
+      "bytes": 33725
+    },
+    {
+      "path": "OBJ/Wooden Fence Straight.mtl",
+      "sha256": "16733ecc247b6db4b99162eab57a0fac93b43b3bf49a67a04cf8aca5066cfe12",
+      "bytes": 698
+    },
+    {
+      "path": "OBJ/Wooden Fence Straight.obj",
+      "sha256": "849539d7267364636018bfdd211aa9bc8895d537a863a3de48eb73c7fd0d717e",
+      "bytes": 13306
+    },
+    {
+      "path": "README.txt",
+      "sha256": "f162e9ff1fc14b0217c7f51deff7578dc4fa8f2b4399fa1ee490494e4a909f65",
+      "bytes": 1080
+    },
+    {
+      "path": "USAGE_TERMS.json",
+      "sha256": "0e9e1a882c701571deeaf5ce6afbf75f2213a1779f30cc2f3a8bca1c5ff1ec18",
+      "bytes": 865
+    }
+  ],
+  "license_file": "LICENSE.txt",
+  "usage_terms_file": "USAGE_TERMS.json",
+  "ai_notice_file": "AI_NOTICE.txt",
+  "license_summary": "Commercial end-product use permitted. Standalone resale, redistribution, re-upload, mirroring and sublicensing prohibited, including via AI, agents or automated intermediaries.",
+  "standalone_resale_allowed": false,
+  "standalone_redistribution_allowed": false,
+  "redistribution_via_ai_or_intermediary_allowed": false
+}
