@@ -1,59 +1,22 @@
-[gd_scene load_steps=41 format=3 uid="uid://cjo7cpv4c2c53"]
+[gd_scene load_steps=22 format=3 uid="uid://cjo7cpv4c2c53"]
 
 [ext_resource type="Script" uid="uid://b8mex6n83r8b0" path="res://barnlv_1.gd" id="1_fh1oy"]
-[ext_resource type="Script" uid="uid://bruuuhkkk5ulm" path="res://player.gd" id="2_7rax8"]
-[ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="3_0jm4f"]
-[ext_resource type="AudioStream" uid="uid://bwo6q6iju7jbs" path="res://RandomizerStream/pickup.tres" id="3_6bweg"]
+[ext_resource type="PackedScene" uid="uid://b5bwbeu1y1ydi" path="res://player.tscn" id="2_aisrd"]
 [ext_resource type="PackedScene" uid="uid://cp0k7litdqsvj" path="res://grange.tscn" id="3_x2eys"]
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="4_cri2b"]
-[ext_resource type="AudioStream" uid="uid://dnxlxaj124qei" path="res://assets/sfx/dragon-studio-pop-402324.mp3" id="4_et6jf"]
 [ext_resource type="PackedScene" uid="uid://deuduqxjxjsei" path="res://wheelbarrow.tscn" id="5_cri2b"]
-[ext_resource type="AudioStream" uid="uid://6ni6nfdi8o8t" path="res://assets/sfx/oeuf.mp3" id="5_gh47u"]
-[ext_resource type="AudioStream" uid="uid://dfsqw6lrriuy0" path="res://assets/sfx/voicelines/coq/coqVL.01.coq1.wav" id="6_pyb3s"]
 [ext_resource type="PackedScene" uid="uid://b720d1hjdq03g" path="res://prop_hay_pile_012.tscn" id="6_valy8"]
-[ext_resource type="AudioStream" uid="uid://cxsn53uuabdwu" path="res://assets/sfx/voicelines/coq/coqVL.03.coq3.wav" id="7_2x56h"]
 [ext_resource type="PackedScene" uid="uid://et4xw4vjfyls" path="res://cow_bl_w.tscn" id="7_valy8"]
-[ext_resource type="AudioStream" uid="uid://y3fuy2hqw2cv" path="res://assets/sfx/voicelines/coq/coqVL.04.coq4.wav" id="8_6afgl"]
 [ext_resource type="PackedScene" uid="uid://bf2m3idwarjly" path="res://sheep_white.tscn" id="8_wiarr"]
-[ext_resource type="AudioStream" uid="uid://cvvkcay3dt7vb" path="res://assets/sfx/voicelines/coq/coqVL.05.coq5.wav" id="9_8pa2n"]
 [ext_resource type="PackedScene" uid="uid://dh348ew775p6t" path="res://tool_pitchfork_01.tscn" id="9_dxt5t"]
 [ext_resource type="PackedScene" uid="uid://cg8klssgqxw7q" path="res://pig.tscn" id="10_jo8ah"]
-[ext_resource type="AudioStream" uid="uid://dexgmku5hs7kw" path="res://assets/sfx/voicelines/coq/coqVL.06.coq6.wav" id="10_wsv3m"]
-[ext_resource type="AudioStream" uid="uid://bjr31mxtkkbnn" path="res://assets/sfx/voicelines/coq/coqVL.07.coq7.wav" id="11_8fwce"]
 [ext_resource type="PackedScene" uid="uid://cel6n33rl7n6w" path="res://filled_vegetable_crate.tscn" id="11_dpprv"]
-[ext_resource type="AudioStream" uid="uid://rmigrghnbyxl" path="res://assets/sfx/voicelines/coq/coqVL.08.coq8.wav" id="12_6p7nq"]
 [ext_resource type="PackedScene" uid="uid://1sgsf8rqy007" path="res://prop_crate_box_pile_012.tscn" id="13_aisrd"]
-[ext_resource type="AudioStream" uid="uid://biqsr6tuuyb17" path="res://assets/sfx/voicelines/coq/coqVL.09.coq9.wav" id="13_v757h"]
-[ext_resource type="AudioStream" uid="uid://dhbd3pdrcddh6" path="res://assets/sfx/voicelines/coq/coqVL.11.coq11.wav" id="14_dhlmb"]
 [ext_resource type="PackedScene" uid="uid://mwmtvoflckp1" path="res://prop_wood_pile_02.tscn" id="14_dpprv"]
 [ext_resource type="PackedScene" uid="uid://r6nq4odae8h5" path="res://prop_crate_box_pile_022.tscn" id="14_uc47n"]
 [ext_resource type="PackedScene" uid="uid://p3pia14j08hc" path="res://prop_hay_bale_round_01.tscn" id="15_bvgwf"]
-[ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="15_fh1oy"]
 [ext_resource type="PackedScene" uid="uid://byaif553kd3ok" path="res://prop_hay_bale_square_02.tscn" id="16_aisrd"]
 [ext_resource type="PackedScene" uid="uid://df8y6jn3mkkjx" path="res://bld_01_fence_wood_gate_double_handle_01.tscn" id="17_uc47n"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_cri2b"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_valy8"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wiarr"]
-albedo_texture = ExtResource("3_0jm4f")
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_x2eys"]
-radius = 0.2
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_g8myq"]
-streams_count = 10
-stream_0/stream = ExtResource("6_pyb3s")
-stream_1/stream = ExtResource("7_2x56h")
-stream_2/stream = ExtResource("8_6afgl")
-stream_3/stream = ExtResource("9_8pa2n")
-stream_4/stream = ExtResource("10_wsv3m")
-stream_5/stream = ExtResource("11_8fwce")
-stream_6/stream = ExtResource("12_6p7nq")
-stream_7/stream = ExtResource("13_v757h")
-stream_8/stream = ExtResource("14_dhlmb")
-stream_9/stream = ExtResource("15_fh1oy")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x2eys"]
 
@@ -91,37 +54,8 @@ size = Vector3(10.094238, 12.233887, 1)
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_fh1oy")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1.6490294, 0, 0, 0, 1.6490294, 0, 0, 0, 1.6490294, 22.028154, -1.1064528, 51.7538)
-script = ExtResource("2_7rax8")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-shape = SubResource("SphereShape3D_cri2b")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
-mesh = SubResource("SphereMesh_valy8")
-surface_material_override/0 = SubResource("StandardMaterial3D_wiarr")
-
-[node name="PivotCamera" type="Node3D" parent="CharacterBody3D"]
-
-[node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D/PivotCamera"]
-shape = SubResource("SphereShape3D_x2eys")
-spring_length = 5.0
-margin = 0.005
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/PivotCamera/SpringArm3D"]
-
-[node name="pickup" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
-stream = ExtResource("3_6bweg")
-
-[node name="lay_egg" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
-stream = ExtResource("4_et6jf")
-
-[node name="jump" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
-stream = ExtResource("5_gh47u")
-
-[node name="voicelines" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
-stream = SubResource("AudioStreamRandomizer_g8myq")
+[node name="Player" parent="." instance=ExtResource("2_aisrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.349472, 0, 58.431477)
 
 [node name="Bld_Barn_01" parent="." instance=ExtResource("3_x2eys")]
 transform = Transform3D(7.5, 0, 0, 0, 7.5, 0, 0, 0, 7.5, 15.63562, -0.9178524, 21.379395)
