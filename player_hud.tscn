@@ -75,6 +75,7 @@ label_settings = SubResource("LabelSettings_tvw2b")
 horizontal_alignment = 1
 
 [node name="Pause" type="Label" parent="."]
+visible = false
 offset_left = 759.0
 offset_top = 366.0
 offset_right = 1067.0

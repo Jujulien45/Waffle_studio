@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkxx64rjjt2ns"]
+[gd_scene load_steps=10 format=3 uid="uid://bkxx64rjjt2ns"]
 
 [ext_resource type="PackedScene" uid="uid://b5bwbeu1y1ydi" path="res://player.tscn" id="1_0g12c"]
 [ext_resource type="PackedScene" uid="uid://pu6efshxol71" path="res://rabbit_model.tscn" id="5_gamoy"]
+[ext_resource type="PackedScene" uid="uid://c46177kxv8076" path="res://breakable_floor.tscn" id="5_ofiah"]
 [ext_resource type="PackedScene" uid="uid://bkru8ife5aq0y" path="res://chicken.tscn" id="5_p4ujc"]
 [ext_resource type="PackedScene" uid="uid://bb2wr3t8rmw4g" path="res://crate.tscn" id="19_3m4xw"]
 
@@ -108,9 +109,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9539175, 0.99999905, -10.8
 [node name="Crate2" parent="." instance=ExtResource("19_3m4xw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.468864, 2.207725, -10.876823)
 
-[node name="Crate3" parent="." instance=ExtResource("19_3m4xw")]
-transform = Transform3D(8.83, 0, 0, 0, 8.83, 0, 0, 0, 8.83, -0.6294279, 5.4971466, -2.5200014)
-necessary_speed = 100.0
-
 [node name="Crate4" parent="." instance=ExtResource("19_3m4xw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.228725, 0.99999905, -10.876823)
+
+[node name="floor" parent="." instance=ExtResource("5_ofiah")]
+transform = Transform3D(9.21, 0, 0, 0, 1, 0, 0, 0, 13.015, -4.802416, 5.699196, 3.831578)
