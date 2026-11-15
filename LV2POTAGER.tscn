@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dwq4tr2ryf3mq"]
+[gd_scene load_steps=46 format=3 uid="uid://dwq4tr2ryf3mq"]
 
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="1_7qbri"]
 [ext_resource type="Script" path="res://player.gd" id="2_j87em"]
@@ -31,11 +31,12 @@
 [ext_resource type="PackedScene" uid="uid://dh348ew775p6t" path="res://tool_pitchfork_01.tscn" id="28_xi47v"]
 [ext_resource type="PackedScene" uid="uid://n3v2wk3323wl" path="res://tool_broom_01.tscn" id="29_moseg"]
 [ext_resource type="PackedScene" uid="uid://cilnm87mkwntc" path="res://bld_chicken_coop_02.tscn" id="30_cehe7"]
-[ext_resource type="PackedScene" uid="uid://bca63gtn8ub12" path="res://bld_doghouse_large_01.tscn" id="31_xi47v"]
 [ext_resource type="PackedScene" uid="uid://r6nq4odae8h5" path="res://prop_crate_box_pile_022.tscn" id="32_moseg"]
 [ext_resource type="PackedScene" uid="uid://byaif553kd3ok" path="res://prop_hay_bale_square_02.tscn" id="33_moseg"]
 [ext_resource type="PackedScene" uid="uid://bi58ll78h6yo2" path="res://assets/assets6/low-poly-farm-free/addons/low_poly_farm/models/ground_grass_model.glb" id="34_cehe7"]
 [ext_resource type="PackedScene" uid="uid://cel6n33rl7n6w" path="res://filled_vegetable_crate.tscn" id="36_qnq0a"]
+[ext_resource type="PackedScene" uid="uid://b720d1hjdq03g" path="res://prop_hay_pile_012.tscn" id="37_slo6c"]
+[ext_resource type="PackedScene" uid="uid://mwmtvoflckp1" path="res://prop_wood_pile_02.tscn" id="38_as24j"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xi47v"]
 
@@ -610,16 +611,16 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -7.2151747, -1.4816293, 37
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 5.4310427, -1.4816293, 37.767452)
 
 [node name="Tool Shed" parent="." instance=ExtResource("23_o4evj")]
-transform = Transform3D(-4.6772933, 0, -8.838717, 0, 10, 0, 8.838717, 0, -4.6772933, 62.560555, -2.6647108, 105.51848)
+transform = Transform3D(-4.6772933, 0, -8.838717, 0, 10, 0, 8.838717, 0, -4.6772933, 62.560555, -5.871176, 105.51848)
 
 [node name="Prop_Plank_Stack_01" parent="." instance=ExtResource("24_fypvx")]
-transform = Transform3D(4.5224805, 0, 8.918922, 0, 10.000001, 0, -8.918922, 0, 4.5224805, 1.7273655, -2.6647146, 111.322784)
+transform = Transform3D(4.5224805, 0, 8.918922, 0, 10.000001, 0, -8.918922, 0, 4.5224805, -0.74418163, -2.6647146, 114.7983)
 
 [node name="Prop_Plank_01" parent="." instance=ExtResource("25_8kcsw")]
-transform = Transform3D(8.0047, 1.3998187, -5.8279753, 0, 9.7234535, 2.3354716, 5.9937286, -1.8694749, 7.7833323, 11.096721, -3.0237267, 98.13159)
+transform = Transform3D(8.0047, 1.3998187, -5.8279753, 0, 9.7234535, 2.3354716, 5.9937286, -1.8694749, 7.7833323, 9.815941, -2.963607, 102.24075)
 
 [node name="Prop_Plank_02" parent="." instance=ExtResource("25_8kcsw")]
-transform = Transform3D(9.497319, 0.731153, -3.0440671, 0, 9.7234535, 2.3354716, 3.1306434, -2.218072, 9.234674, 56.694664, 17.868366, 124.65527)
+transform = Transform3D(9.497319, 0.7311532, -3.0440674, 0.2493859, 9.515862, 3.0636802, 3.1206946, -2.98559, 9.019285, 56.694664, 17.868366, 124.65527)
 
 [node name="Tool_Rake_01" parent="." instance=ExtResource("26_isjpf")]
 transform = Transform3D(12.973331, -1.0430813e-07, -5.262385, 1.641096, 13.301819, 4.045786, 4.99995, -4.365957, 12.32635, 59.317978, -2.6647072, 128.48418)
@@ -631,16 +632,13 @@ transform = Transform3D(1.8294002, 9.656494, 9.970224, -2.7181904, 10.110972, -9
 transform = Transform3D(9.050126, -4.250312, -0.17331101, 0, 0.40742207, -9.991696, 4.253844, 9.042612, 0.36872214, 52.174236, -2.6422732, 124.26447)
 
 [node name="Tool_Pitchfork_01" parent="." instance=ExtResource("28_xi47v")]
-transform = Transform3D(11.794817, 0, -5.4664664, -0.9226403, 12.813494, -1.990751, 5.3880415, 2.1941638, 11.625602, 55.152073, -2.5950413, 127.858536)
+transform = Transform3D(11.794817, 0, -5.4664664, -0.71266586, 12.8890505, -1.5376961, 5.4198117, 1.6948159, 11.694152, 55.152073, -2.5950413, 127.858536)
 
 [node name="Tool_Broom_01" parent="." instance=ExtResource("29_moseg")]
 transform = Transform3D(11, 0, 0, 0, 11, 0, 0, 0, 11, 58.415623, -2.65215, 116.841)
 
 [node name="Bld_Chicken_Coop_02" parent="." instance=ExtResource("30_cehe7")]
-transform = Transform3D(-5.2780104, 0, 8.493682, 0, 10, 0, -8.493682, 0, -5.2780104, -17.06163, -3.9627113, 140.086)
-
-[node name="Bld_Doghouse_Large_01" parent="." instance=ExtResource("31_xi47v")]
-transform = Transform3D(4.1020956, 0, -9.119913, 0, 10, 0, 9.119913, 0, 4.1020956, 41.277653, -2.664711, 164.20932)
+transform = Transform3D(-49.990498, 0, -0.97469634, 0, 50, 0, 0.97469634, 0, -49.990498, 33.925114, -6.2423663, 297.68478)
 
 [node name="Prop_Crate_Box_Pile_022" parent="." instance=ExtResource("32_moseg")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 35.271767, -2.7336235, 106.56064)
@@ -649,7 +647,10 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 35.271767, -2.7336235, 106
 transform = Transform3D(3.9594617, 0, 9.182737, 0, 10, 0, -9.182737, 0, 3.9594617, 38.690975, -2.659176, 135.14005)
 
 [node name="Prop_Hay_Bale_Square_03" parent="." instance=ExtResource("33_moseg")]
-transform = Transform3D(-4.172629, -1.2338847, 9.003704, -4.774247, 8.727732, -1.0164872, -7.73277, -4.722734, -4.2308455, 36.537716, 2.7921598, 129.69296)
+transform = Transform3D(-2.5933273, -3.0357857, 9.168351, -6.9373946, 7.190092, 0.41846588, -6.7191677, -6.2519264, -3.9706702, 36.537716, 2.7921598, 129.69296)
+
+[node name="Prop_Hay_Bale_Square_04" parent="." instance=ExtResource("33_moseg")]
+transform = Transform3D(-2.0471337, 0.62703055, 9.768116, 0.26863313, 9.979301, -0.5842899, -9.784533, 0.14278984, -2.0597398, -21.045837, -3.0731337, 146.49739)
 
 [node name="ground_grass_model" parent="." instance=ExtResource("34_cehe7")]
 transform = Transform3D(47.435, 0, 0, 0, 4.285966, 47.24098, 0, -47.24098, 4.285966, 13.391503, 25.59668, -133.10591)
@@ -661,7 +662,7 @@ transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -21.124065, 1.4358764, 179.74
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -13.543133, 1.4358764, 187.87181)
 
 [node name="Crate3" parent="." instance=ExtResource("23_fypvx")]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -15.529747, 8.63935, 182.84439)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -15.3641205, 8.63935, 182.34428)
 
 [node name="Filled Vegetable Crate" parent="." instance=ExtResource("36_qnq0a")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -32.866196, -2.664709, 91.6444)
@@ -680,3 +681,27 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -29.961966, 0.26310897, 91
 
 [node name="Filled Vegetable Crate6" parent="." instance=ExtResource("36_qnq0a")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -26.728401, 3.286935, 91.6444)
+
+[node name="Prop_Hay_Pile_012" parent="." instance=ExtResource("37_slo6c")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 28.55343, -2.664713, 223.26222)
+
+[node name="Prop_Hay_Pile_013" parent="." instance=ExtResource("37_slo6c")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 40.60018, -2.664713, 180.80031)
+
+[node name="Tool_Pitchfork_02" parent="." instance=ExtResource("28_xi47v")]
+transform = Transform3D(3.6596534, -9.306285, 0, 2.1655595, 0.8515963, 9.725489, -9.0508175, -3.559192, 2.3269863, 42.471916, -2.664711, 212.45393)
+
+[node name="Tool_Pitchfork_03" parent="." instance=ExtResource("28_xi47v")]
+transform = Transform3D(-5.626776, 7.187068, 4.0847816, -2.8619602, -6.3292203, 7.193757, 7.7555523, 2.878718, 5.6182203, 8.19622, 11.51811, 208.05884)
+
+[node name="Tool_Pitchfork_04" parent="." instance=ExtResource("28_xi47v")]
+transform = Transform3D(2.8260586, 8.084164, 5.1633005, -0.52787393, -5.243497, 8.4986515, 9.5778265, -2.6743262, -1.0551004, 4.3792415, 14.608612, 226.85541)
+
+[node name="Tool_Axe_03" parent="." instance=ExtResource("27_xiyai")]
+transform = Transform3D(-5.061434, -8.057096, 3.0765283, 8.272941, -5.5437975, -0.9081564, 2.4372776, 2.0855365, 9.471547, 11.880213, 7.676277, 248.88261)
+
+[node name="Prop_Wood_Pile_02" parent="." instance=ExtResource("38_as24j")]
+transform = Transform3D(6.4164586, 0, -8.9347105, 0, 11, 0, 8.9347105, 0, 6.4164586, 1.1818628, -2.6643639, 247.45993)
+
+[node name="Tool_Rake_03" parent="." instance=ExtResource("26_isjpf")]
+transform = Transform3D(9.977546, 1.5745571, -6.4783807, 2.1748095, 10.25401, 5.841702, 6.3022885, -6.031259, 8.240455, 19.636326, -3.443737, 237.76297)
