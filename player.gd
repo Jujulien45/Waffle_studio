@@ -3,7 +3,7 @@ extends CharacterBody3D
 var egg = preload("res://egg.tscn")
 
 const ACELERATION = 5
-const DASH_ACCEL = 20
+const DASH_ACCEL =  20
 const FRICTION = 0.4  
 const JUMP_VELOCITY = 7
 
@@ -18,12 +18,13 @@ var dir = null
 var dash_time = -5000
 var dash_available = true
 
+var pred_speed = null
+
 var paused = false
 
 @export var sensitivity = 0.01
 
 var camera
-
 var MESH: MeshInstance3D
 var Pickup_steam_player: AudioStreamPlayer3D
 var lay_egg_steam_player: AudioStreamPlayer3D
@@ -95,6 +96,8 @@ func _physics_process(delta: float) -> void:
 		MESH.basis = MESH.basis.rotated(local_axis.normalized(), angle)
 			
 		move_and_slide()
+		
+		pred_speed = velocity
 		
 		if(not dash_available):
 			if(Time.get_ticks_msec() > 4000 + dash_time):

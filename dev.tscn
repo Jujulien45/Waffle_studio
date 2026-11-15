@@ -19,13 +19,6 @@
 [ext_resource type="AudioStream" uid="uid://dhbd3pdrcddh6" path="res://assets/sfx/voicelines/coq/coqVL.11.coq11.wav" id="14_mn5um"]
 [ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="15_ue33a"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fkxo1"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_daqws"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_daqws"]
-albedo_color = Color(1, 0.14901961, 1, 1)
-
 [sub_resource type="SphereShape3D" id="SphereShape3D_0g12c"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_coge5"]
@@ -46,25 +39,22 @@ stream_7/stream = ExtResource("13_cnd6s")
 stream_8/stream = ExtResource("14_mn5um")
 stream_9/stream = ExtResource("15_ue33a")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fkxo1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_daqws"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_daqws"]
+albedo_color = Color(1, 0.14901961, 1, 1)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fkxo1"]
 
 [node name="Node3D" type="Node3D"]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(31.93, 0, 0, 0, 1, 0, 0, 0, 29.68, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_fkxo1")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("BoxMesh_daqws")
-surface_material_override/0 = SubResource("StandardMaterial3D_daqws")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -0.019805908, 110.537834, -0.4930153)
 
 [node name="Player" type="CharacterBody3D" parent="." groups=["Player"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92383, 6.9042525, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08358765, 2.4063926, 0)
 script = ExtResource("1_coge5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
@@ -89,6 +79,16 @@ stream = ExtResource("5_6r40v")
 
 [node name="voicelines" type="AudioStreamPlayer3D" parent="Player"]
 stream = SubResource("AudioStreamRandomizer_vm5kt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(31.93, 0, 0, 0, 1, 0, 0, 0, 29.68, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_fkxo1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_daqws")
+surface_material_override/0 = SubResource("StandardMaterial3D_daqws")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
 transform = Transform3D(-12.718792, -0.17364818, -2.5947081e-06, -2.2426662, 0.9848077, 0, 1.1119121e-06, 1.5180806e-08, -29.68, 89.0958, -16.424698, 0)
