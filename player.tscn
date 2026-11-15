@@ -75,6 +75,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 
 [node name="jump_sound_delay" type="Timer" parent="."]
 one_shot = true
+[node name="RayCast3D" type="RayCast3D" parent="."]
 
 [connection signal="finished" from="pickup" to="." method="_on_pickup_finished"]
 [connection signal="finished" from="jump" to="." method="_on_jump_finished"]
