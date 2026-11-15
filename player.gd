@@ -44,6 +44,8 @@ var Pickup_steam_player: AudioStreamPlayer3D
 var lay_egg_steam_player: AudioStreamPlayer3D
 var jump_stream_player: AudioStreamPlayer3D
 var voicelines_audio: AudioStreamPlayer3D
+@onready var jump_sound_delay: Timer = $jump_sound_delay
+@export var JUMP_SOUND_DELAY := 0.2
 
 var is_playing_audio := false
 
@@ -86,14 +88,14 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 			if(not is_on_floor()):
 				lay_egg_steam_player.play()
+				jump_sound_delay.wait_time = JUMP_SOUND_DELAY
+				jump_sound_delay.start()
 				double_jumped = true
 				var egg_inst = egg.instantiate()
 				get_parent().add_child(egg_inst)
 				egg_inst.global_position = global_position
 				egg_inst.global_position.y -= 0.6
-			else:
-				jump_stream_player.play()
-
+				
 		# Get the input direction
 		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		
@@ -192,3 +194,8 @@ func _on_voicelines_finished() -> void:
 func _on_warning_timer_timeout() -> void:
 	warning = false
 	warning_label.visible = false
+
+
+func _on_jump_sound_delay_timeout() -> void:
+	jump_stream_player.play()
+	
