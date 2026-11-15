@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dw5qt4v804ovy"
-path="res://.godot/imported/Filled Vegetable Crate.fbx-d2096f531c310eef786c7d48620c1b10.scn"
+path="res://.godot/imported/Filled Vegetable Crate.fbx-fa4bc9194f4b92f1498df556bd46ed9c.scn"
 
 [deps]
 
-source_file="res://assets/assets4/FREE_VERSION_30_MODELS/FBX/Filled Vegetable Crate.fbx"
-dest_files=["res://.godot/imported/Filled Vegetable Crate.fbx-d2096f531c310eef786c7d48620c1b10.scn"]
+source_file="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Filled Vegetable Crate.fbx"
+dest_files=["res://.godot/imported/Filled Vegetable Crate.fbx-fa4bc9194f4b92f1498df556bd46ed9c.scn"]
 
 [params]
 

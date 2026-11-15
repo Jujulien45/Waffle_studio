@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbc2dtuw3b71y"]
+
+[ext_resource type="PackedScene" uid="uid://r8wt522g4uut" path="res://assets/assets7/Grimnir_Low-Poly-Farm-Assets_Vol1_1.0/Models/FBX Format/Prop_Plank_01.fbx" id="1_fp5mm"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6q73c"]
+data = PackedVector3Array(-0.105, 0, 1.75, 0.105, 0, 1.75, -0.105, 0, -1.75, 0.105, 0, 1.75, 0.105, 0, -1.75, -0.105, 0, -1.75, -0.105, 0.08, 1.75, -0.105, 0.08, -1.75, 0.105, 0.08, 1.75, 0.105, 0, 1.75, 0.105, 0.08, 1.75, 0.105, 0, -1.75, 0.105, 0.08, 1.75, 0.105, 0.08, -1.75, 0.105, 0, -1.75, -0.105, 0, -1.75, -0.105, 0.08, -1.75, -0.105, 0, 1.75, -0.105, 0.08, -1.75, -0.105, 0.08, 1.75, -0.105, 0, 1.75, 0.105, 0, -1.75, 0.105, 0.08, -1.75, -0.105, 0, -1.75, 0.105, 0.08, -1.75, -0.105, 0.08, -1.75, -0.105, 0, -1.75, -0.105, 0, 1.75, -0.105, 0.08, 1.75, 0.105, 0, 1.75, -0.105, 0.08, 1.75, 0.105, 0.08, 1.75, 0.105, 0, 1.75, -0.105, 0.08, -1.75, 0.105, 0.08, -1.75, 0.105, 0.08, 1.75)
+
+[node name="Prop_Plank_01" instance=ExtResource("1_fp5mm")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Prop_Plank_01" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Prop_Plank_01/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_6q73c")
