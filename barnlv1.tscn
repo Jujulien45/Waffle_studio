@@ -356,3 +356,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.908987, 41.48072, 66.88393
 shape = SubResource("BoxShape3D_aisrd")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+
+[node name="Player" parent="." instance=ExtResource("16_bvgwf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.45089, 0, 51.211227)
+
