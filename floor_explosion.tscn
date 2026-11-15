@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://blyb4kxkbjjqd"]
+[gd_scene load_steps=7 format=3 uid="uid://blyb4kxkbjjqd"]
 
 [ext_resource type="Script" uid="uid://cv6wfyf0o68pk" path="res://floor_explosion.gd" id="1_ujqin"]
 
@@ -12,62 +12,33 @@ curve = SubResource("Curve_0ecxc")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ujqin"]
 particle_flag_align_y = true
 spread = 180.0
-initial_velocity_min = 12.0
-initial_velocity_max = 14.0
+initial_velocity_min = 4.0
+initial_velocity_max = 6.0
 scale_min = 0.25
 scale_max = 2.0
 scale_curve = SubResource("CurveTexture_dwm25")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fc5i1"]
-albedo_color = Color(0.6666667, 0.6666667, 0, 1)
-emission_enabled = true
-emission = Color(0.78431374, 0.6313726, 0, 1)
-emission_energy_multiplier = 2.0
-grow_amount = -3.68
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujqin"]
+albedo_color = Color(0.46954602, 0.31890243, 2.7915835e-06, 1)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_jukag"]
-material = SubResource("StandardMaterial3D_fc5i1")
-top_radius = 0.1
-bottom_radius = 0.0
-
-[sub_resource type="Curve" id="Curve_x7lov"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7983651, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_x77si"]
-curve = SubResource("Curve_x7lov")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y00fj"]
-particle_flag_align_y = true
-spread = 180.0
-initial_velocity_min = 12.0
-initial_velocity_max = 14.0
-scale_min = 0.25
-scale_max = 2.0
-scale_curve = SubResource("CurveTexture_x77si")
-
-[sub_resource type="BoxMesh" id="BoxMesh_pj8b1"]
-size = Vector3(0.2, 0.05, 0.2)
+[sub_resource type="BoxMesh" id="BoxMesh_jukag"]
+material = SubResource("StandardMaterial3D_ujqin")
+size = Vector3(0.2, 0.2, 0.2)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ujqin")
 
-[node name="egg_yolk" type="GPUParticles3D" parent="."]
-emitting = false
-amount = 17
-lifetime = 0.5
-one_shot = true
+[node name="wood" type="GPUParticles3D" parent="."]
+amount = 10
+explosiveness = 1.0
+fixed_fps = 60
+trail_lifetime = 10.0
+process_material = SubResource("ParticleProcessMaterial_ujqin")
+draw_pass_1 = SubResource("BoxMesh_jukag")
+
+[node name="wood_big" type="GPUParticles3D" parent="."]
+amount = 9
 explosiveness = 1.0
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_ujqin")
-draw_pass_1 = SubResource("CylinderMesh_jukag")
-
-[node name="egg_shell" type="GPUParticles3D" parent="."]
-emitting = false
-amount = 7
-lifetime = 0.5
-one_shot = true
-explosiveness = 1.0
-fixed_fps = 60
-process_material = SubResource("ParticleProcessMaterial_y00fj")
-draw_pass_1 = SubResource("BoxMesh_pj8b1")
+draw_pass_1 = SubResource("BoxMesh_jukag")

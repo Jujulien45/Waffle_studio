@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://2358hdckow0m"]
 
-[ext_resource type="Script" uid="uid://c0880pn6nq44m" path="res://ptnlvl_3enfinilest_7h.gd" id="1_flo2v"]
+[ext_resource type="Script" path="res://ptnlvl_3enfinilest_7h.gd" id="1_flo2v"]
 [ext_resource type="PackedScene" uid="uid://b5bwbeu1y1ydi" path="res://player.tscn" id="3_qtuxb"]
 [ext_resource type="PackedScene" uid="uid://c46177kxv8076" path="res://breakable_floor.tscn" id="4_556px"]
 [ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="5_c7pun"]
