@@ -14,8 +14,8 @@
 [ext_resource type="AudioStream" uid="uid://dvths7mxym8a4" path="res://assets/sfx/voicelines/poulet/poulet.09.poulet8.wav" id="11_aq0qg"]
 [ext_resource type="AudioStream" uid="uid://dn4k83gixeqjc" path="res://assets/sfx/voicelines/poulet/poulet.10.poulet9.wav" id="12_ke7sg"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t87h6"]
-height = 1.5
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_60y4l"]
+height = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_t87h6"]
 
@@ -40,7 +40,7 @@ script = ExtResource("1_p42ce")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_t87h6")
+shape = SubResource("CylinderShape3D_60y4l")
 
 [node name="Area3D" type="Area3D" parent="."]
 
