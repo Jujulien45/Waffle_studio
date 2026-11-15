@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c43v0kdkoic1s"]
+[gd_scene load_steps=9 format=3 uid="uid://c43v0kdkoic1s"]
 
 [ext_resource type="Script" uid="uid://bl8lx1dn5c25g" path="res://egg_explosion.gd" id="1_dwm25"]
+[ext_resource type="AudioStream" uid="uid://0tukeo18ivm3" path="res://assets/sfx/u_viypcpsnud-egg_crack_4-389263.mp3" id="2_fc5i1"]
 
 [sub_resource type="Curve" id="Curve_o376u"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7983651, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -55,3 +56,6 @@ explosiveness = 1.0
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_fc5i1")
 draw_pass_1 = SubResource("BoxMesh_ani73")
+
+[node name="crack" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_fc5i1")

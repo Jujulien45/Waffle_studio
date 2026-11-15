@@ -25,12 +25,22 @@ var paused = false
 var camera
 
 var MESH: MeshInstance3D
+var Pickup_steam_player: AudioStreamPlayer3D
+var lay_egg_steam_player: AudioStreamPlayer3D
+var jump_stream_player: AudioStreamPlayer3D
+var voicelines_audio: AudioStreamPlayer3D
+
+var is_playing_audio := false
 
 func _ready() -> void:
+	jump_stream_player = $jump
+	Pickup_steam_player = $pickup
+	lay_egg_steam_player = $lay_egg
 	MESH = $MeshInstance3D
 	camera = $Camera3D
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	radius = $MeshInstance3D.mesh.radius
+	voicelines_audio = $voicelines
 
 func _physics_process(delta: float) -> void:
 	
@@ -50,11 +60,14 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("ui_accept") and double_jumped == false:
 			velocity.y = JUMP_VELOCITY
 			if(not is_on_floor()):
+				lay_egg_steam_player.play()
 				double_jumped = true
 				var egg_inst = egg.instantiate()
 				get_parent().add_child(egg_inst)
 				egg_inst.global_position = global_position
 				egg_inst.global_position.y -= 0.6
+			else:
+				jump_stream_player.play()
 
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
@@ -79,7 +92,7 @@ func _physics_process(delta: float) -> void:
 		var angle : float = v.length() / radius * delta
 
 		var local_axis := global_transform.basis.inverse() * axis
-		$MeshInstance3D.basis = $MeshInstance3D.basis.rotated(local_axis.normalized(), angle)
+		MESH.basis = MESH.basis.rotated(local_axis.normalized(), angle)
 			
 		move_and_slide()
 		
@@ -109,4 +122,13 @@ func _input(event: InputEvent) -> void:
 				dash_available = false
 
 func add_chick():
-	pass
+	is_playing_audio = true
+	Pickup_steam_player.play()
+
+
+func _on_pickup_finished() -> void:
+	voicelines_audio.play()
+
+
+func _on_voicelines_finished() -> void:
+	is_playing_audio = false

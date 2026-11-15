@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://bwo6q6iju7jbs"]
+
+[ext_resource type="AudioStream" uid="uid://vgrgrjjlqg4f" path="res://assets/sfx/voicelines/pickup/kotkot.01.kotkot1.wav" id="1_jvuxx"]
+[ext_resource type="AudioStream" uid="uid://sjewulpxis2k" path="res://assets/sfx/voicelines/pickup/kotkot.02.kotkot2.wav" id="2_hmts5"]
+[ext_resource type="AudioStream" uid="uid://bghnkvlfe4ri" path="res://assets/sfx/voicelines/pickup/kotkot.03.kotkot3.wav" id="3_54pld"]
+[ext_resource type="AudioStream" uid="uid://bdk1b81ifmqdb" path="res://assets/sfx/voicelines/pickup/kotkot.04.kotkot4.wav" id="4_eu8hi"]
+[ext_resource type="AudioStream" uid="uid://b5w43sbu7fdcv" path="res://assets/sfx/voicelines/pickup/kotkot.05.kotkot5.wav" id="5_37x1y"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_jvuxx")
+stream_1/stream = ExtResource("2_hmts5")
+stream_2/stream = ExtResource("3_54pld")
+stream_3/stream = ExtResource("4_eu8hi")
+stream_4/stream = ExtResource("5_37x1y")

@@ -1,12 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2we34x8nngnl"]
+[gd_scene load_steps=17 format=3 uid="uid://b2we34x8nngnl"]
 
 [ext_resource type="Script" uid="uid://bbp1il4kn4ohq" path="res://chick.gd" id="1_p42ce"]
+[ext_resource type="AudioStream" uid="uid://852saishs43e" path="res://assets/sfx/voicelines/poulet/poulet.01.poulet1.wav" id="2_60y4l"]
 [ext_resource type="PackedScene" uid="uid://07pfosgp7o3g" path="res://assets/assets1/ChickenBrown.fbx" id="2_p42ce"]
+[ext_resource type="AudioStream" uid="uid://b3oqn4flwsqm0" path="res://assets/sfx/voicelines/poulet/poulet.02.poulet2.wav" id="3_ujonq"]
+[ext_resource type="AudioStream" uid="uid://bb4uu7cto6e75" path="res://assets/sfx/voicelines/poulet/poulet.11.poulet10.wav" id="4_csmu4"]
+[ext_resource type="AudioStream" uid="uid://duh3mrfytehe2" path="res://assets/sfx/voicelines/poulet/poulet.03.poulet3.wav" id="5_vcnc2"]
+[ext_resource type="AudioStream" uid="uid://bptr6rvepfj66" path="res://assets/sfx/voicelines/poulet/poulet.04.poulet3.wav" id="6_j1fsn"]
+[ext_resource type="AudioStream" uid="uid://c787v60r5rvpe" path="res://assets/sfx/voicelines/poulet/poulet.05.poulet4.wav" id="7_q0wm0"]
+[ext_resource type="AudioStream" uid="uid://2e45sbamnny2" path="res://assets/sfx/voicelines/poulet/poulet.06.poulet 5.wav" id="8_epu8q"]
+[ext_resource type="AudioStream" uid="uid://b5ydxiwxsuane" path="res://assets/sfx/voicelines/poulet/poulet.07.poulet6.wav" id="9_v1ed5"]
+[ext_resource type="AudioStream" uid="uid://cleg1hk8xo0bh" path="res://assets/sfx/voicelines/poulet/poulet.08.poulet7.wav" id="10_lpl6a"]
+[ext_resource type="AudioStream" uid="uid://dvths7mxym8a4" path="res://assets/sfx/voicelines/poulet/poulet.09.poulet8.wav" id="11_aq0qg"]
+[ext_resource type="AudioStream" uid="uid://dn4k83gixeqjc" path="res://assets/sfx/voicelines/poulet/poulet.10.poulet9.wav" id="12_ke7sg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t87h6"]
 height = 1.5
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_t87h6"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hw03e"]
+streams_count = 11
+stream_0/stream = ExtResource("2_60y4l")
+stream_1/stream = ExtResource("3_ujonq")
+stream_2/stream = ExtResource("5_vcnc2")
+stream_3/stream = ExtResource("6_j1fsn")
+stream_4/stream = ExtResource("7_q0wm0")
+stream_5/stream = ExtResource("8_epu8q")
+stream_6/stream = ExtResource("9_v1ed5")
+stream_7/stream = ExtResource("10_lpl6a")
+stream_8/stream = ExtResource("11_aq0qg")
+stream_9/stream = ExtResource("12_ke7sg")
+stream_10/stream = ExtResource("4_csmu4")
 
 [node name="male_chick" type="RigidBody3D"]
 script = ExtResource("1_p42ce")
@@ -23,9 +48,15 @@ shape = SubResource("CapsuleShape3D_t87h6")
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 shape = SubResource("SphereShape3D_t87h6")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="voicelines" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_hw03e")
+volume_db = 15.0
+max_distance = 20.0
 
 [node name="ChickenBrown" parent="." instance=ExtResource("2_p42ce")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
