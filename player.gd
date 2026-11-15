@@ -31,6 +31,7 @@ var camera
 
 # On remplace la caméra par le Pivot
 @onready var pivot = $PivotCamera 
+@onready var cast  = $RayCast3D
 
 var MESH: MeshInstance3D
 var Pickup_steam_player: AudioStreamPlayer3D

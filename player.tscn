@@ -73,6 +73,8 @@ margin = 0.005
 
 [node name="CanvasLayer" parent="." instance=ExtResource("16_u1c27")]
 
+[node name="RayCast3D" type="RayCast3D" parent="."]
+
 [connection signal="finished" from="pickup" to="." method="_on_pickup_finished"]
 [connection signal="finished" from="jump" to="." method="_on_jump_finished"]
 [connection signal="finished" from="voicelines" to="." method="_on_voicelines_finished"]
