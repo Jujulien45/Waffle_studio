@@ -1,0 +1,152 @@
+[gd_scene load_steps=25 format=3 uid="uid://dwq4tr2ryf3mq"]
+
+[ext_resource type="PackedScene" uid="uid://cvbksknfr24qh" path="res://ground_grass_model.tscn" id="1_7qbri"]
+[ext_resource type="Script" path="res://player.gd" id="2_j87em"]
+[ext_resource type="Texture2D" uid="uid://oyxkvkxffb6n" path="res://ball.jpg" id="3_vxc5f"]
+[ext_resource type="AudioStream" uid="uid://bwo6q6iju7jbs" path="res://RandomizerStream/pickup.tres" id="4_uu322"]
+[ext_resource type="AudioStream" uid="uid://dnxlxaj124qei" path="res://assets/sfx/dragon-studio-pop-402324.mp3" id="5_pjl3l"]
+[ext_resource type="AudioStream" uid="uid://6ni6nfdi8o8t" path="res://assets/sfx/oeuf.mp3" id="6_84how"]
+[ext_resource type="AudioStream" uid="uid://dfsqw6lrriuy0" path="res://assets/sfx/voicelines/coq/coqVL.01.coq1.wav" id="7_bafpn"]
+[ext_resource type="AudioStream" uid="uid://cxsn53uuabdwu" path="res://assets/sfx/voicelines/coq/coqVL.03.coq3.wav" id="8_8n7aj"]
+[ext_resource type="AudioStream" uid="uid://y3fuy2hqw2cv" path="res://assets/sfx/voicelines/coq/coqVL.04.coq4.wav" id="9_sd4mx"]
+[ext_resource type="AudioStream" uid="uid://cvvkcay3dt7vb" path="res://assets/sfx/voicelines/coq/coqVL.05.coq5.wav" id="10_o4evj"]
+[ext_resource type="AudioStream" uid="uid://dexgmku5hs7kw" path="res://assets/sfx/voicelines/coq/coqVL.06.coq6.wav" id="11_fypvx"]
+[ext_resource type="AudioStream" uid="uid://bjr31mxtkkbnn" path="res://assets/sfx/voicelines/coq/coqVL.07.coq7.wav" id="12_8kcsw"]
+[ext_resource type="AudioStream" uid="uid://rmigrghnbyxl" path="res://assets/sfx/voicelines/coq/coqVL.08.coq8.wav" id="13_mbrwg"]
+[ext_resource type="AudioStream" uid="uid://biqsr6tuuyb17" path="res://assets/sfx/voicelines/coq/coqVL.09.coq9.wav" id="14_68tqn"]
+[ext_resource type="AudioStream" uid="uid://dhbd3pdrcddh6" path="res://assets/sfx/voicelines/coq/coqVL.11.coq11.wav" id="15_isjpf"]
+[ext_resource type="AudioStream" uid="uid://byqxmhdwjvs1t" path="res://assets/sfx/voicelines/coq/coqVL.12.coq12.wav" id="16_xiyai"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xi47v"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_moseg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cehe7"]
+albedo_texture = ExtResource("3_vxc5f")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_odtmv"]
+radius = 0.2
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qnq0a"]
+streams_count = 10
+stream_0/stream = ExtResource("7_bafpn")
+stream_1/stream = ExtResource("8_8n7aj")
+stream_2/stream = ExtResource("9_sd4mx")
+stream_3/stream = ExtResource("10_o4evj")
+stream_4/stream = ExtResource("11_fypvx")
+stream_5/stream = ExtResource("12_8kcsw")
+stream_6/stream = ExtResource("13_mbrwg")
+stream_7/stream = ExtResource("14_68tqn")
+stream_8/stream = ExtResource("15_isjpf")
+stream_9/stream = ExtResource("16_xiyai")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_slo6c"]
+
+[sub_resource type="Sky" id="Sky_7rax8"]
+sky_material = SubResource("ProceduralSkyMaterial_slo6c")
+process_mode = 1
+radiance_size = 4
+
+[sub_resource type="Environment" id="Environment_as24j"]
+background_mode = 2
+background_energy_multiplier = 1.77
+sky = SubResource("Sky_7rax8")
+ambient_light_source = 3
+ambient_light_color = Color(0.039215688, 0.0627451, 0.1254902, 1)
+ambient_light_sky_contribution = 0.65
+ambient_light_energy = 0.1
+tonemap_mode = 4
+tonemap_exposure = 0.64
+ssao_enabled = true
+ssao_intensity = 9.87
+glow_enabled = true
+glow_intensity = 1.52
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(1.3659997, 1.2227292, 0.9797501, 1)
+volumetric_fog_emission = Color(0.2159017, 0.21590173, 0.2159017, 1)
+volumetric_fog_emission_energy = 3.0
+volumetric_fog_anisotropy = 0.5
+volumetric_fog_length = 256.0
+volumetric_fog_ambient_inject = 0.1
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ground_grass_model2" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, -38.466938, -2.664711, 34.083244)
+
+[node name="ground_grass_model3" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 19.667484, -2.664711, 34.083244)
+
+[node name="ground_grass_model4" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 76.2373, -2.664711, 34.083244)
+
+[node name="ground_grass_model7" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, -38.466938, -2.664711, 91.4715)
+
+[node name="ground_grass_model8" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 19.667484, -2.664711, 91.4715)
+
+[node name="ground_grass_model9" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 76.2373, -2.664711, 91.4715)
+
+[node name="ground_grass_model12" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, -38.466938, -2.664711, 149.57483)
+
+[node name="ground_grass_model13" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 19.667484, -2.664711, 149.57483)
+
+[node name="ground_grass_model14" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 76.2373, -2.664711, 149.57483)
+
+[node name="ground_grass_model17" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, -38.466938, -2.664711, 207.28246)
+
+[node name="ground_grass_model18" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 19.667484, -2.664711, 207.28246)
+
+[node name="ground_grass_model19" parent="." instance=ExtResource("1_7qbri")]
+transform = Transform3D(29.490309, 0, 0, 0, 29.490309, 0, 0, 0, 29.490309, 76.2373, -2.664711, 207.28246)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1.6490294, 0, 0, 0, 1.6490294, 0, 0, 0, 1.6490294, 22.028154, 1.5173435, 59.056232)
+script = ExtResource("2_j87em")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("SphereShape3D_xi47v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("SphereMesh_moseg")
+surface_material_override/0 = SubResource("StandardMaterial3D_cehe7")
+
+[node name="PivotCamera" type="Node3D" parent="CharacterBody3D"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CharacterBody3D/PivotCamera"]
+shape = SubResource("SphereShape3D_odtmv")
+spring_length = 5.0
+margin = 0.005
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/PivotCamera/SpringArm3D"]
+
+[node name="pickup" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
+stream = ExtResource("4_uu322")
+
+[node name="lay_egg" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
+stream = ExtResource("5_pjl3l")
+
+[node name="jump" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
+stream = ExtResource("6_84how")
+
+[node name="voicelines" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
+stream = SubResource("AudioStreamRandomizer_qnq0a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.9831402, 0.18285325, 0, -0.18285325, -0.9831402, 0, 76.303505, 0)
+light_color = Color(0.9999935, 0.50694025, 0.11757334, 1)
+light_energy = 3.315
+shadow_enabled = true
+shadow_blur = 0.0
+directional_shadow_mode = 0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_as24j")
