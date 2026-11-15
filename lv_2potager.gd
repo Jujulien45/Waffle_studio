@@ -18,6 +18,6 @@ func _process(_delta) -> void :
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if(body is CharacterBody3D):
 		if player.has_all_chicks:
-			get_tree().change_scene_to_file("res://lv_3 ... .tscn")
+			get_tree().change_scene_to_file("res://PTNLVL3ENFINILEST7H.tscn")
 		else:
 			player.start_warning()
