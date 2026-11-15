@@ -15,6 +15,8 @@ var radius
 var double_jumped = false
 var dir = null
 
+var ground_pound = false
+
 var dash_time = -5000
 var dash_available = true
 
@@ -59,6 +61,7 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			velocity += get_gravity().slide(get_floor_normal()) * delta
 			double_jumped = false
+			ground_pound = false
 
 		# Handle jump.
 		if Input.is_action_just_pressed("ui_accept") and double_jumped == false:
@@ -130,6 +133,9 @@ func _input(event: InputEvent) -> void:
 				velocity.z += dir.z * DASH_ACCEL
 				dash_time = Time.get_ticks_msec()
 				dash_available = false
+		if event.pressed and event.keycode == KEY_CTRL and not ground_pound and not paused:
+			ground_pound = true
+			velocity.y -= 5*JUMP_VELOCITY
 
 func add_chick():
 	is_playing_audio = true
