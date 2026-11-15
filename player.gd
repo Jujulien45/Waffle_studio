@@ -175,7 +175,7 @@ func _process(_delta: float) -> void:
 			has_all_chicks = true
 		else:
 			has_all_chicks = false
-		print(num_sounds_playing)
+
 func play_sound(sound: AudioStreamPlayer3D, ignore_cap = false) -> void:
 	if num_sounds_playing < 4 or ignore_cap:
 		num_sounds_playing += 1
@@ -188,6 +188,7 @@ func _on_audio_finished(sound: AudioStreamPlayer3D) -> void:
 func pick_up_chick():
 	is_playing_audio = true
 	play_sound(Pickup_steam_player, true)
+
 
 func add_chick():
 	total_chicks += 1

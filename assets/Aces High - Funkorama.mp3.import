@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ciksdxgkw3vtt"
+path="res://.godot/imported/Aces High - Funkorama.mp3-50a86c6cf6436388a4c3409ead3f46ed.mp3str"
+
+[deps]
+
+source_file="res://assets/Aces High - Funkorama.mp3"
+dest_files=["res://.godot/imported/Aces High - Funkorama.mp3-50a86c6cf6436388a4c3409ead3f46ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
