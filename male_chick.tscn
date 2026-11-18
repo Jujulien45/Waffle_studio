@@ -37,25 +37,28 @@ stream_10/stream = ExtResource("4_csmu4")
 collision_layer = 2
 script = ExtResource("1_p42ce")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=802539634]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1635294707]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("CylinderShape3D_60y4l")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." unique_id=1522490903]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=513087359]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 shape = SubResource("SphereShape3D_t87h6")
 
-[node name="voicelines" type="AudioStreamPlayer3D" parent="."]
+[node name="voicelines" type="AudioStreamPlayer3D" parent="." unique_id=934259691]
 stream = SubResource("AudioStreamRandomizer_hw03e")
-volume_db = 15.0
+volume_db = 40.0
 max_distance = 20.0
+bus = &"Chicken"
 
-[node name="ChickenBrown" parent="." instance=ExtResource("2_p42ce")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+[node name="ChickenBrown" parent="." unique_id=992884907 instance=ExtResource("2_p42ce")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.67614657, 0)
 
 [node name="Timer" type="Timer" parent="." unique_id=417655488]
 one_shot = true
