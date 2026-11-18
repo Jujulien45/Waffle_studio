@@ -17,7 +17,6 @@ func _process(_delta) -> void :
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if(body is CharacterBody3D):
-		print("hellow")
 		if player.has_all_chicks:
 			print("ok")
 			get_tree().change_scene_to_file("res://LV2POTAGER.tscn")
