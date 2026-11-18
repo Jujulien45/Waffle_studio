@@ -164,9 +164,11 @@ func _input(event: InputEvent) -> void:
 				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 			
 		if event.pressed and event.keycode == KEY_E and not paused:
-			if(dir and dash_available):
-				velocity.x += dir.x * DASH_ACCEL
-				velocity.z += dir.z * DASH_ACCEL
+			if dash_available:
+				var dash_plane_dir = Vector2.from_angle(pivot.rotation.y)
+				var dash_dir = Vector3(-dash_plane_dir.y, 0.0, -dash_plane_dir.x)
+				velocity.x += dash_dir.x * DASH_ACCEL
+				velocity.z += dash_dir.z * DASH_ACCEL
 				dash_time = Time.get_ticks_msec()
 				dash_available = false
 		if event.pressed and event.keycode == KEY_CTRL and not ground_pound and not paused:
