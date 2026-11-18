@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c43v0kdkoic1s"]
+[gd_scene format=3 uid="uid://c43v0kdkoic1s"]
 
 [ext_resource type="Script" uid="uid://bl8lx1dn5c25g" path="res://egg_explosion.gd" id="1_dwm25"]
 [ext_resource type="AudioStream" uid="uid://0tukeo18ivm3" path="res://assets/sfx/u_viypcpsnud-egg_crack_4-389263.mp3" id="2_fc5i1"]
@@ -34,10 +34,10 @@ bottom_radius = 0.0
 [sub_resource type="BoxMesh" id="BoxMesh_ani73"]
 size = Vector3(0.2, 0.05, 0.2)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=430128619]
 script = ExtResource("1_dwm25")
 
-[node name="egg_yolk" type="GPUParticles3D" parent="."]
+[node name="egg_yolk" type="GPUParticles3D" parent="." unique_id=992008610]
 emitting = false
 amount = 17
 lifetime = 0.5
@@ -47,7 +47,7 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_fc5i1")
 draw_pass_1 = SubResource("CylinderMesh_hdh6x")
 
-[node name="egg_shell" type="GPUParticles3D" parent="."]
+[node name="egg_shell" type="GPUParticles3D" parent="." unique_id=206861185]
 emitting = false
 amount = 7
 lifetime = 0.5

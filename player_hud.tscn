@@ -45,7 +45,7 @@ grow_horizontal = 2
 grow_vertical = 2
 show_percentage = false
 
-[node name="Progress_label" type="Label" parent="Control"]
+[node name="Progress_label" type="Label" parent="Control" unique_id=694349250]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -62,7 +62,7 @@ text = "0/0"
 label_settings = SubResource("LabelSettings_5sskr")
 horizontal_alignment = 1
 
-[node name="Warning" type="Label" parent="Control"]
+[node name="Warning" type="Label" parent="Control" unique_id=998331640]
 visible = false
 layout_mode = 1
 anchors_preset = 5

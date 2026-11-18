@@ -7,13 +7,13 @@ var start
 
 func _ready() -> void:
 	player = get_tree().get_nodes_in_group("Player")[0]
-	$Player/CanvasLayer/tuto.text = "Press Space to Jump and Double Jump\nTake the ladder to go to the next level"
+	$Player/CanvasLayer/Control/tuto.text = "Press Space to Jump and Double Jump\nTake the ladder to go to the next level"
 	start = Time.get_ticks_msec()
 
 func _process(_delta) -> void :
-	if($Player/CanvasLayer/tuto.text != ""):
+	if($Player/CanvasLayer/Control/tuto.text != ""):
 		if(Time.get_ticks_msec() > 15000 + start):
-			$Player/CanvasLayer/tuto.text = ""
+			$Player/CanvasLayer/Control/tuto.text = ""
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if(body is CharacterBody3D):
