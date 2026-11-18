@@ -8,19 +8,23 @@
 [sub_resource type="LabelSettings" id="LabelSettings_4jooh"]
 font_size = 100
 
-[node name="ending" type="Node2D"]
+[node name="ending" type="Control" unique_id=189829165]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_fsb5k")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=740270451]
 position = Vector2(592, 243)
 stream = ExtResource("2_4jooh")
 
-[node name="ending_picture" type="TextureRect" parent="."]
-offset_right = 1679.0
-offset_bottom = 1050.0
+[node name="ending_picture" type="TextureRect" parent="." unique_id=1668539979]
+layout_mode = 0
+offset_right = 1952.0
+offset_bottom = 1077.0
 texture = ExtResource("3_4jooh")
 
-[node name="black" type="TextureRect" parent="."]
+[node name="black" type="TextureRect" parent="." unique_id=643371578]
+layout_mode = 0
 offset_left = -311.0
 offset_top = -162.0
 offset_right = 5396.0
@@ -29,10 +33,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("3_iggq8")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 715.0
-offset_top = 169.0
-offset_right = 1016.0
-offset_bottom = 306.0
+[node name="Label" type="Label" parent="." unique_id=891480676]
+layout_mode = 0
+offset_left = 863.0
+offset_top = 150.0
+offset_right = 1164.0
+offset_bottom = 287.0
 text = "GGWP"
 label_settings = SubResource("LabelSettings_4jooh")

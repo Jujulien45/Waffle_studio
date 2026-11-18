@@ -10,12 +10,9 @@ font_color = Color(1, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_cs3pk"]
 font_size = 50
 
-[sub_resource type="LabelSettings" id="LabelSettings_6vp4k"]
-font_size = 50
+[node name="CanvasLayer" type="CanvasLayer" unique_id=274068538]
 
-[node name="CanvasLayer" type="CanvasLayer"]
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=721794510]
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
@@ -28,7 +25,18 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="ProgressBar" type="ProgressBar" parent="Control"]
+[node name="tuto" type="Label" parent="Control" unique_id=6502476]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.024
+offset_left = -177.0
+offset_top = -962.0
+offset_right = 153.68001
+offset_bottom = -794.0
+label_settings = SubResource("LabelSettings_6vp4k")
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=1460627186]
 modulate = Color(0, 1, 0, 1)
 self_modulate = Color(0, 1, 0, 1)
 layout_mode = 1
@@ -77,12 +85,20 @@ text = "Tu n'as pas assez de poulets pour finir le niveau !"
 label_settings = SubResource("LabelSettings_tvw2b")
 horizontal_alignment = 1
 
-[node name="Pause" type="Label" parent="."]
+[node name="Pause" type="Control" parent="." unique_id=1865472187]
+process_mode = 2
 visible = false
-offset_left = 688.0
-offset_top = 369.0
-offset_right = 996.0
-offset_bottom = 582.0
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1921.0
+offset_bottom = 1061.0
+
+[node name="Pause" type="Label" parent="Pause" unique_id=477523419]
+layout_mode = 0
+offset_left = 782.0
+offset_top = 381.0
+offset_right = 1090.0
+offset_bottom = 594.0
 text = "Paused
 Esc to Quit
 P to upsause"
