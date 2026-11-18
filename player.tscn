@@ -36,7 +36,8 @@ stream_9/stream = ExtResource("15_iruf7")
 [sub_resource type="SphereShape3D" id="SphereShape3D_7wi0t"]
 radius = 0.2
 
-[node name="Player" type="CharacterBody3D" groups=["Player"]]
+[node name="Player" type="CharacterBody3D" unique_id=645408622 groups=["Player"]]
+process_mode = 3
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("1_606se")
 
@@ -59,30 +60,30 @@ bus = &"Rooster"
 stream = SubResource("AudioStreamRandomizer_vm5kt")
 bus = &"Rooster"
 
-[node name="PivotCamera" type="Node3D" parent="."]
+[node name="PivotCamera" type="Node3D" parent="." unique_id=1730028369]
 
-[node name="SpringArm3D" type="SpringArm3D" parent="PivotCamera"]
+[node name="SpringArm3D" type="SpringArm3D" parent="PivotCamera" unique_id=1072555004]
 shape = SubResource("SphereShape3D_7wi0t")
 spring_length = 5.0
 margin = 0.005
 
-[node name="Camera3D" type="Camera3D" parent="PivotCamera/SpringArm3D"]
+[node name="Camera3D" type="Camera3D" parent="PivotCamera/SpringArm3D" unique_id=1520274381]
 
-[node name="CanvasLayer" parent="." instance=ExtResource("16_u1c27")]
+[node name="CanvasLayer" parent="." unique_id=1409608238 instance=ExtResource("16_u1c27")]
 
-[node name="warning_timer" type="Timer" parent="."]
+[node name="warning_timer" type="Timer" parent="." unique_id=1319826929]
 one_shot = true
 
-[node name="ChickenBrown" type="Node3D" parent="."]
+[node name="ChickenBrown" type="Node3D" parent="." unique_id=734459832]
 transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 0, -0.3, 0)
 
-[node name="ChickenBrown" parent="ChickenBrown" instance=ExtResource("16_op7ga")]
+[node name="ChickenBrown" parent="ChickenBrown" unique_id=1809791340 instance=ExtResource("16_op7ga")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 
-[node name="jump_sound_delay" type="Timer" parent="."]
+[node name="jump_sound_delay" type="Timer" parent="." unique_id=82006378]
 one_shot = true
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=46181878]
 
 [node name="cocorico" type="AudioStreamPlayer3D" parent="." unique_id=153246711]
 stream = ExtResource("17_op7ga")
@@ -91,6 +92,6 @@ bus = &"Rooster"
 [connection signal="finished" from="pickup" to="." method="_on_pickup_finished"]
 [connection signal="finished" from="jump" to="." method="_on_jump_finished"]
 [connection signal="finished" from="voicelines" to="." method="_on_voicelines_finished"]
-[connection signal="timeout" from="warning_timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="warning_timer" to="." method="_on_warning_timer_timeout"]
+[connection signal="timeout" from="warning_timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="jump_sound_delay" to="." method="_on_jump_sound_delay_timeout"]

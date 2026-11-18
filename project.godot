@@ -26,6 +26,7 @@ buses/default_bus_layout="uid://6bbxtnebjg18"
 [autoload]
 
 BackgroundMusic="*res://background_music.tscn"
+SpeedrunTimer="*uid://refawi5sxvxj"
 
 [display]
 

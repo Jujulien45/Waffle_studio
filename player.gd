@@ -156,6 +156,13 @@ func _input(event: InputEvent) -> void:
 		if event.pressed and event.keycode == KEY_P:
 			paused = not paused
 			$CanvasLayer/Pause.visible = not $CanvasLayer/Pause.visible
+			get_tree().paused = paused
+			get_node("/root/SpeedrunTimer").toggle_pause()
+			if paused:
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			else:
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			
 		if event.pressed and event.keycode == KEY_E and not paused:
 			if(dir and dash_available):
 				velocity.x += dir.x * DASH_ACCEL
@@ -184,7 +191,7 @@ func _process(_delta: float) -> void:
 			has_all_chicks = false
 
 func play_sound(sound: AudioStreamPlayer3D, ignore_cap = false) -> void:
-	if num_sounds_playing < 2 or ignore_cap:
+	if num_sounds_playing < 1 or ignore_cap:
 		num_sounds_playing += 1
 		sound.play()
 		sound.finished.connect(_on_audio_finished.bind(sound), CONNECT_ONE_SHOT)

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://refawi5sxvxj"]
+
+[ext_resource type="Script" uid="uid://57bxrers74e2" path="res://speedrun_timer.gd" id="1_ubcmd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_274va"]
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_uj3h4"]
+font_size = 45
+
+[node name="SpeedrunTimer" type="Control" unique_id=1012278485]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ubcmd")
+
+[node name="time" type="Label" parent="." unique_id=977561376]
+z_index = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -61.5
+offset_right = 251.0
+offset_bottom = 61.5
+grow_vertical = 2
+text = "59:59"
+label_settings = SubResource("LabelSettings_274va")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="miliseconds" type="Label" parent="time" unique_id=2058223606]
+z_index = 1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -61.0
+offset_right = 174.0
+offset_bottom = 59.5
+grow_horizontal = 0
+grow_vertical = 2
+text = ".999"
+label_settings = SubResource("LabelSettings_uj3h4")
+vertical_alignment = 2

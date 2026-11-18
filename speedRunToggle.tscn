@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b85ygv6vy3hrj"]
+
+[ext_resource type="Script" uid="uid://ccdbcxcdwd17k" path="res://speed_run_toggle.gd" id="1_dooeg"]
+
+[node name="CheckButton" type="CheckButton" unique_id=129606034]
+offset_left = 87.0
+offset_top = 805.0
+offset_right = 232.5
+offset_bottom = 882.0
+scale = Vector2(2, 2)
+button_pressed = true
+text = "Show speedrun timer"
+alignment = 1
+autowrap_mode = 3
+script = ExtResource("1_dooeg")
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]

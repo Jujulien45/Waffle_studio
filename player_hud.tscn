@@ -1,4 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://biasbeaubjat4"]
+[gd_scene format=3 uid="uid://biasbeaubjat4"]
+
+[ext_resource type="PackedScene" uid="uid://b85ygv6vy3hrj" path="res://speedRunToggle.tscn" id="1_tvw2b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6vp4k"]
+font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_5sskr"]
 font_size = 32
@@ -105,12 +110,9 @@ P to upsause"
 label_settings = SubResource("LabelSettings_cs3pk")
 horizontal_alignment = 1
 
-[node name="tuto" type="Label" parent="."]
-anchors_preset = -1
-anchor_right = 0.024
-offset_left = 657.0
-offset_top = 32.0
-offset_right = 987.68
-offset_bottom = 200.0
-label_settings = SubResource("LabelSettings_6vp4k")
-horizontal_alignment = 1
+[node name="CheckButton" parent="Pause" unique_id=129606034 instance=ExtResource("1_tvw2b")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 145.5
+offset_bottom = 77.0
