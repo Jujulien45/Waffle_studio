@@ -43,17 +43,21 @@ script = ExtResource("1_606se")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_0g12c")
 
-[node name="pickup" type="AudioStreamPlayer3D" parent="."]
+[node name="pickup" type="AudioStreamPlayer3D" parent="." unique_id=707110212]
 stream = ExtResource("3_op7ga")
+bus = &"Hen"
 
-[node name="lay_egg" type="AudioStreamPlayer3D" parent="."]
+[node name="lay_egg" type="AudioStreamPlayer3D" parent="." unique_id=1395330695]
 stream = ExtResource("4_q13i1")
+bus = &"Other"
 
-[node name="jump" type="AudioStreamPlayer3D" parent="."]
+[node name="jump" type="AudioStreamPlayer3D" parent="." unique_id=1399438032]
 stream = ExtResource("5_pylmc")
+bus = &"Rooster"
 
-[node name="voicelines" type="AudioStreamPlayer3D" parent="."]
+[node name="voicelines" type="AudioStreamPlayer3D" parent="." unique_id=618378948]
 stream = SubResource("AudioStreamRandomizer_vm5kt")
+bus = &"Rooster"
 
 [node name="PivotCamera" type="Node3D" parent="."]
 
@@ -80,8 +84,9 @@ one_shot = true
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 
-[node name="cocorico" type="AudioStreamPlayer3D" parent="."]
+[node name="cocorico" type="AudioStreamPlayer3D" parent="." unique_id=153246711]
 stream = ExtResource("17_op7ga")
+bus = &"Rooster"
 
 [connection signal="finished" from="pickup" to="." method="_on_pickup_finished"]
 [connection signal="finished" from="jump" to="." method="_on_jump_finished"]
